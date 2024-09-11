@@ -1,0 +1,53 @@
+import React from 'react';
+import '../../App.css';
+import logo from "../../assets/logo.png";
+import '../../App.css'
+
+const Navbar = () => {
+    const navMenu = [
+        <li className='list-item font-medium text-[#1e6deb]'><a href='/'>Home</a></li>,
+        <li className='list-item font-medium text-[#1e6deb]'><a href='/'>Study Abroad</a></li>,
+        <li className='list-item font-medium text-[#1e6deb]'><a href='/'>Institutions</a></li>,
+    ];
+
+    return (
+        <div className="px-8 navbar relative justify-between bg-white bg-opacity-20 backdrop-blur-xl shadow-lg shadow-cyan-50" >
+            <div className="w-72 border-0 outline-none">
+                <img className='w-full' src={logo} alt="" />
+            </div>
+            <div className=''>
+                <div className="hidden-special-on-small md:flex">
+                    <ul className="menu menu-horizontal px-1">
+                        {navMenu}
+                    </ul>
+                </div>
+                <div className="hidden-special-on-large">
+                    <div className="dropdown">
+                        <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                className="h-5 w-5"
+                                fill="none"
+                                viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path
+                                    strokeLinecap="round"
+                                    strokeLinejoin="round"
+                                    strokeWidth="2"
+                                    d="M4 6h16M4 12h8m-8 6h16" />
+                            </svg>
+                        </div>
+                        <ul
+                            tabIndex={0}
+                            className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
+                            {navMenu}
+                        </ul>
+                    </div>
+                </div>
+                <button className='rounded-full text-white font-normal px-2 py-0.5 bg-gradient-to-r from-pink-500 to-red-500 hover:border-2 hover:border-red-500 hover:bg-transparent transition-all'>Book Now</button>
+            </div>
+        </div >
+    );
+};
+
+export default Navbar;
