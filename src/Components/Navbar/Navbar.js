@@ -11,11 +11,11 @@ const Navbar = () => {
     ];
 
     return (
-        <div className="px-8 navbar relative justify-between bg-white bg-opacity-20 backdrop-blur-xl shadow-lg shadow-cyan-50" >
-            <div className="w-72 border-0 outline-none">
+        <div className="px-8 navbar relative justify-between bg-white bg-opacity-20 backdrop-blur-xl shadow-lg shadow-cyan-50">
+            <div className="w-72 border-0 outline-none" data-aos="fade-right">
                 <img className='w-full' src={logo} alt="" />
             </div>
-            <div className=''>
+            <div data-aos="fade-left">
                 <div className="hidden-special-on-small md:flex">
                     <ul className="menu menu-horizontal px-1">
                         {navMenu}

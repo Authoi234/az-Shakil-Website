@@ -72,6 +72,22 @@
   background: radial-gradient(circle at top, hsla(186, 100%, 71%, 1) 0%, hsla(217, 84%, 52%, 1) 31%);
 }
 
+.awesome-3d-card {
+  transform:
+    perspective(75em) rotateX(25deg);
+  box-shadow:
+    rgba(60, 62, 65, 0.42) 0px 60px 123px -25px,
+    white 0px 35px 75px -35px;
+  transition:
+    transform .4s ease,
+    box-shadow .4s ease;
+}
+
+.awesome-3d-card:hover {
+  transform:
+    rotate3d(0, 0, 0, 0deg) rotateY(10deg);
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
