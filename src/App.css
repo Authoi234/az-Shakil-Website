@@ -88,6 +88,25 @@
     rotate3d(0, 0, 0, 0deg) rotateY(10deg);
 }
 
+.special-scrolling::-webkit-scrollbar {
+  height: 1px;
+  background-color: transparent;
+}
+
+.flip-card:hover .flip-3d {
+  transform:
+    perspective(30em) rotateY(-25deg);
+  border-radius: 16px;
+  box-shadow: 0 0 25px 5px #1e6deb;
+}
+
+.flip-card .flip-3d {
+  transform:
+    rotate3d(0, 0, 0, 0deg) rotateY(10deg);
+  transition: all 0.5s ease-in-out;
+}
+
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);

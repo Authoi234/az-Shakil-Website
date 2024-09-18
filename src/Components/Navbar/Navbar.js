@@ -5,9 +5,9 @@ import '../../App.css'
 
 const Navbar = () => {
     const navMenu = [
-        <li className='list-item font-medium text-[#1e6deb]'><a href='/'>Home</a></li>,
-        <li className='list-item font-medium text-[#1e6deb]'><a href='/'>Study Abroad</a></li>,
-        <li className='list-item font-medium text-[#1e6deb]'><a href='/'>Institutions</a></li>,
+        <li className='list-item font-medium text-primary'><a href='/'>Home</a></li>,
+        <li className='list-item font-medium text-primary'><a href='/'>Study Abroad</a></li>,
+        <li className='list-item font-medium text-primary'><a href='/'>Institutions</a></li>,
     ];
 
     return (
