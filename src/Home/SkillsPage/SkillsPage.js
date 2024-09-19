@@ -17,12 +17,12 @@ const SkillsPage = () => {
     return (
         <div
             className='bg-[#173158] py-12 md:flex md:justify-center md:items-center px-6 text-center'>
-            <div className='grid md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-6 mx-10'>
+            <div className='grid lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-6 mx-10'>
                 {
-                    isPending === false ? skillsData?.map(item => <div data-aos="fade-up"><SkillsCards card={item}></SkillsCards></div>) :  <div><span className="loading loading-spinner text-primary"></span></div>
+                    isPending === true ? <div><span className="loading loading-spinner text-primary"></span></div> : skillsData?.map(item => <div data-aos="fade-up"><SkillsCards card={item}></SkillsCards></div>)
                 }
             </div>
-            <div className='md:w-[50rem] w-5/6' data-aos-duration="1000" data-aos="zoom-in">
+            <div className='lg:w-[50rem] w-5/6' data-aos-duration="1000" data-aos="zoom-in">
                 <Tilt>
                     <img className='w-full' src={learningImage} alt="" />
                 </Tilt>

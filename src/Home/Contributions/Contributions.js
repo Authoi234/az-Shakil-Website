@@ -1,10 +1,14 @@
 import React, { useCallback, useEffect, useRef, useState } from 'react';
 import image from "../../assets/download.svg";
 import '../../App.css';
+import ContributionCard from './ContributionCard';
 
 const Contributions = () => {
 
   const scrollRef = useRef(null);
+  const [isDragging, setIsDragging] = useState(false);
+  const [startX, setStartX] = useState(0);
+  const [scrollLeft, setScrollLeft] = useState(0);
   const [allowVerticalScroll, setAllowVerticalScroll] = useState(false);
 
   useEffect(() => {
@@ -13,11 +17,13 @@ const Contributions = () => {
     const handleWheel = (event) => {
       const maxScrollLeft = div.scrollWidth - div.clientWidth;
 
+      // If horizontal scroll is not at the end, prevent default and scroll horizontally
       if (div.scrollLeft < maxScrollLeft) {
         event.preventDefault();
-        div.scrollLeft += event.deltaY;
+        div.scrollLeft += event.deltaY; // Scroll horizontally with vertical scroll
       }
 
+      // Once horizontal scroll is finished, allow vertical scroll
       if (div.scrollLeft >= maxScrollLeft) {
         setAllowVerticalScroll(true);
       }
@@ -26,7 +32,7 @@ const Contributions = () => {
     div.addEventListener('wheel', handleWheel);
 
     return () => {
-      div.removeEventListener('wheel', handleWheel);
+      div.removeEventListener('wheel', handleWheel); // Cleanup
     };
   }, []);
 
@@ -40,9 +46,28 @@ const Contributions = () => {
     window.addEventListener('wheel', handleBodyScroll);
 
     return () => {
-      window.removeEventListener('wheel', handleBodyScroll);
+      window.removeEventListener('wheel', handleBodyScroll); // Cleanup
     };
   }, [allowVerticalScroll]);
+
+  // Handle drag/swipe functionality
+  const handleMouseDown = (event) => {
+    setIsDragging(true);
+    setStartX(event.pageX - scrollRef.current.offsetLeft);
+    setScrollLeft(scrollRef.current.scrollLeft);
+  };
+
+  const handleMouseMove = (event) => {
+    if (!isDragging) return; // Only run this if dragging is true
+    event.preventDefault();
+    const x = event.pageX - scrollRef.current.offsetLeft;
+    const walk = (x - startX) * 2; // Multiply by 2 to make scrolling faster
+    scrollRef.current.scrollLeft = scrollLeft - walk;
+  };
+
+  const handleMouseUpOrLeave = () => {
+    setIsDragging(false);
+  };
 
 
 
@@ -67,16 +92,11 @@ const Contributions = () => {
       name: "Spiderman",
       para: "If a dog chews shoes whose shoes does he choose"
     },
-    {
-      img: "https://kingdompen.org/wp-content/uploads/2021/10/tom-holland-vs-andrew-garfield-vs-tobey-maguire-who-is-the-better-spider-man-1.jpg",
-      name: "Spiderman",
-      para: "If a dog chews shoes whose shoes does he choose"
-    },
   ]
 
 
   return (
-    <div className='px-5 py-10 bg-[#0e2850] mb-96'>
+    <div className='px-5 py-10 bg-[#0e2850] pb-5'>
       <div data-aos="fade-up">
         <div className='flex items-center justify-center'>
           <div className='w-40'>
@@ -94,25 +114,14 @@ const Contributions = () => {
         ref={scrollRef}
         className='special-scrolling p-10 flex gap-8 md:gap-16 whitespace-nowrap w-full px-2 md:px-4 py-2 overflow-x-scroll'
         style={{ scrollbarColor: 'transparent transparent', whiteSpace: 'nowrap' }}
+        onMouseDown={handleMouseDown}
+        onMouseMove={handleMouseMove}
+        onMouseUp={handleMouseUpOrLeave}
+        onMouseLeave={handleMouseUpOrLeave}
       >
         {
-          sectionData.map(data =>
-            <div className={`rounded-3xl hover:scale-105 flip-card flex-shrink-0 w-11/12 mt-5 sm:w-80 md:w-96 lg:w-1/4 text-white bg-[#0c1222] shadow-xl`} style={{ transition: 'all 0.5s ease', }}>
-              <figure>
-                <img
-                  className='w-full h-full rounded-t-2xl flip-3d'
-                  src={data.img}
-                  alt=''
-                />
-              </figure>
-              <div className="card-body p-2 sm:p-4 text-center">
-                <h2 className="md:text-3xl text-xl text-wrap">{data.name}</h2>
-                <p className='text-sm md:text-lg my-4 text-wrap'>{data.para}</p>
-                <div className="card-actions">
-                  <button className="px-3 bg-primary text-sm md:text-lg py-1 text-wrap rounded-full">Buy Now</button>
-                </div>
-              </div>
-            </div>
+          sectionData.map((data, i) =>
+            <ContributionCard key={i} card={data}></ContributionCard>
           )
         }
       </div>
