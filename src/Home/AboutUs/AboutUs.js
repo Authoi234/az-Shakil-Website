@@ -8,10 +8,10 @@ import { FaFacebookF, FaYoutube } from "react-icons/fa";
 const AboutUs = () => {
     return (
         <div className='bg-[#0e2850] px-5 py-10 text-center'>
-            <h1 className="text-3xl font-extrabold text-white mb-8">
+            <h1 className="text-3xl font-extrabold text-white mb-8" data-aos="fade-up">
                 প্রতিষ্ঠাতা সম্পর্কে কিছু কথা
             </h1>
-            <div className='lg:flex lg:justify-center lg:items-center text-center'>
+            <div className='lg:flex lg:justify-center lg:items-center text-center' data-aos="flip-right">
                 <div
                     className='flex px-3'
                 >

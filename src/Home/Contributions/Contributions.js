@@ -1,4 +1,4 @@
-import React, { useCallback, useEffect, useRef, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import image from "../../assets/download.svg";
 import '../../App.css';
 import ContributionCard from './ContributionCard';
