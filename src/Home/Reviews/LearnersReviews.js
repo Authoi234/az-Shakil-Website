@@ -98,7 +98,7 @@ const LearnersReviews = () => {
         <div className='bg-[#173158] px-20 py-12'>
             <div className="bg-[#0f172a] pt-5 px-16 text-center">
                 <div>
-                    <div className="flex justify-center items-center">
+                    <div className="flex justify-center items-center" data-aos="fade-up">
                         <div className="w-40">
                             <img src={introImg} alt="" />
                         </div>
@@ -108,7 +108,7 @@ const LearnersReviews = () => {
                 </div>
                 <div className='mt-5 columns-3 flex-wrap gap-10'>
                     {visibleReviews.map((data, index) => (
-                        <div key={index} className="bg-[#182234] px-2 text-white rounded-3xl my-10 py-3 break-inside-avoid">
+                        <div key={index} className="bg-[#182234] px-2 text-white rounded-3xl my-10 py-3 break-inside-avoid" data-aos="zoom-in">
                             <div className='flex justify-center items-start'>
                                 <div className='w-1/4 text-center flex justify-center items-center'>
                                     <div className='w-12 h-12 rounded-full border border-white'>
@@ -133,15 +133,16 @@ const LearnersReviews = () => {
                         style={{
                             background: 'linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.8) 60%, rgba(0, 0, 0, 1) 100%)'
                         }}>
+                        <div className="absolute inset-0 flex justify-center items-center">
+                            <button
+                                className="cursor-pointer relative bg-[#1e6deb] text-white text-base px-4 border-0 rounded-full transition ease-in-out py-2 hover:bg-[#3288ff] hover:scale-110"
+                                onClick={handleToggle}
+                            >
+                                {!showAll && 'আরো কমেন্ট দেখুন'}
+                            </button>
+                        </div>
                     </div>
                 )}
-                {!showAll && <button
-                    className="cursor-pointer relative bg-[#1e6deb] text-white text-base px-4 py-1 border-0 rounded-full transition ease-in-out hover:bg-[#3288ff] hover:scale-110"
-                    onClick={handleToggle}
-                >
-                    {!showAll && 'আরো কমেন্ট দেখুন'}
-                </button>}
-
             </div>
         </div>
     );
