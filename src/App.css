@@ -36,28 +36,6 @@
   display: none;
 }
 
-.glasseffect::before {
-  content: '';
-  position: absolute;
-  /* top: -45%;
-  left: -50%; */
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(rgb(255, 21, 251), rgb(255, 0, 255));
-  clip-path: circle(15% at left top);
-}
-
-.glasseffect::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 255, 255, 0.6);
-  backdrop-filter: blur(0.75px);
-  clip-path: circle(5% at right top);
-}
-
 @media (min-width: 768px) {
   .hidden-special-on-large {
     display: none;
@@ -66,10 +44,6 @@
   .hidden-special-on-small {
     display: flex;
   }
-}
-
-.colorbg {
-  background: radial-gradient(circle at top, hsla(186, 100%, 71%, 1) 0%, hsla(217, 84%, 52%, 1) 31%);
 }
 
 .awesome-3d-card {
@@ -106,6 +80,21 @@
   transition: all 0.5s ease-in-out;
 }
 
+.star-container {
+  position: relative;
+  width: 100%;
+  /* Adjust as needed */
+  overflow: hidden;
+  top: 70px;
+}
+
+.star {
+  position: absolute;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.9) 0%, rgba(255, 215, 0, 0) 70%);
+  animation: twinkle 1.5s infinite alternate;
+}
+
 
 @keyframes App-logo-spin {
   from {
@@ -114,5 +103,15 @@
 
   to {
     transform: rotate(360deg);
+  }
+}
+
+@keyframes twinkle {
+  0% {
+    opacity: 0.6;
+  }
+
+  100% {
+    opacity: 1;
   }
 }

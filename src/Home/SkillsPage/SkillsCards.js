@@ -12,7 +12,7 @@ const SkillsCards = ({ card }) => {
             </div>
             <h1 className='text-white text-lg'>{card.title}</h1>
             <p className='text-[#bab8b8] text-md'>{card.discription}</p>
-            <Link to={`/video/${card.id}`} className='btn my-1 py-0 px-2 rounded-3xl btn-outline bg-primary text-white border-2 hover:border-2  hover:border-blue-700 border-blue-700 hover:bg-white hover:text-primary flex items-center'> <PiVideoFill className='text-xl'></PiVideoFill>  ভিডিও দেখুন</Link>
+            <Link to={`/video/${card.id}`} className='btn my-1 py-0 px-2 rounded-3xl btn-outline text-white border-2 hover:border-2  hover:border-blue-700 border-blue-700 hover:bg-white hover:text-primary flex items-center'> <PiVideoFill className='text-xl'></PiVideoFill>  ভিডিও দেখুন</Link>
         </div>
     );
 };

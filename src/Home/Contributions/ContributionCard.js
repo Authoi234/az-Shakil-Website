@@ -14,7 +14,7 @@ const ContributionCard = ({card}) => {
                 <h2 className="md:text-3xl text-xl text-wrap">{card.name}</h2>
                 <p className='text-sm md:text-lg my-4 text-wrap'>{card.para}</p>
                 <div className="card-actions">
-                    <button className="px-3 bg-primary text-sm md:text-lg py-1 text-wrap rounded-full">Buy Now</button>
+                    <button className="px-3 text-sm md:text-lg py-1 text-wrap rounded-full">Buy Now</button>
                 </div>
             </div>
         </div>
