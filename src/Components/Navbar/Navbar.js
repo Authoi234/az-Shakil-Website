@@ -11,7 +11,7 @@ const Navbar = () => {
     ];
 
     return (
-        <div className="fixed top-0 left-0 right-0 z-50 h-16 bg-transparent backdrop-blur-sm">
+        <div className="fixed top-0 left-0 right-0 z-50 h-20 bg-transparent backdrop-blur-md">
             <div className='container mx-auto flex justify-between items-center h-full'>
                 <div className="w-72 border-0 outline-none pt-2" data-aos="fade-right">
                     <img className='w-full' src={logo} alt="" />
