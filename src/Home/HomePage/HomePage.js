@@ -15,13 +15,13 @@ const HomePage = () => {
         const stars = starContainer.querySelectorAll('.star');
         stars.forEach(star => star.remove());
     
-        for (let i = 0; i < 20; i++) { // Create 30 stars
+        for (let i = 0; i < 20; i++) {
             const star = document.createElement('div');
             star.className = 'star';
             star.style.width = `6px`;
-            star.style.height = star.style.width; // Keep it circular
-            star.style.top = `${Math.random() * 100}%`; // Random vertical position
-            star.style.left = `${Math.random() * 100}%`; // Random horizontal position
+            star.style.height = star.style.width; 
+            star.style.top = `${Math.random() * 100}%`;
+            star.style.left = `${Math.random() * 100}%`;
             starContainer.appendChild(star);
         }
     }, []);
@@ -35,7 +35,7 @@ const HomePage = () => {
                             <h1 className="text-4xl text-white font-bold">Our mission is to help <br /> Bangladeshi students </h1>
                             <h1 className="text-6xl text-white font-bold">study abroad</h1>
                             <p className="text-md text-white py-2">We are Working for Bangladeshi Students Study Abroad</p>
-                            <button id="test" className="special-neon-btn btn text-primary px-16 mt-4 z-20 relative " style={{textShadow: "0 0 .20em #FFF7, 0 0 .30em #14f7ff", boxShadow: "inset 0 0 .5em #14f7ff, 0 0 .9em #14f7ff"}}>i’m a student who wants study abroad</button>
+                            <button className="special-neon-btn btn text-primary hover:bg-[#400C63] px-16 mt-4 z-20 relative hover:text-white" style={{textShadow: "0 0 .20em #FFF7, 0 0 .30em #14f7ff", boxShadow: "inset 0 0 .5em #14f7ff, 0 0 .9em #14f7ff"}}>i’m a student who wants study abroad</button>
                         </div>
                     </div>
                     <img className='bg-cover w-full' src={bottomLayerImg} alt="" />

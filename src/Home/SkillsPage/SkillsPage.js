@@ -16,7 +16,7 @@ const SkillsPage = () => {
 
     return (
         <div
-            className='bg-[#173158] py-12 md:flex md:justify-center md:items-center px-6 text-center'>
+            className='bg-[#00001F] py-12 md:flex md:justify-center md:items-center px-6 text-center'>
             <div className='grid lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-6 mx-10'>
                 {
                     isPending === true ? <div><span className="loading loading-spinner text-primary"></span></div> : skillsData?.map(item => <div data-aos="fade-up"><SkillsCards card={item}></SkillsCards></div>)
