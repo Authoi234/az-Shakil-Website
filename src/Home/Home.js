@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import HomePage from './HomePage/HomePage';
 import "../App.css"
 import SkillsPage from './SkillsPage/SkillsPage';
@@ -7,6 +7,7 @@ import AboutUs from './AboutUs/AboutUs';
 import LearnersReviews from './Reviews/LearnersReviews';
 
 const Home = () => {
+
     return (
         <div className=''>
             <HomePage></HomePage>
@@ -14,7 +15,7 @@ const Home = () => {
             <Contributions></Contributions>
             <AboutUs></AboutUs>
             <LearnersReviews></LearnersReviews>
-        </div>
+        </div >
     );
 };
 

@@ -133,7 +133,9 @@
     perspective(0.3em)
     rotateX(10deg)
     scale(0.8, 0.3); /* Restore scale on hover */
-}
+};
+
+
 
 
 @keyframes App-logo-spin {

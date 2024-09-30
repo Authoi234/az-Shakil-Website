@@ -3,9 +3,9 @@ import React from 'react';
 const ContributionCard = ({card}) => {
     return (
         <div className={`rounded-3xl hover:scale-105 flip-card flex-shrink-0 w-11/12 mt-5 sm:w-80 md:w-96 lg:w-1/4 text-white bg-[#0c1222] shadow-xl`} style={{ transition: 'all 0.5s ease', }}>
-            <figure>
+            <figure className='flex justify-center items-center'>
                 <img
-                    className='w-full h-full rounded-t-2xl flip-3d'
+                    className=' w-full max-w-[600px] h-full p-2 rounded-t-2xl flip-3d'
                     src={card.img}
                     alt=''
                 />
