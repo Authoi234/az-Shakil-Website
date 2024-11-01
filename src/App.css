@@ -24,6 +24,12 @@
   color: white;
 }
 
+.homepage-animated-bg {
+  background: radial-gradient(circle, rgba(29, 36, 202, 1) 0%, rgba(32, 22, 88, 1) 29%);
+  transition: 0.5s;
+  clip-path: inset(0 0 auto 0);
+}
+
 .App-link {
   color: #61dafb;
 }
@@ -117,23 +123,23 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: #14f7ff;
-  transform: 
-    perspective(0.3em)
-    rotateX(10deg)
-    scale( 0.8, 0.3);
+  background-color: #224eff;
+  transform:
+    perspective(0.3em) rotateX(10deg) scale(0.8, 0.3);
   filter: blur(15px);
-  opacity: 0; 
+  opacity: 0;
   transition: opacity 0.5s ease, transform 0.5s ease;
 }
 
 .special-neon-btn:hover::before {
-  opacity: 0.6; /* Visible on hover */
-  transform: 
-    perspective(0.3em)
-    rotateX(10deg)
-    scale(0.8, 0.3); /* Restore scale on hover */
-};
+  opacity: 0.6;
+  /* Visible on hover */
+  transform:
+    perspective(0.3em) rotateX(10deg) scale(0.8, 0.3);
+  /* Restore scale on hover */
+}
+
+;
 
 
 

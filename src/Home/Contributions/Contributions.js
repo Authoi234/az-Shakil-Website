@@ -3,6 +3,10 @@ import image from "../../assets/download.svg";
 import '../../App.css';
 import ContributionCard from './ContributionCard';
 import contributionImg from '../../assets/bgContributionImg.jpg';
+import { useAnimation } from 'framer-motion';
+import { motion } from 'framer-motion';
+
+const easeOut = (t) => t * (2 - t); // Quadratic easing
 
 const Contributions = () => {
 
@@ -11,6 +15,7 @@ const Contributions = () => {
   const [startX, setStartX] = useState(0);
   const [scrollLeft, setScrollLeft] = useState(0);
   const [allowVerticalScroll, setAllowVerticalScroll] = useState(false);
+  const controls = useAnimation();
 
   useEffect(() => {
     const div = scrollRef.current;
@@ -21,7 +26,8 @@ const Contributions = () => {
       // If horizontal scroll is not at the end, prevent default and scroll horizontally
       if (div.scrollLeft < maxScrollLeft) {
         event.preventDefault();
-        div.scrollLeft += event.deltaY; // Scroll horizontally with vertical scroll
+        const speedMultiplier = 2; // Increase this for faster scroll
+        div.scrollLeft += event.deltaY * speedMultiplier; // Scroll horizontally with vertical scroll
       }
 
       // Once horizontal scroll is finished, allow vertical scroll
@@ -62,8 +68,11 @@ const Contributions = () => {
     if (!isDragging) return; // Only run this if dragging is true
     event.preventDefault();
     const x = event.pageX - scrollRef.current.offsetLeft;
-    const walk = (x - startX) * 2; // Multiply by 2 to make scrolling faster
+    const walk = (x - startX) * 3; // Increase the factor for faster scrolling
     scrollRef.current.scrollLeft = scrollLeft - walk;
+
+    // Smooth scrolling with Framer Motion
+    controls.start({ x: -walk });
   };
 
   const handleMouseUpOrLeave = () => {
@@ -93,13 +102,15 @@ const Contributions = () => {
       name: "Spiderman",
       para: "If a dog chews shoes whose shoes does he choose"
     },
+
   ]
 
 
   return (
     <div className='px-5 py-10 pb-5' style={{
-      backgroundImage: `linear-gradient(45deg, #00001f 35%,#7621af 84%,#f5c4ff 88%,#7621af 91%,#271628 95%), url(${contributionImg})`,backgroundSize : 'cover', backgroundPosition: "center",  }}>
-        <div data- aos="fade-up" >
+      backgroundImage: `linear-gradient(45deg, #00001f 35%,#7621af 84%,#f5c4ff 88%,#7621af 91%,#271628 95%), url(${contributionImg})`, backgroundSize: 'cover', backgroundPosition: "center",
+    }}>
+      <div data- aos="fade-up" >
         <div className='flex items-center justify-center'>
           <div className='w-40'>
             <img src={image} className='w-full' alt="" />
@@ -112,21 +123,21 @@ const Contributions = () => {
           </p>
         </div>
       </div >
-  <div
-    ref={scrollRef}
-    className='special-scrolling p-10 flex gap-8 md:gap-16 whitespace-nowrap w-full px-2 md:px-4 py-2 overflow-x-scroll'
-    style={{ scrollbarColor: 'transparent transparent', whiteSpace: 'nowrap' }}
-    onMouseDown={handleMouseDown}
-    onMouseMove={handleMouseMove}
-    onMouseUp={handleMouseUpOrLeave}
-    onMouseLeave={handleMouseUpOrLeave}
-  >
-    {
-      sectionData.map((data, i) =>
-        <ContributionCard key={i} card={data}></ContributionCard>
-      )
-    }
-  </div>
+      <motion.div
+        ref={scrollRef}
+        className='special-scrolling p-10 flex gap-8 md:gap-16 whitespace-nowrap w-full px-2 md:px-4 py-2 overflow-x-scroll'
+        style={{ scrollbarColor: 'transparent transparent', whiteSpace: 'nowrap', scrollBehavior: "smooth", }}
+        onMouseDown={handleMouseDown}
+        onMouseMove={handleMouseMove}
+        onMouseUp={handleMouseUpOrLeave}
+        onMouseLeave={handleMouseUpOrLeave}
+      >
+        {
+          sectionData.map((data, i) =>
+            <ContributionCard key={i} card={data}></ContributionCard>
+          )
+        }
+      </motion.div>
     </div >
   );
 };
