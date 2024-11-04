@@ -2,6 +2,7 @@ import React from 'react';
 import '../../App.css';
 import logo from "../../assets/logo.png";
 import '../../App.css'
+import { Link } from 'react-router-dom';
 
 const Navbar = () => {
     const navMenu = [
@@ -45,7 +46,7 @@ const Navbar = () => {
                             </ul>
                         </div>
                     </div>
-                    <button className='rounded-full  text-white font-normal h-8 px-2 py-0 bg-gradient-to-r from-pink-500 to-red-500 hover:border-2 hover:border-red-500 hover:bg-transparent transition-all'>Book Now</button>
+                    <button className='rounded-full  text-white font-normal h-8 px-2 py-0 bg-gradient-to-r from-pink-500 to-red-500 hover:border-2 hover:border-red-500 hover:bg-transparent transition-all'><Link to={'/bookInfo'}>Book Now</Link></button>
                 </div>
             </div>
         </div >

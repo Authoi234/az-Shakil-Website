@@ -2,6 +2,7 @@ import { createBrowserRouter } from "react-router-dom";
 import Main from "../layout/Main";
 import Home from "../Home/Home";
 import VideoSect from "../Home/Videos/VideoSect";
+import BookInfo from "../booking/BookNow/BookInfo";
 
 export const router = createBrowserRouter([
     {
@@ -19,4 +20,8 @@ export const router = createBrowserRouter([
             }
         ]
     },
+    {
+        path: "/bookInfo",
+        element: <BookInfo></BookInfo>
+    }
 ])

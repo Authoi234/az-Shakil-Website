@@ -7,8 +7,10 @@ import { FaFacebookF, FaYoutube } from "react-icons/fa";
 
 const AboutUs = () => {
     return (
-        <div className='bg-[#0e2850] px-5 py-10 text-center'>
-            <h1 className="text-3xl font-extrabold text-white mb-8" data-aos="fade-up">
+        <div className='bg-[#0e2850] px-5 py-5 text-center' style={{
+            background: "linear-gradient(0deg, rgba(14,40,80,1) 67%, rgba(10,0,65,1) 100%)"
+        }}>
+            <h1 className="text-3xl font-extrabold text-white mb-3" data-aos="fade-up">
                 প্রতিষ্ঠাতা সম্পর্কে কিছু কথা
             </h1>
             <div className='lg:flex lg:justify-center lg:items-center text-center' data-aos="flip-right">
@@ -48,12 +50,20 @@ const AboutUs = () => {
                         <div className="divider divider-neutral divider-horizontal h-14 w-2"></div>
                         <div className='flex gap-3'>
                             <a href="https://www.facebook.com/infoAZS/" target="_blank" rel="noopener noreferrer"><FaFacebookF className='bg-gradient-to-r from-blue-400 to-blue-600 text-white p-0.5 rounded-full w-10 h-10' /></a>
-                            <a href="https://www.youtube.com/@iAZShakil" target="_blank" rel="noopener noreferrer"><FaYoutube className="text-red-500 bg-white rounded-badge p-0.5 w-10 h-10"/></a>
+                            <a href="https://www.youtube.com/@iAZShakil" target="_blank" rel="noopener noreferrer"><FaYoutube className="text-red-500 bg-white rounded-badge p-0.5 w-10 h-10" /></a>
                             <a href="https://azshakil.com/" target="_blank" rel="noopener noreferrer"><img className='w-10 h-10' src={azShakilPortfolioImage} alt="" /></a>
                         </div>
                     </div>
+                    <div>
+                        <h4 className='text-2xl text-white'>VISA Success Story</h4>
+                        <p className='text-base text-white'>
+                            STUDENTS Wing by AZ যা এখন 𝗮𝗽𝗽𝗿𝗲𝗻𝘁 𝗴𝗹𝗼𝗯𝗮𝗹 এর সামান্য কিছু সফলতা যা শুরু করেছিলাম একা, এখন আলহামদুলিল্লাহ বলার মত একটা টিম আছে। যারা আপনাদের কে ডেডিকেটেটলি গাইড, সাজেশন এবং হেল্প করার জন্য প্রস্তুত । আমি এবং আমার টীম কোন কোয়ালিটি তে বিশ্বাসী কোয়ানটিটি, লাইক, কমেন্টে বিশ্বাসী নয়, কাজে বিশ্বাসী ।
+                        </p>
+                        <span className='text-white'>See Visa Success story, Link</span><p className='text-white '><a className='underline decoration-[#fffbc2] underline-offset-2' href="https://www.facebook.com/media/set/?set=a.690482626426774&type=3" rel='noreferrer' target='_blank'>Click Here</a></p>
+                    </div>
                 </div>
             </div>
+
         </div>
     );
 };

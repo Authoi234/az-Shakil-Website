@@ -2,14 +2,14 @@ import React, { useEffect, useRef, useState } from 'react';
 import image from "../../assets/download.svg";
 import '../../App.css';
 import ContributionCard from './ContributionCard';
-import contributionImg from '../../assets/bgContributionImg.jpg';
 import { useAnimation } from 'framer-motion';
 import { motion } from 'framer-motion';
-
-const easeOut = (t) => t * (2 - t); // Quadratic easing
+import contributionImg1 from '../../assets/contribution1.webp';
+import contributionImg2 from '../../assets/contributionImg2.png';
+import contributionImg3 from '../../assets/contributionImg3.jpg';
+import contributionIcon from '../../assets/contributionIcon.png';
 
 const Contributions = () => {
-
   const scrollRef = useRef(null);
   const [isDragging, setIsDragging] = useState(false);
   const [startX, setStartX] = useState(0);
@@ -83,24 +83,28 @@ const Contributions = () => {
 
   const sectionData = [
     {
-      img: "https://kingdompen.org/wp-content/uploads/2021/10/tom-holland-vs-andrew-garfield-vs-tobey-maguire-who-is-the-better-spider-man-1.jpg",
-      name: "Spiderman",
-      para: "If a dog chews shoes whose shoes does he choose"
+      img: contributionImg1,
+      name: "𝐐 & 𝐀 𝐒𝐞𝐬𝐬𝐢𝐨𝐧 𝐰𝐢𝐭𝐡 𝐇𝐨𝐧𝐨𝐫𝐚𝐛𝐥𝐞 𝐇𝐂 𝐃𝐫. 𝐊𝐡𝐚𝐥𝐢𝐥𝐮𝐫 𝐑𝐚𝐡𝐦𝐚𝐧 𝐒𝐢𝐫",
+      para: "𝑯𝒊𝒈𝒉 𝑪𝒐𝒎𝒎𝒊𝒔𝒔𝒊𝒐𝒏𝒆𝒓 𝑺𝒊𝒓 answers most of the student's questions in this video. This is the 2nd part of the 𝟭𝟵𝘁𝗵 𝗝𝘂𝗻𝗲 𝗺𝗲𝗲𝘁𝗶𝗻𝗴, 𝘄𝗵𝗶𝗰𝗵 𝘄𝗮𝘀 𝗵𝗲𝗹𝗱 𝗼𝗻 𝗭𝗼𝗼𝗺",
+      link: "https://www.facebook.com/watch/?v=768175584203625"
     },
     {
-      img: "https://kingdompen.org/wp-content/uploads/2021/10/tom-holland-vs-andrew-garfield-vs-tobey-maguire-who-is-the-better-spider-man-1.jpg",
-      name: "Spiderman",
-      para: "If a dog chews shoes whose shoes does he choose"
+      img: contributionImg1,
+      name: "SDS updates with Honorable HC Dr. Khalidur Rahman Sir",
+      para: "𝑯𝒊𝒈𝒉 𝑪𝒐𝒎𝒎𝒊𝒔𝒔𝒊𝒐𝒏𝒆𝒓 𝑺𝒊𝒓 answered most hyped questions 𝒲𝒽𝑒𝓃 𝒮𝒟𝒮 𝓌𝒾𝓁𝓁 𝒶𝓋𝒶𝒾𝓁𝒶𝒷𝓁𝑒 𝒻𝑜𝓇 𝐵𝒶𝓃𝑔𝓁𝒶𝒹𝑒𝓈𝒽𝒾 𝒮𝓉𝓊𝒹𝑒𝓃𝓉𝓈 in this video. 𝗧𝗵𝗲 𝗺𝗲𝗲𝘁𝗶𝗻𝗴 𝘄𝗮𝘀 𝗵𝗲𝗹𝗱 𝗼𝗻 𝗭𝗼𝗼𝗺 𝗣𝗹𝗮𝘁𝗳𝗼𝗿𝗺 𝗮𝘁 𝗦𝘂𝗻𝗱𝗮𝘆 𝟭𝟵𝘁𝗵 𝗝𝘂𝗻𝗲, 𝟮𝟬𝟮𝟮.",
+      link: "https://www.facebook.com/watch/?v=776487500435395"
     },
     {
-      img: "https://kingdompen.org/wp-content/uploads/2021/10/tom-holland-vs-andrew-garfield-vs-tobey-maguire-who-is-the-better-spider-man-1.jpg",
-      name: "Spiderman",
-      para: "If a dog chews shoes whose shoes does he choose"
+      img: contributionImg2,
+      name: "Canadian Student Direct Stream for Bangladeshi Students was live — with Engr AZ Shakil.",
+      para: "Canadian Student Direct Stream for Bangladeshi Students was live — with Engr AZ Shakil.",
+      link: "https://www.facebook.com/watch/live/?ref=watch_permalink&v=777927390091880"
     },
     {
-      img: "https://kingdompen.org/wp-content/uploads/2021/10/tom-holland-vs-andrew-garfield-vs-tobey-maguire-who-is-the-better-spider-man-1.jpg",
-      name: "Spiderman",
-      para: "If a dog chews shoes whose shoes does he choose"
+      img: contributionImg3,
+      name: " Canadian Student Direct Stream for Bangladeshi Students Discussion with 𝐂𝐒𝐃𝐒𝐁𝐒 𝐓𝐞𝐚𝐦 ",
+      para: "AZ Shakil Canadian Student Direct Stream for Bangladeshi Students (CSDSBS), that is the third part",
+      link: "https://www.facebook.com/csdsbsofficial/videos/440509444570773"
     },
 
   ]
@@ -108,9 +112,12 @@ const Contributions = () => {
 
   return (
     <div className='px-5 py-10 pb-5' style={{
-      backgroundImage: `linear-gradient(45deg, #00001f 35%,#7621af 84%,#f5c4ff 88%,#7621af 91%,#271628 95%), url(${contributionImg})`, backgroundSize: 'cover', backgroundPosition: "center",
-    }}>
-      <div data- aos="fade-up" >
+      background: "linear-gradient(0deg, #0A0041 0%, rgba(0,0,31,1) 96%)"
+    }} >
+      <div className="w-24 h-24 -mb-8 p-0 box-content border-0 outline-none">
+        <img className='w-full' src={contributionIcon} alt='' />
+      </div>
+      <div data-aos="fade-up" >
         <div className='flex items-center justify-center'>
           <div className='w-40'>
             <img src={image} className='w-full' alt="" />
