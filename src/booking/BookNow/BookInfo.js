@@ -5,12 +5,12 @@ import { motion } from 'framer-motion';
 
 const BookInfo = () => {
     return (
-        <div className='bg-[#407BFF]  py-10 px-24'>
-            <div className="flex justify-around items-center">
-                <div className='w-[45%]'>
+        <div className='bg-[#407BFF] pt-24  py-10 px-24'>
+            <div className="md:flex md:justify-around md:items-center text-center">
+                <div className='md:w-[45%]'>
                     <img className='w-full' src={rafiki} alt="" />
                 </div>
-                <div className='text-center w-[45%]'>
+                <div className='text-center md:w-[45%]'>
                     <h1 className='text-4xl text-white font-semibold'>We’ll use calendly</h1>
                     <div className='p-8 bg-white w-full mx-5 my-8 rounded-2xl'>
                         <div className='text-start'>

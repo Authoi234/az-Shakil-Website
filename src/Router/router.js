@@ -17,11 +17,11 @@ export const router = createBrowserRouter([
                 path: "/video/:id",
                 element: <VideoSect></VideoSect>,
                 loader: ({params}) => fetch(`https://az-shakil-website-server.vercel.app/videos/${params.id}`)
+            },
+            {
+                path: "/bookInfo",
+                element: <BookInfo></BookInfo>
             }
         ]
-    },
-    {
-        path: "/bookInfo",
-        element: <BookInfo></BookInfo>
     }
 ])

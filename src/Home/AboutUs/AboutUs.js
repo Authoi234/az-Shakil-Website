@@ -8,7 +8,7 @@ import { FaFacebookF, FaYoutube } from "react-icons/fa";
 const AboutUs = () => {
     return (
         <div className='bg-[#0e2850] px-5 py-5 text-center' style={{
-            background: "linear-gradient(0deg, rgba(14,40,80,1) 67%, rgba(10,0,65,1) 100%)"
+            background: "linear-gradient(0deg, rgba(14,40,80,1) 98%, rgba(10,0,65,1) 100%)"
         }}>
             <h1 className="text-3xl font-extrabold text-white mb-3" data-aos="fade-up">
                 প্রতিষ্ঠাতা সম্পর্কে কিছু কথা
@@ -17,7 +17,7 @@ const AboutUs = () => {
                 <div
                     className='flex px-3'
                 >
-                    <div className='absolute' style={{ borderTop: "30px solid #0e2850", borderRight: "30px solid #7d9feb", borderBottom: "30px solid #7d9feb", borderLeft: "30px solid #0e2850", boxShadow: '1px 1px 0px black', borderEndEndRadius: "16px" }}></div>
+                    <div className='absolute' style={{ borderTop: "30px solid #0E2850", borderRight: "30px solid pink", borderBottom: "30px solid pink", borderLeft: "30px solid #0E2850", boxShadow: '1px 1px 0px black', borderEndEndRadius: "16px" }}></div>
                     <img className='lg:w-1/2 lg:h-96 w-1/2 flex justify-center items-center rounded-s-2xl' src={Img1} alt="" />
                     <img className='lg:w-1/2 lg:h-96 w-1/2 flex justify-center items-center rounded-e-2xl' src={Img2} alt="" />
                 </div>

@@ -95,7 +95,9 @@ const LearnersReviews = () => {
     };
 
     return (
-        <div className='bg-[#173158] px-20 py-12'>
+        <div className='px-20 py-12' style={{
+            background: "linear-gradient(0deg, rgba(23,49,88,1) 86%, rgba(14,40,80,1) 91%)"
+        }}>
             <div className="bg-[#0f172a] pt-5 px-16 text-center">
                 <div>
                     <div className="flex justify-center items-center" data-aos="fade-up">
@@ -106,7 +108,7 @@ const LearnersReviews = () => {
                     <h1 className='text-3xl font-bold text-white'><span className='text-[#36b7f0]'>লার্নাররা</span> আমাদের সম্পর্কে যা ভাবেন</h1>
                     <p className='text-md font-semibold text-[#8f9eb3]'>লার্নাররা সর্বদাই এপরেন্ট এর প্রতি তাদের ভালবাসা প্রকাশ করেছেন</p>
                 </div>
-                <div className='mt-5 columns-3 flex-wrap gap-10'>
+                <div className='mt-5 columns-1 md:columns-2 lg:columns-3 flex-wrap gap-10'>
                     {visibleReviews.map((data, index) => (
                         <div key={index} className="bg-[#182234] px-2 text-white rounded-3xl my-10 py-3 break-inside-avoid" data-aos="zoom-in">
                             <div className='flex justify-center items-start'>
