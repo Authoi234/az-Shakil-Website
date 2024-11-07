@@ -16,7 +16,7 @@ export const router = createBrowserRouter([
             {
                 path: "/video/:id",
                 element: <VideoSect></VideoSect>,
-                loader: ({params}) => fetch(`http://localhost:5000/videos/${params.id}`)
+                loader: ({params}) => fetch(`https://az-shakil-website-server.vercel.app/videos/${params.id}`)
             }
         ]
     },

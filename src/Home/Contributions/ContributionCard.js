@@ -3,9 +3,9 @@ import React from 'react';
 const ContributionCard = ({card}) => {
     return (
         <div className={`rounded-3xl flip-card flex-shrink-0 w-11/12 mt-5 sm:w-80 md:w-96 lg:w-1/4 text-white bg-[#0c1222] shadow-xl`} style={{ transition: 'all 0.5s ease', }}>
-            <figure className='flex justify-center items-center'>
+            <figure className='flex justify-center items-center overflow-hidden rounded-t-2xl'>
                 <img
-                    className=' w-full max-w-[600px] h-full p-2 rounded-t-2xl flip-3d'
+                    className=' w-full max-w-[600px] h-full p-2 rounded-t-2xl overflow-hidden transition-transform duration-500 ease-in-out hover:scale-125'
                     src={card.img}
                     alt=''
                 />
@@ -22,3 +22,4 @@ const ContributionCard = ({card}) => {
 };
 
 export default ContributionCard;
+// flip-3d

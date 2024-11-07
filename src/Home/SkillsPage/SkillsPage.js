@@ -10,7 +10,7 @@ const SkillsPage = () => {
     const { isPending, error, data: skillsData = 0 } = useQuery({
         queryKey: ['skillsData'],
         queryFn: async () => {
-            const res = await fetch("http://localhost:5000/videos/");
+            const res = await fetch("https://az-shakil-website-server.vercel.app/videos/");
             const data = await res.json();
             return data;
         }
