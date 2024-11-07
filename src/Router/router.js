@@ -3,6 +3,7 @@ import Main from "../layout/Main";
 import Home from "../Home/Home";
 import VideoSect from "../Home/Videos/VideoSect";
 import BookInfo from "../booking/BookNow/BookInfo";
+import BookingLayout from "../layout/BookingLayout";
 
 export const router = createBrowserRouter([
     {
@@ -17,11 +18,17 @@ export const router = createBrowserRouter([
                 path: "/video/:id",
                 element: <VideoSect></VideoSect>,
                 loader: ({params}) => fetch(`https://az-shakil-website-server.vercel.app/videos/${params.id}`)
-            },
-            {
-                path: "/bookInfo",
-                element: <BookInfo></BookInfo>
             }
+        ]
+    },
+    {
+        path: "/book",
+        element: <BookingLayout></BookingLayout>,
+        children: [
+            {
+                path: '/bookInfo',
+                element: <BookInfo></BookInfo>
+            },
         ]
     }
 ])

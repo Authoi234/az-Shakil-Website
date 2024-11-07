@@ -1,18 +1,16 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import { Outlet } from 'react-router-dom';
 import "../App.css";
 import Navbar from '../Components/Navbar/Navbar';
-import Footer from '../Components/Footer/Footer';
 
-const Main = () => {
+const BookingLayout = () => {
 
     return (
         <div>
             <Navbar></Navbar>
             <Outlet></Outlet>
-            <Footer></Footer>
         </div>
     );
 };
 
-export default Main;
+export default BookingLayout;
