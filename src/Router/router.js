@@ -26,7 +26,7 @@ export const router = createBrowserRouter([
         element: <BookingLayout></BookingLayout>,
         children: [
             {
-                path: '/bookInfo',
+                path: '/book/bookInfo',
                 element: <BookInfo></BookInfo>
             },
         ]
