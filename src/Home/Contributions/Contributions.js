@@ -16,6 +16,52 @@ const Contributions = () => {
   const [scrollLeft, setScrollLeft] = useState(0);
   const [allowVerticalScroll, setAllowVerticalScroll] = useState(false);
   const controls = useAnimation();
+  const [bgColor, setBgColor] = useState("rgb(0, 0, 31)");
+
+
+  const [isInView, setIsInView] = useState(false);
+  const componentRef = useRef(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => setIsInView(entry.isIntersecting),
+      { threshold: 0.1 }
+    );
+
+    if (componentRef.current) {
+      observer.observe(componentRef.current);
+    }
+
+    return () => {
+      if (componentRef.current) {
+        observer.unobserve(componentRef.current);
+      }
+    };
+  }, []);
+
+  useEffect(() => {
+    if (!isInView) return;
+
+    const handleScroll = () => {
+      const componentTop = componentRef.current.getBoundingClientRect().top;
+      const maxScroll = 100;
+      const scrollPercent = Math.min(Math.max(1 - componentTop / maxScroll, 0), 1);
+
+      const startColor = [0, 0, 31];
+      const endColor = [10, 0, 65];
+
+      const currentColor = startColor.map((start, i) =>
+        Math.round(start + (endColor[i] - start) * scrollPercent)
+      );
+
+      setBgColor(`rgb(${currentColor.join(",")})`);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [isInView]);
+
+
 
   useEffect(() => {
     const div = scrollRef.current;
@@ -81,6 +127,9 @@ const Contributions = () => {
 
 
 
+
+
+
   const sectionData = [
     {
       img: contributionImg1,
@@ -111,9 +160,13 @@ const Contributions = () => {
 
 
   return (
-    <div className='px-5 py-10 pb-5' style={{
-      background: "linear-gradient(0deg, #0A0041 0%, rgba(0,0,31,1) 96%)"
-    }} >
+    <div
+      ref={componentRef}
+      className='px-5 py-10 pb-5'
+      style={{
+        background: bgColor,
+        transition: "background-color 0.5s ease-in-out"
+      }} >
       <div className="w-24 h-24 -mb-8 p-0 box-content border-0 outline-none">
         <img className='w-full' src={contributionIcon} alt='' />
       </div>

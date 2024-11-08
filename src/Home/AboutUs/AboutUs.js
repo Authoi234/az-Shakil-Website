@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import Img1 from '../../assets/aboutImg1.jpg';
 import Img2 from '../../assets/aboutImg2.jpg';
 import logo from '../../assets/logo.png';
@@ -6,9 +6,53 @@ import azShakilPortfolioImage from '../../assets/azShakilPortfolioImage.png';
 import { FaFacebookF, FaYoutube } from "react-icons/fa";
 
 const AboutUs = () => {
+
+    const [bgColor, setBgColor] = useState("rgb(10, 0, 65)");
+    const [isInView, setIsInView] = useState(false);
+    const componentRef = useRef(null);
+
+    useEffect(() => {
+        const observer = new IntersectionObserver(
+            ([entry]) => setIsInView(entry.isIntersecting),
+            { threshold: 0.1 }
+        );
+
+        if (componentRef.current) {
+            observer.observe(componentRef.current);
+        }
+
+        return () => {
+            if (componentRef.current) {
+                observer.unobserve(componentRef.current);
+            }
+        };
+    }, []);
+
+    useEffect(() => {
+        if (!isInView) return;
+
+        const handleScroll = () => {
+            const componentTop = componentRef.current.getBoundingClientRect().top;
+            const maxScroll = 50;
+            const scrollPercent = Math.min(Math.max(1 - componentTop / maxScroll, 0), 1);
+
+            const startColor = [10, 0, 65];
+            const endColor = [14,40,80];
+
+            const currentColor = startColor.map((start, i) =>
+                Math.round(start + (endColor[i] - start) * scrollPercent)
+            );
+
+            setBgColor(`rgb(${currentColor.join(",")})`);
+        };
+
+        window.addEventListener("scroll", handleScroll);
+        return () => window.removeEventListener("scroll", handleScroll);
+    }, [isInView]);
+
     return (
-        <div className='bg-[#0e2850] px-5 py-5 text-center' style={{
-            background: "linear-gradient(0deg, rgba(14,40,80,1) 98%, rgba(10,0,65,1) 100%)"
+        <div className='px-5 py-5 text-center' ref={componentRef} style={{
+            background: bgColor
         }}>
             <h1 className="text-3xl font-extrabold text-white mb-3" data-aos="fade-up">
                 প্রতিষ্ঠাতা সম্পর্কে কিছু কথা
