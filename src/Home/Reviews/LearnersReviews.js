@@ -1,8 +1,50 @@
-import React, { useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import introImg from '../../assets/peep1.f4841716.svg';
 
 const LearnersReviews = () => {
     const [showAll, setShowAll] = useState(false);
+    const [bgColor, setBgColor] = useState("rgb(14,40,80)");
+    const [isInView, setIsInView] = useState(false);
+    const componentRef = useRef(null);
+
+    useEffect(() => {
+        const observer = new IntersectionObserver(
+            ([entry]) => setIsInView(entry.isIntersecting),
+            { threshold: 0.1 }
+        );
+
+        if (componentRef.current) {
+            observer.observe(componentRef.current);
+        }
+
+        return () => {
+            if (componentRef.current) {
+                observer.unobserve(componentRef.current);
+            }
+        };
+    }, []);
+
+    useEffect(() => {
+        if (!isInView) return;
+
+        const handleScroll = () => {
+            const componentTop = componentRef.current.getBoundingClientRect().top;
+            const maxScroll = 200;
+            const scrollPercent = Math.min(Math.max(1 - componentTop / maxScroll, 0), 1);
+
+            const startColor = [14,40,80];
+            const endColor = [ 23, 49, 88  ];
+
+            const currentColor = startColor.map((start, i) =>
+                Math.round(start + (endColor[i] - start) * scrollPercent)
+            );
+
+            setBgColor(`rgb(${currentColor.join(",")})`);
+        };
+
+        window.addEventListener("scroll", handleScroll);
+        return () => window.removeEventListener("scroll", handleScroll);
+    }, [isInView])
 
     const reviewsData = [
         {
@@ -95,8 +137,9 @@ const LearnersReviews = () => {
     };
 
     return (
-        <div className='px-20 py-12' style={{
-            background: "linear-gradient(0deg, rgba(23,49,88,1) 86%, rgba(14,40,80,1) 91%)"
+        <div className='px-20 py-12' ref={componentRef} style={{
+            backgroundColor: bgColor,
+            transition: 'background-color 0.5s ease-in'
         }}>
             <div className="bg-[#0f172a] pt-5 px-16 text-center">
                 <div>
