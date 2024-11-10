@@ -14,6 +14,7 @@ root.render(
   <React.StrictMode>
     <QueryClientProvider client={queryClient}>
       <ParallaxProvider>
+
         <App />
       </ParallaxProvider>
     </QueryClientProvider>

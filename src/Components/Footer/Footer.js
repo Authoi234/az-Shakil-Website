@@ -14,7 +14,7 @@ import azShakilPortfolioImage from '../../assets/azShakilPortfolioImage.png';
 const Footer = () => {
     return (
         <div>
-            <footer className="footer bg-neutral text-neutral-content p-10">
+            <footer className="footer bg-[#0F172A] text-neutral-content p-10">
                 <aside>
                     <img src={logo} className='w-80 py-2 rounded-xl bg-white p-4' alt="" />
                     <p className='text-base'>
