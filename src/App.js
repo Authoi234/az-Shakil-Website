@@ -3,27 +3,9 @@ import './App.css';
 import { router } from './Router/router';
 import { useEffect, useState } from 'react';
 import logo from './assets/logo.png';
+import preloader from './assets/earthpreloader.gif';
 
 function App() {
-
-  const [progress, setProgress] = useState(0);
-  const [isComplete, setIsComplete] = useState(false);
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setIsComplete(false)
-      setProgress((prev) => {
-        if (prev >= 100) {
-          clearInterval(interval); // Stop the interval when progress reaches 100
-          setIsComplete(true);
-          return 100;
-        }
-        return prev + 1;
-      });
-    }, 30); // Adjust this delay for faster or slower animation
-
-    return () => clearInterval(interval); // Cleanup interval on component unmount
-  }, []);
 
   useEffect(() => {
     const preloader = document.getElementById('preloader');
@@ -35,9 +17,9 @@ function App() {
         setTimeout(() => {
           preloader.style.display = "none"
         }, 1100);
-      }, 1000);
+      }, 800);
     });
-  }, [isComplete, progress])
+  }, [])
 
   return (
     <div className="">
@@ -47,12 +29,9 @@ function App() {
             <div className='flex justify-center items-center'>
               <img className='bg-white p-1 rounded-lg w-80 mt-10' src={logo} alt="" />
             </div>
-            <h2 className="text-4xl my-2 text-white">{isComplete ? "Completed" : "Loading..."}</h2>
-            <div
-              className="radial-progress bg-black text-white border-black border-8 shadow-white sahdow shadow-xl text-3xl"
-              style={{ "--value": progress, "--size": '12rem', "--thickness": '1rem' }}
-              role="progressbar">
-              {progress}%
+            <h2 className="text-4xl my-2 text-white">Loading...</h2>
+            <div className="flex justify-center items-center">
+              <img className='w-full' src={preloader} alt="" />
             </div>
           </div>
         </div>
