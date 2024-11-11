@@ -11,14 +11,10 @@ function App() {
     const preloader = document.getElementById('preloader');
 
     window.addEventListener('load', () => {
-      setTimeout(() => {
         preloader.style.opacity = '0';
         preloader.style.transition = '1.5s ease-in';
-        setTimeout(() => {
           preloader.style.display = "none"
-        }, 1100);
-      }, 800);
-    });
+    })
   }, [])
 
   return (
