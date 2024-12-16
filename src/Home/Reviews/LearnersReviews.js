@@ -149,7 +149,7 @@ const LearnersReviews = () => {
                         </div>
                     </div>
                     <h1 className='text-3xl font-bold text-white'><span className='text-[#36b7f0]'>লার্নাররা</span> আমাদের সম্পর্কে যা ভাবেন</h1>
-                    <p className='text-md font-semibold text-[#8f9eb3]'>লার্নাররা সর্বদাই এপরেন্ট এর প্রতি তাদের ভালবাসা প্রকাশ করেছেন</p>
+                    <p className='text-md font-semibold text-[#8f9eb3]'>সর্বদাই এপরেন্ট এর প্রতি তাদের ভালবাসা প্রকাশ করেছেন</p>
                 </div>
                 <div className='mt-5 columns-1 md:columns-2 lg:columns-3 flex-wrap gap-10'>
                     {visibleReviews.map((data, index) => (

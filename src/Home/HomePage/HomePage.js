@@ -30,14 +30,12 @@ const HomePage = () => {
     }, []);
 
     return (
-        <div style={{
-            clipPath: "polygon(100% 0%, 0% 0% , 0.00% 100.00%, 2.00% 99.94%, 4.00% 99.75%, 6.00% 99.46%, 8.00% 99.05%, 10.00% 98.56%, 12.00% 97.99%, 14.00% 97.37%, 16.00% 96.72%, 18.00% 96.06%, 20.00% 95.42%, 22.00% 94.81%, 24.00% 94.27%, 26.00% 93.80%, 28.00% 93.43%, 30.00% 93.17%, 32.00% 93.03%, 34.00% 93.01%, 36.00% 93.11%, 38.00% 93.33%, 40.00% 93.67%, 42.00% 94.10%, 44.00% 94.62%, 46.00% 95.21%, 48.00% 95.84%, 50.00% 96.50%, 52.00% 97.16%, 54.00% 97.79%, 56.00% 98.38%, 58.00% 98.90%, 60.00% 99.33%, 62.00% 99.67%, 64.00% 99.89%, 66.00% 99.99%, 68.00% 99.97%, 70.00% 99.83%, 72.00% 99.57%, 74.00% 99.20%, 76.00% 98.73%, 78.00% 98.19%, 80.00% 97.58%, 82.00% 96.94%, 84.00% 96.28%, 86.00% 95.63%, 88.00% 95.01%, 90.00% 94.44%, 92.00% 93.95%, 94.00% 93.54%, 96.00% 93.25%, 98.00% 93.06%, 100.00% 93.00%)"
-        }}>
-            <div className="pb-20 bg-[#201658] relative homepage-animated-bg">
-                <div className="star-container relative z-10">
-                    <div className="pt-44">
+        <div>
+            <div className="bg-[#201658] relative homepage-animated-bg h-[95vh]">
+                <div className="star-container relative z-10 ">
+                    <div className="pt-[11%]">
                         <div className="text-center md:pt-0">
-                            <div>
+                            <div className=''>
                                 <h1 className="text-3xl md:text-4xl text-white font-bold " style={{wordSpacing: '10px', letterSpacing: "3px"}}>Our mission is to help <br /> Bangladeshi students </h1>
                                 <h1 className=" text-4xl md:text-6xl text-white font-bold" style={{wordSpacing: "5px", letterSpacing: "4px"}}>study abroad</h1>
                                 <p className="text-md text-white py-2">We are Working for Bangladeshi Students Study Abroad</p>

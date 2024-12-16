@@ -1,7 +1,7 @@
 import { RouterProvider } from 'react-router-dom';
 import './App.css';
 import { router } from './Router/router';
-import { useEffect, useState } from 'react';
+import { useEffect } from 'react';
 import logo from './assets/logo.png';
 import preloader from './assets/earthpreloader.gif';
 
@@ -11,8 +11,7 @@ function App() {
     const preloader = document.getElementById('preloader');
 
     window.addEventListener('load', () => {
-        preloader.style.opacity = '0';
-        preloader.style.transition = '1.5s ease-in';
+        preloader.style.opacity = '0';  
           preloader.style.display = "none"
     })
   }, [])

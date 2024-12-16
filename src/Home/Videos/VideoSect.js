@@ -14,7 +14,7 @@ const VideoSect = () => {
                     <h1 className='text-5xl text-white my-1'>
                         {video.title}
                     </h1>
-                    <p className='text-xl text-white my-1'>{video.discription}</p>
+                <p className='text-xl text-white my-1'>{video.discription}</p>
                     <p className='underline decoration-dashed decoration-blue-400 text-white text-lg'>{video.isOwner ? "This Is Special cause a Owner of website made it" : ""}</p>
                 </div>
             </div>
