@@ -37,18 +37,18 @@ const Footer = () => {
                                 <a href="https://twitter.com/iazshakil?fbclid=IwZXh0bgNhZW0CMTAAAR3bswr6WAETdosCktBw8l6tLGEgPO2HRLFxe_-qAkizehKptDnawH4SEkE_aem_9sMli_2M2qTt13tZlmqYfw" target='_blank' rel='noreferrer' className='leading-10 text-[2.7rem]'><FaTwitter className='text-cyan-500 bg-white rounded-full p-1 mx-0 my-1'></FaTwitter></a>
                                 <a href="https://www.linkedin.com/in/iazshakil/" target='_blank' rel='noreferrer' className='leading-10 text-[2.7rem]'><FaLinkedin className='text-cyan-500 bg-white rounded-full p-1 mx-0 my-1'></FaLinkedin></a>
                                 <a href="https://t.me/iazshakil" target='_blank' rel='noreferrer' className='leading-10 text-[2.7rem]'><FaTelegram className='text-cyan-500 bg-white rounded-full p-1 mx-0 my-1'></FaTelegram></a>
-                                <a href="https://www.instagram.com/iazshakil/" target='_blank' rel='noreferrer' className='leading-10 text-[2.7rem]'><FaInstagram className='rounded-full p-1 mx-0 my-1' style={{background: "linear-gradient(225deg, rgba(129,53,176,1) 0%, rgba(166,57,152,1) 25%, rgba(213,61,130,1) 50%, rgba(239,106,77,1) 75%, rgba(246,180,61,1) 100%)"}}></FaInstagram></a>
+                                <a href="https://www.instagram.com/iazshakil/" target='_blank' rel='noreferrer' className='leading-10 text-[2.7rem]'><FaInstagram className='rounded-full p-1 mx-0 my-1' style={{ background: "linear-gradient(225deg, rgba(129,53,176,1) 0%, rgba(166,57,152,1) 25%, rgba(213,61,130,1) 50%, rgba(239,106,77,1) 75%, rgba(246,180,61,1) 100%)" }}></FaInstagram></a>
                             </div>
                         </div>
                     </div>
                     <div className="flex w-full">
                         <div className='mx-7 '>
-                            <h2 className='text-xl my-1'>Mail</h2>
-                            <p className='text-base text-slate-300 flex items-center space-x-3' style={{letterSpacing: '1.5px'}}><IoIosMail className='text-3xl mx-1 bg-gradient-to-r via-green-500 rounded-lg from-red-600 to-blue-700'></IoIosMail> <span className='text-base'> hi@azshakil.com</span></p>
-                            <h2 className='text-xl my-1'>Mobile</h2>
-                            <p className='text-base text-slate-300 flex items-center space-x-3' style={{letterSpacing: '1.5px'}}><IoIosCall className='text-3xl mx-1 bg-gradient-to-r from-green-500 to-emerald-400 rounded-md'></IoIosCall  > <span className='text-base'> hi@azshakil.com</span></p>
-                            <h2 className='text-xl  flex items-center my-1'>Website <a href="https://azshakil.com/" target='_blank' rel='noreferrer'> <img className='w-8 mx-1' src={azShakilPortfolioImage} alt="" /></a></h2>
-                            <p className='text-base text-slate-300 flex items-center space-x-3' style={{letterSpacing: '1.5px'}} ><FaLink className='text-3xl mx-1 text-white'></FaLink> <span className='text-base'><a href="https://azshakil.com/" target="_blank" rel="noopener noreferrer">https://azshakil.com/</a></span></p>
+                            <IoIosMail className='text-4xl mt-2 bg-gradient-to-r via-green-500 rounded-lg from-red-600 to-blue-700'></IoIosMail>
+                            <p className='text-base text-slate-300 flex items-center space-x-3' style={{ letterSpacing: '1.5px' }}> <span className='text-base'> hi@azshakil.com</span></p>
+                            <IoIosCall className='text-3xl mt-2 bg-gradient-to-r from-green-500 to-emerald-400 rounded-md'></IoIosCall  >
+                            <p className='text-base text-slate-300 flex items-center space-x-3' style={{ letterSpacing: '1.5px' }}> <span className='text-base'> hi@azshakil.com</span></p>
+                            <FaLink className='text-4xl mt-2 text-white'></FaLink> 
+                            <p className='text-base text-slate-300 flex items-center space-x-3' style={{ letterSpacing: '1.5px' }} ><a className='flex items-center' href="https://azshakil.com/" target="_blank" rel="noopener noreferrer"><a href="https://azshakil.com/" target='_blank' rel='noreferrer'> </a> https://azshakil.com/ <img className='w-8 ml-1' src={azShakilPortfolioImage} alt="" /></a></p>
                         </div>
                     </div>
                 </div>
@@ -67,9 +67,9 @@ const Footer = () => {
                     </nav>
                     <nav className='flex flex-col gap-2'>
                         <h6 className="text-xl font-bold text-gray">Social</h6>
-                        <a className="link link-hover text-base" rel='noreferrer' target='_blank' href='https://https://x.com/iazshakil?fbclid=IwZXh0bgNhZW0CMTAAAR3bswr6WAETdosCktBw8l6tLGEgPO2HRLFxe_-qAkizehKptDnawH4SEkE_aem_9sMli_2M2qTt13tZlmqYfw'>Twitter</a>
-                        <a className="link link-hover text-base" rel='noreferrer' target='_blank' href='https://https://www.instagram.com/iazshakil/'>Instagram</a>
-                        <a className="link link-hover text-base" rel='noreferrer' target='_blank' href='https://https://www.facebook.com/infoAZS/'>Facebook</a>
+                        <a className="link link-hover text-base" rel='noreferrer' target='_blank' href='https://x.com/iazshakil?fbclid=IwZXh0bgNhZW0CMTAAAR3bswr6WAETdosCktBw8l6tLGEgPO2HRLFxe_-qAkizehKptDnawH4SEkE_aem_9sMli_2M2qTt13tZlmqYfw'>Twitter</a>
+                        <a className="link link-hover text-base" rel='noreferrer' target='_blank' href='https://www.instagram.com/iazshakil/'>Instagram</a>
+                        <a className="link link-hover text-base" rel='noreferrer' target='_blank' href='https://www.facebook.com/infoAZS/'>Facebook</a>
                     </nav>
                 </div>
             </footer>
@@ -80,8 +80,8 @@ const Footer = () => {
                         <p className='text-gray-400 text-xs'>Empowering Minds, Shaping Futures</p>
                     </div>
                 </div>
-                <div className='flex items-center justify-center'>
-                    <h1 className='text-lg text-slate-400'>Developed By <span className='text-xl font-medium' style={{ background: 'linear-gradient(304deg, rgba(1,255,0,1) 0%, rgba(0,252,254,1) 50%, rgba(0,0,255,1) 100%)', backgroundClip: 'text', color: 'transparent' }}>MD. Jawad Jabbar Khan Authoi</span> </h1>
+                <div className='flex items-center justify-center text-center'>
+                    <h1 className='text-lg text-slate-400'>Developed By <span className='text-xl font-medium' style={{ background: 'linear-gradient(304deg, rgba(1,255,0,1) 0%, rgba(0,252,254,1) 50%, rgba(0,0,255,1) 100%)', backgroundClip: 'text', color: 'transparent' }}>Jaber Ahmed & MD. Jawad Jabbar Khan Authoi</span> </h1>
                 </div>
             </footer>
         </div>

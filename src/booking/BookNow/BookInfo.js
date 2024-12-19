@@ -2,8 +2,11 @@ import React from 'react';
 import rafiki from '../../assets/bookInfoRafiki.png';
 import { FaArrowRight, FaHome, FaUser } from "react-icons/fa";
 import { motion } from 'framer-motion';
+import useTitle from '../../hooks/useTitle';
 
 const BookInfo = () => {
+    useTitle('Booking Info')
+
     return (
         <div className='bg-[#407BFF] pt-24  py-10 px-24'>
             <div className="md:flex md:justify-around md:items-center text-center">
