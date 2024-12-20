@@ -64,7 +64,7 @@ const SkillsPage = () => {
             className={`py-12 relative bg-[#00001f]`}>
             <img src={triangle3d} className='w-28 absolute top-0' alt="" />
             <div className='md:flex md:justify-center md:items-center px-6 text-center '>
-                <div className='grid lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-3 mx-10'>
+                <div className='grid lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-3 mx-4 md:mx-10'>
                     {
                         isPending === true ? <div><span className="loading loading-spinner text-primary"></span></div> : skillsData?.map(item => <div data-aos="fade-up"><SkillsCards card={item}></SkillsCards></div>)
                     }

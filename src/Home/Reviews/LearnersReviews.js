@@ -137,11 +137,11 @@ const LearnersReviews = () => {
     };
 
     return (
-        <div className='px-20 py-12' ref={componentRef} style={{
+        <div className='px-5 md:px-20 py-12' ref={componentRef} style={{
             backgroundColor: bgColor,
             transition: 'background-color 0.5s ease-in'
         }}>
-            <div className="bg-[#0f172a] pt-5 px-16 text-center">
+            <div className="bg-[#0f172a] pt-5 px-3 md:px-16 text-center">
                 <div>
                     <div className="flex justify-center items-center" data-aos="fade-up">
                         <div className="w-40">
@@ -174,7 +174,7 @@ const LearnersReviews = () => {
                     ))}
                 </div>
                 {!showAll && (
-                    <div className="absolute inset-x-0 -m-52 h-52 mx-20"
+                    <div className="absolute inset-x-0 -m-52 h-52 mx-5 md:mx-20"
                         style={{
                             background: 'linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.8) 60%, rgba(0, 0, 0, 1) 100%)'
                         }}>

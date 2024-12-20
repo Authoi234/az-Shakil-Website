@@ -73,9 +73,9 @@ const AboutUs = () => {
                         fontSize: "17px",
                         lineHeight: "22px "
                     }}>
-                        আমি <span className='font-semibold'> মোঃ আশাদুজ্জামান শাকিল</span>, যিনি এ জেড শাকিল নামে পরিচিত। আমি সিভিল ইঞ্জিনিয়ারিংয়ে ডিপ্লোমা এবং ব্যাচেলর ডিগ্রি নিয়ে উচ্চতর যোগ্যতা সম্পন্ন ব্যক্তি। পাশাপাশি, আমি গ্রাফিক ডিজাইনার এবং আর্কিটেকচারাল ভিজুয়ালাইজার হিসেবে ৮ বছরেরও বেশি সময় ধরে পেশাদার হিসেবে কাজ করছি। <br />
-                        আমার সবচেয়ে বড় শক্তি হলো, আমি দ্রুত স্বশিক্ষায়ন করতে পারি। আমি ডিজাইন করতে এবং স্ট্রাকচার সুপারভিশন করতে ভালোবাসি। আমি ১০ম শ্রেণিতে পড়ার সময় গ্রাফিক ডিজাইনার হিসেবে শুরু করি এবং থ্রিডি ডিজাইন এবং অ্যানিমেশনের দিকে অগ্রসর হই। ২০১৭ সালে পেশাদার আর্কিটেকচারাল ভিজুয়ালাইজার হিসেবে পুরস্কৃত হয়েছি এবং ২০১৯ সালে অ্যাডোবির পক্ষ থেকে UI/UX এর জন্য আর্লি বার্ড পুরস্কার অর্জন করেছি। আমি যুক্তরাষ্ট্র থেকে কন্সট্রাকশন প্রকল্প ব্যবস্থাপনা এবং খরচের মূল্যায়ন সম্পর্কে কোর্স সম্পন্ন করেছি। <br />
-                        আমি রেভিট, টুইনমোশন এবং লুমিয়নে দক্ষ। ২০১৬ সাল থেকে লুমিয়ন এবং টুইনমোশন ব্যবহার করে বড় পরিসরের ল্যান্ডস্কেপ এবং অ্যানিমেশন তৈরির ক্ষেত্রে আমার বিশেষজ্ঞতা রয়েছে। আমি বাংলাদেশে বেশ কয়েকটি প্রকল্প সম্পন্ন করেছি এবং চীনে দুটি প্রকল্পও সম্পন্ন করেছি
+                        I am <span className='font-semibold'> Md. Ashaduzzaman Shakil </span>, Who is known as AZ Shakil. I am highly qualified person with diploma and bachelor degree in civil engineering . As well as, I have been working as a graphic designer and architectural visualizer for over 8 years as a professional.<br />
+                       My greatest power is I can do self-study very fast. I love to Design and doing Stuctural Super Vision. When I was in Class 10, I started Grafic Design and proceeded to The ThreeD Design and Animation । In 2017 I have been Awarded as professional architectural visualizer and in 2019 I have won the "Early Bird" award for UI/UX from Adobe. From United States, I have completed course about Construction Project Management and Cost Assessment .<br />
+                        I am expert in Revit, TwinMotion and Lumion. Since 2016 I specialize in creating large scale landscapes and animations using Lumion and TwinMotion. I have completed several projects in Bangladesh and also completed two projects in China
                     </p>
                     <div className='text-white text-sm my-1 pl-3'><ul>
                         <li className='list-disc'>Former Vice-Chairman of ISC at Hebei University of Technology</li>
@@ -84,8 +84,8 @@ const AboutUs = () => {
                         <li className='list-disc'>Studied Civil Engineering at Stamford University Bangladesh</li>
                     </ul></div>
                     <div className='text-white my-2'>
-                        <h3 className='text-base' style={{ fontWeight: '550' }}>আশাদুজ্জামান শাকিল</h3>
-                        <h3 className='text-base font-medium'>প্রতিষ্ঠাতা - আশাদুজ্জামান শাকিল</h3>
+                        <h3 className='text-base' style={{ fontWeight: '550' }}>Ashaduzzaman Shakil</h3>
+                        <h3 className='text-lg font-medium'>Founder - Ashaduzzaman Shakil</h3>
                     </div>
                     <div className='flex items-center'>
                         <div className='w-48 my-2'>

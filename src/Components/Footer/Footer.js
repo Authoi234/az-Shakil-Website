@@ -18,9 +18,7 @@ const Footer = () => {
                 <aside className='w-full max-w-sm'>
                     <img src={logo} className='w-80 py-2 rounded-xl bg-white p-4' alt="" />
                     <p className='text-base'>
-                        ACME Industries Ltd.
-                        <br />
-                        Providing reliable tech since 1992
+                    Cqube Internationa Since 2019
                     </p>
                     <p className='text-base'>Copyright © {new Date().getFullYear()} - All right reserved</p>
                     <p className='pt-1 text-base'>
