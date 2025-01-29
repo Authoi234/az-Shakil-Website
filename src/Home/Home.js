@@ -6,16 +6,18 @@ import Contributions from './Contributions/Contributions';
 import AboutUs from './AboutUs/AboutUs';
 import LearnersReviews from './Reviews/LearnersReviews';
 import '../css/style.css';
+import Services from './Service/Services';
 
 const Home = () => {
 
     return (
         <div className=''>
             <HomePage></HomePage>
-            <SkillsPage></SkillsPage>
-            <Contributions></Contributions>
             <AboutUs></AboutUs>
+            <Services></Services>
+            <Contributions></Contributions>
             <LearnersReviews></LearnersReviews>
+            <SkillsPage></SkillsPage>
         </div >
     );
 };

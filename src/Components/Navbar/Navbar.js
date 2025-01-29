@@ -12,7 +12,7 @@ const Navbar = () => {
     ];
 
     return (
-        <div className="fixed top-0 left-0 right-0 z-50 h-20 bg-transparent backdrop-blur-[15px]">
+        <div className="fixed top-0 left-0 right-0 z-50 h-20 bg-transparent backdrop-blur-[15px] bg-gray-900" data-theme="dark">
             <div className='container mx-auto flex justify-between items-center h-full'>
                 <div className="w-72 border-0 outline-none pt-2" data-aos="fade-right">
                     <img className='w-full' src={logo} alt="" />
@@ -46,7 +46,7 @@ const Navbar = () => {
                             </ul>
                         </div>
                     </div>
-                    <button className='rounded-full  text-white font-normal h-8 px-2 py-0 bg-gradient-to-r from-pink-500 to-red-500 hover:border-2 hover:border-red-500 hover:bg-transparent transition-all'><Link to={'/book/bookInfo'}>Book Now</Link></button>
+                    <button className='rounded-full  text-white font-normal h-8 px-2 py-0 bg-gradient-to-r from-pink-500 to-red-500 hover:border-2 hover:border-red-500 hover:bg-transparent transition-all'><Link to={'/book/booking'}>Book Now</Link></button>
                 </div>
             </div>
         </div >
