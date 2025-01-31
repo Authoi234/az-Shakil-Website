@@ -183,7 +183,7 @@ const Contributions = () => {
       className='md:px-5 py-10 pb-5 px-1'
       style={{
         background: bgColor,
-        transition: "background-color 0.5s ease-in-out"
+        transition: "background-color 0.5s ease-in-out "
       }} >
 
       <div className="w-24 h-24 -mb-8 p-0 box-content border-0 outline-none">

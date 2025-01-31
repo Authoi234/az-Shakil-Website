@@ -9,7 +9,6 @@ import { Navigation, Pagination } from 'swiper/modules';
 import "../../css/style.css";
 
 const HomePage = () => {
-    const constraintsRef = useRef(null);
     const [currentIndex, setCurrentIndex] = useState(0);
     const bannerData = [
         {
@@ -39,41 +38,42 @@ const HomePage = () => {
     ];
 
     return (
-        <div
-            data-theme="dark"
-            className="mt-20"
-            style={{
-                backgroundImage: "url(https://wordpress.zozothemes.com/hegira/wp-content/uploads/sites/21/2024/05/shape-15.png)",
-                backgroundSize: 'cover',
-                position: 'relative',
-                backgroundRepeat: "no-repeat",
-                backgroundPosition: "center",
-                width: "100%",
-                height: "100vh",
-            }}
-        >
-            <Swiper
-                modules={[Pagination, Navigation]}
-                spaceBetween={1}
-                slidesPerView={1}
-                navigation
-                onSlideChange={(swiper) => setCurrentIndex(swiper.realIndex)}
-                pagination={{
-                    clickable: true,
-                    renderBullet: function (index, className) {
-                        return `<span class="pagination-dot ${className}"></span>`;
-                    },
+        <div className=""> 
+            <div
+                data-theme="dark"
+                className="mt-20 h-auto md:min-h-[90vh] lg:min-h-[100vh]"
+                style={{
+                    backgroundImage: "url(https://wordpress.zozothemes.com/hegira/wp-content/uploads/sites/21/2024/05/shape-15.png)",
+                    backgroundSize: 'cover',
+                    position: 'relative',
+                    backgroundRepeat: "no-repeat",
+                    backgroundPosition: "center",
+                    width: "100%",
                 }}
-                loop={true}
             >
-                {
-                    bannerData.map(item => (
-                        <SwiperSlide key={item?.id}>
-                            <BannerItem constraintsRef={constraintsRef} item={item}></BannerItem>
-                        </SwiperSlide>
-                    ))
-                }
-            </Swiper>
+                <Swiper
+                    modules={[Pagination, Navigation]}
+                    spaceBetween={1}
+                    slidesPerView={1}
+                    navigation
+                    onSlideChange={(swiper) => setCurrentIndex(swiper.realIndex)}
+                    pagination={{
+                        clickable: true,
+                        renderBullet: function (index, className) {
+                            return `<span class="pagination-dot ${className}"></span>`;
+                        },
+                    }}
+                    loop={true}
+                >
+                    {
+                        bannerData.map(item => (
+                            <SwiperSlide key={item?.id}>
+                                <BannerItem item={item}></BannerItem>
+                            </SwiperSlide>
+                        ))
+                    }
+                </Swiper>
+            </div>
         </div>
     );
 };
