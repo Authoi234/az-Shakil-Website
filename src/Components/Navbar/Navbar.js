@@ -1,23 +1,22 @@
 import React from 'react';
 import '../../App.css';
 import logo from "../../assets/logo.png";
-import '../../App.css'
 import { Link } from 'react-router-dom';
 
 const Navbar = () => {
     const navMenu = [
-        <li className='list-item font-medium text-white'><a href='/'>Home</a></li>,
-        <li className='list-item font-medium text-white'><a href='/'>Study Abroad</a></li>,
-        <li className='list-item font-medium text-white'><a href='/'>Institutions</a></li>,
+        <li className='list-item font-medium text-black'><a href='/'>Home</a></li>,
+        <li className='list-item font-medium text-black'><a href='/'>Study Abroad</a></li>,
+        <li className='list-item font-medium text-black'><a href='/'>Institutions</a></li>,
     ];
 
     return (
-        <div className="fixed top-0 left-0 right-0 z-50 h-20 bg-transparent backdrop-blur-[15px] bg-gray-900" data-theme="dark">
+        <div className="fixed top-0 left-0 right-0 z-50 h-20 bg-transparent backdrop-blur-[15px] " data-theme="light">
             <div className='container mx-auto flex justify-between items-center h-full'>
                 <div className="w-72 border-0 outline-none pt-2" data-aos="fade-right">
                     <img className='w-full' src={logo} alt="" />
                 </div>
-                <div className='flex items-center'>
+                <div className='flex items-center '>
                     <div className="hidden-special-on-small md:flex">
                         <ul className="menu menu-horizontal px-1">
                             {navMenu}
@@ -46,8 +45,8 @@ const Navbar = () => {
                             </ul>
                         </div>
                     </div>
-                    <button className='rounded-full  text-white font-normal h-8 px-2 py-0 bg-gradient-to-r from-pink-500 to-red-500 hover:border-2 hover:border-red-500 hover:bg-transparent transition-all'><Link to={'/book/booking'}>Book Now</Link></button>
                 </div>
+                <button className='rounded-full  text-white font-normal h-8 px-2 py-0 bg-gradient-to-r from-pink-500 to-red-500 hover:border-2 hover:border-red-500 hover:bg-transparent transition-all'><Link to={'/book/booking'}>Book Now</Link></button>
             </div>
         </div >
     );

@@ -1,14 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap');
 
 @keyframes animation-move {
-    0%{
-        transform: translate3d(0,0,0)
+    0% {
+        transform: translate3d(0, 0, 0)
     }
-    50%{
+
+    50% {
         transform: translateX(10px) translateY(20px);
     }
-    100%{
-        transform: translate3d(0,0,0)
+
+    100% {
+        transform: translate3d(0, 0, 0)
     }
 }
 
@@ -16,27 +18,20 @@
     font-family: "Lexend", serif;
 }
 
-.pagination-dot {
-    display: inline-block;
-    width: 30px;
-    /* Default width for all dots */
-    height: 15px;
-    background: linear-gradient(225deg, rgba(129, 53, 176, 1) 0%, rgba(166, 57, 152, 1) 25%, rgba(213, 61, 130, 1) 50%, rgba(239, 106, 77, 1) 75%, rgba(246, 180, 61, 1) 100%);
-    /* Light blue for inactive dots */
-    border-radius: 40px;
-    margin: 0 5px;
+.custom-pagination .swiper-pagination-bullet {
+    width: 70px;
+    height: 7px;
+    background: black;
     transition: all 0.3s ease;
+    border-radius: 0%;
 }
 
-/* Active dot styling */
-.swiper-pagination-bullet-active {
-    width: 60px;
-    /* Make active dots wider */
-    background: linear-gradient(225deg, rgba(1,7,102,1) 0%, rgba(21,68,177,1) 25%, rgba(32,103,216,1) 50%, rgba(84,191,251,1) 75%, rgba(172,243,244,1) 100%);;
-    /* Dark blue for active dot */
+.custom-pagination .swiper-pagination-bullet-active {
+    background: #1E6DEB;
+    width: 70px;
 }
 
-.animation-updown{
+.animation-updown {
     animation: animation-move 3s ease-in-out infinite;
     opacity: 0.4;
 }
