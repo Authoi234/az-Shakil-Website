@@ -4,7 +4,7 @@ import BannerItem from './BannerItem';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
-import { Navigation, Pagination } from 'swiper/modules';
+import { Autoplay, Navigation, Pagination } from 'swiper/modules';
 import { RxArrowBottomLeft, RxArrowTopRight } from "react-icons/rx";
 import '../../App.css';
 import "../../css/style.css";
@@ -53,7 +53,7 @@ const HomePage = () => {
                     }}
                 >
                     <Swiper
-                        modules={[Pagination, Navigation]}
+                        modules={[Pagination, Navigation, Autoplay]}
                         spaceBetween={1}
                         slidesPerView={1}
                         navigation={{ enabled: true, nextEl: ".nextEl", prevEl: '.prevEl' }}
@@ -63,6 +63,11 @@ const HomePage = () => {
                             el: '.custom-pagination'
                         }}
                         loop={true}
+                        autoplay={{
+                            delay: 2500,
+                            disableOnInteraction: false,
+                            waitForTransition: true
+                        }}
                     >
                         {
                             bannerData.map(item => (
@@ -90,7 +95,7 @@ const HomePage = () => {
                                 className="w-40 h-32 object-cover rounded-lg hover:scale-110 mx-6"
                                 style={{ transition: "opacity 0.3s, transform 0.3s" }}
                             />
-                            <h1 className="text-2xl text-white">{ currentIndex + 1}</h1>
+                            <h1 className="text-2xl text-white">{currentIndex + 1}</h1>
 
                             {/* Pagination Dots */}
                             <div className="custom-pagination flex gap-2 z-20"></div>
