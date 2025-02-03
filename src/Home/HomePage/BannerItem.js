@@ -26,14 +26,14 @@ const BannerItem = ({ item }) => {
                                 scale: 1.02,
                                 transition: { duration: 0.2 },
                             }}
-                            className="flex justify-around items-center px-6 py-3 text-lg text-white bg-[#1E6CEA] hover:bg-white hover:text-black active:ring-4"
-                            whileTap={{ scale: 0.9 }}
+                            className="relative z-10 overflow-hidden flex justify-around items-center px-8 font-medium py-4 text-lg text-white hover:text-black bg-[#1E6CEA] rounded-md active:ring-4 before:content-[''] before:absolute before:left-[-100%] before:w-full before:h-full before:bg-white before:transition-all before:duration-300 before:ease-in-out hover:before:left-0"
+                        whileTap={{ scale: 0.9 }}
                         >
-                            Get Started <MdArrowOutward className="font-black text-2xl" />
-                        </motion.button>
-                    </Link>
-                </motion.div>
-            </div>
+                        <span className='z-20'>Get Started</span> <MdArrowOutward className="font-black text-2xl z-20" />
+                    </motion.button>
+                </Link>
+            </motion.div>
+        </div>
 
             {/* Right Image Section */}
             <div
@@ -45,7 +45,7 @@ const BannerItem = ({ item }) => {
                     alt=""
                 />
             </div>
-        </div></div>
+        </div></div >
     );
 };
 

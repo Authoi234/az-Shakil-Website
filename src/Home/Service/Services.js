@@ -51,7 +51,7 @@ const Services = () => {
     ];
 
     return (
-        <div className='px-10 py-5 bg-[#080f2c]'>
+        <div className='px-10 py-5 bg-[#020614]'>
             <div className="w-full flex justify-center items-center">
                 <div className="w-1/2 text-center">
                     <h2 className='flex text-xl items-center justify-center font-semibold text-[#1E6DEB]' ><IoPaperPlane className='rotate-45 mr-2' /> Services <BsGlobeAmericas className='ml-1' /></h2>

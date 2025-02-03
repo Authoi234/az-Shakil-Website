@@ -7,6 +7,7 @@ import AboutUs from './AboutUs/AboutUs';
 import LearnersReviews from './Reviews/LearnersReviews';
 import '../css/style.css';
 import Services from './Service/Services';
+import Countries from './Countries/Countries';
 
 const Home = () => {
 
@@ -15,6 +16,7 @@ const Home = () => {
             <HomePage></HomePage>
             <AboutUs></AboutUs>
             <Services></Services>
+            <Countries></Countries>
             <Contributions></Contributions>
             <LearnersReviews></LearnersReviews>
             <SkillsPage></SkillsPage>

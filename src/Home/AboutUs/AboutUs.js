@@ -22,7 +22,7 @@ const AboutUs = () => {
                         <div className="w-1/2">
                             <img className='w-full border-8 border-[#F4F4F5] -z-10 flex justify-center items-center rounded-xl' src={Img1} alt="" />
                             <div className="text-white p-2 border-y-[2rem] border-[#F4F4F5] text-center w-3/4 rounded-xl" style={{ backgroundImage: "url(https://wordpress.zozothemes.com/hegira/wp-content/uploads/sites/21/2024/04/testi-section-vector.png)", backgroundColor: "#111111", backgroundRepeat: "no-repeat", backgroundPosition: 'top' }}>
-                                <h1 className="text-5xl font-medium">{useNumReacher(0, 100,25, 1)}</h1>
+                                <h1 className="text-5xl font-medium">{useNumReacher(0, 100, 50, 1)}</h1>
                                 <span className="text-lg font-styled">Successful Visa <br /> Process Rate</span>
                             </div>
                         </div>
@@ -61,29 +61,29 @@ const AboutUs = () => {
                             </div>
                         </div>
                         <div className='flex items-center py-4'>
-                            <motion.div className='flex justify-center md:justify-start items-center'>
+                            <motion.div className="flex justify-center md:justify-start items-center" >
                                 <Link to={"/book/booking"}>
                                     <motion.button
-                                        whileHover={{
-                                            scale: 1.02,
-                                            transition: { duration: 0.2 },
-                                        }}
-                                        className="flex justify-around items-center px-7 font-medium py-4 text-lg text-white bg-[#1E6CEA] hover:bg-black rounded-lg hover:text-white active:ring-4 "
+                                        whileHover={{ scale: 1.02 }}
                                         whileTap={{ scale: 0.9 }}
+                                        className="relative z-10 overflow-hidden flex justify-around items-center px-8 font-medium py-4 text-lg text-white bg-[#1E6CEA] rounded-md active:ring-4 before:content-[''] before:absolute before:left-[-100%] before:w-full before:h-full before:bg-black before:transition-all before:duration-300 before:ease-in-out hover:before:left-0"
                                     >
-                                        Get Started <MdArrowOutward className="font-black text-2xl " />
+                                        <span className='z-20'>Get Started</span>
+                                        <MdArrowOutward className="relative z-10 font-black text-2xl" />
                                     </motion.button>
                                 </Link>
                             </motion.div>
-                            <div className="py-3 px-3 bg-white flex items-center ml-8">
+                            <div className=" px-3 flex items-center ml-8">
                                 <div className='mr-2'>
                                     <FaTelegram className='text-sky-600 text-5xl'></FaTelegram>
                                 </div>
-                                <div className='ml-2'>
-                                    <p className="text-base text-[#818181]">Message Me Any Time </p>
-                                    <a href="https://t.me/iazshakil" target="_blank" rel="noopener noreferrer">
-                                        <h1 className="text-[1.3rem] font-medium text-[#1E6CEA]">t.me/iazshakil</h1>
-                                    </a>
+                                <div className='ml-2 items-center justify-start flex'>
+                                    <div>
+                                        <p className="text-base text-[#818181] py-0">Message Me Any Time </p>
+                                        <a href="https://t.me/iazshakil" target="_blank" rel="noopener noreferrer" className='py-0'>
+                                            <h1 className="text-[1.3rem] font-medium text-[#1E6CEA]">t.me/iazshakil</h1>
+                                        </a>
+                                    </div>
                                 </div>
                             </div>
                         </div>

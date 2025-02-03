@@ -5,9 +5,9 @@ import { Link } from 'react-router-dom';
 
 const Navbar = () => {
     const navMenu = [
-        <li className='list-item font-medium text-black'><a href='/'>Home</a></li>,
-        <li className='list-item font-medium text-black'><a href='/'>Study Abroad</a></li>,
-        <li className='list-item font-medium text-black'><a href='/'>Institutions</a></li>,
+        <li className='list-item font-medium text-black ' style={{textShadow: "1px 1px 8px white"}}><a href='/'>Home</a></li>,
+        <li className='list-item font-medium text-black ' style={{textShadow: "1px 1px 8px white"}}><a href='/'>Study Abroad</a></li>,
+        <li className='list-item font-medium text-black ' style={{textShadow: "1px 1px 8px white"}}><a href='/'>Institutions</a></li>,
     ];
 
     return (
