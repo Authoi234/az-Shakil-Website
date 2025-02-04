@@ -35,3 +35,18 @@
     animation: animation-move 3s ease-in-out infinite;
     opacity: 0.4;
 }
+
+.before-bg-bg::before {
+    background-image: url(https://wordpress.zozothemes.com/hegira/wp-content/uploads/sites/21/2024/04/service-bg.png);
+    --background-overlay: '';
+    background-position: -91px 508px;
+    background-repeat: no-repeat;
+    background-size: auto;
+}
+
+.before-bg-bg {
+    background-image: url(https://wordpress.zozothemes.com/hegira/wp-content/uploads/sites/21/2024/04/about_img.png);
+    background-position: 62.6em -17px;
+    background-repeat: no-repeat;
+    background-size: auto;
+}

@@ -56,7 +56,7 @@ const Services = () => {
                 <div className="w-1/2 text-center">
                     <h2 className='flex text-xl items-center justify-center font-semibold text-[#1E6DEB]' ><IoPaperPlane className='rotate-45 mr-2' /> Services <BsGlobeAmericas className='ml-1' /></h2>
                     <h2 className="text-white text-[2.7rem] leading-[50px] font-semibold mb-5">
-                        Empowering Newcomers A Handbook on Immigration
+                        Empowering Newcomers <br /> A Handbook on Immigration
                     </h2>
                 </div>
             </div>
@@ -65,14 +65,14 @@ const Services = () => {
                     {
                         servicesData.map(item => {
                             if (item.special && item.feature === "img") {
-                                return <div className='w-full bg-white rounded-lg shadow-xl shadow-white'>
+                                return <div className='w-full bg-white rounded-lg shadow-lg shadow-white'>
                                     <img src={item?.img} className='w-full rounded-lg' alt="" />
                                 </div>
                             }
                             else if (item.special && item.feature === "grid") {
                                 return (
-                                    <Tilt scale={1.09} glareEnable={true} glareMaxOpacity={0.9} glareColor="white" glarePosition="all" glareBorderRadius="20px" className="background-stripes parallax-effect rounded-lg" perspective={700}>
-                                        <div className='p-10 w-full bg-[#1E6DEB] rounded-lg transition-all duration-700 group hover:bg-black group-hover:bg-black shadow-xl shadow-white'>
+                                    <Tilt scale={1.09} glareEnable={true} glareMaxOpacity={0.3} glareColor="white" glarePosition="all" glareBorderRadius="20px" className="background-stripes parallax-effect rounded-lg" perspective={700}>
+                                        <div className='p-10 w-full bg-[#1E6DEB] rounded-lg transition-all duration-700 group hover:bg-black group-hover:bg-black shadow-lg shadow-white'>
                                             <BsFillGrid3X3GapFill className='text-white bg-black p-3 text-[3.5rem] rounded-xl group-hover:bg-[#1E6DEB]' />
                                             <h1 className='mt-10 text-3xl font-[700] text-white group-hover:text-[#1E6DEB]'>
                                                 Easy Study Abroad
@@ -84,7 +84,7 @@ const Services = () => {
                             else if (!item.special) {
                                 return (
                                     <Tilt scale={0.95} glareEnable={true} glareMaxOpacity={0.9} glareColor="white" glarePosition="all" glareBorderRadius="20px" className="background-stripes rounded-lg parallax-effect " perspective={700}>
-                                        <div className='p-10 w-full bg-white rounded-lg transition-all duration-700 group shadow-xl shadow-white'>
+                                        <div className='p-10 w-full bg-white rounded-lg transition-all duration-700 group shadow-lg shadow-white'>
                                             <div className='w-14'><img src={item?.img} className='w-full' alt="" /></div>
                                             <h1 className='mt-10 text-3xl font-[700] text-[#262626] group-hover:text-[#1E6DEB]'>
                                                 {item?.text}

@@ -29,7 +29,7 @@ const BannerItem = ({ item }) => {
                             className="relative z-10 overflow-hidden flex justify-around items-center px-8 font-medium py-4 text-lg text-white hover:text-black bg-[#1E6CEA] rounded-md active:ring-4 before:content-[''] before:absolute before:left-[-100%] before:w-full before:h-full before:bg-white before:transition-all before:duration-300 before:ease-in-out hover:before:left-0"
                         whileTap={{ scale: 0.9 }}
                         >
-                        <span className='z-20'>Get Started</span> <MdArrowOutward className="font-black text-2xl z-20" />
+                        <span className='z-20'>Learn More</span> <MdArrowOutward className="font-black text-2xl z-20" />
                     </motion.button>
                 </Link>
             </motion.div>

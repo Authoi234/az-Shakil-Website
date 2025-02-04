@@ -7,7 +7,7 @@ const BookInfo = () => {
     useTitle('Booking');
 
     return (
-     <div className='mt-20'>
+     <div className='mt-20' data-theme="dark">
         <BookBanner selectedDate={selectedDate} setSelectedDate={setSelectedDate}></BookBanner>
      </div>
     );
