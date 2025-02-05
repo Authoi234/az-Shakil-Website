@@ -38,10 +38,9 @@
 
 .before-bg-bg::before {
     background-image: url(https://wordpress.zozothemes.com/hegira/wp-content/uploads/sites/21/2024/04/service-bg.png);
-    --background-overlay: '';
-    background-position: -91px 508px;
+    background-position: bottom;
     background-repeat: no-repeat;
-    background-size: auto;
+    background-size: auto cover,
 }
 
 .before-bg-bg {
