@@ -33,7 +33,7 @@
 
 .animation-updown {
     animation: animation-move 3s ease-in-out infinite;
-    opacity: 0.4;
+    /* opacity: 0.4; */
 }
 
 .before-bg-bg::before {

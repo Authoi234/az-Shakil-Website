@@ -15,23 +15,27 @@ import { Link } from 'react-router-dom';
 const AboutUs = () => {
 
     return (
-        <div className='bg-[#F4F4F5] min-h-screen h-auto'>
-            <div data-theme="light" className='px-5 py-16 text-center' style={{ background: "#F4F4F5" }}>
+        <div className='bg-[#F4F4F5] min-h-screen  h-auto flex justify-center items-center'>
+            <div data-theme="light" className='px-5 py-16 text-center flex justify-center items-center max-w-[1200px]' style={{ background: "#F4F4F5" }}>
                 <div className='lg:flex lg:justify-center lg:items-center text-center mr-2' data-aos="flip-right">
-                    <div className='justify-around flex px-1'>
-                        <div className="w-1/2">
-                            <img className='w-full border-8 border-[#F4F4F5] -z-10 flex justify-center items-center rounded-xl' src={Img1} alt="" />
-                            <div className="text-white p-2 border-y-[2rem] border-[#F4F4F5] text-center w-3/4 rounded-xl" style={{ backgroundImage: "url(https://wordpress.zozothemes.com/hegira/wp-content/uploads/sites/21/2024/04/testi-section-vector.png)", backgroundColor: "#111111", backgroundRepeat: "no-repeat", backgroundPosition: 'top' }}>
-                                <h1 className="text-5xl font-medium">{useNumReacher(0, 100, 50, 1)}</h1>
-                                <span className="text-lg font-styled">Successful Visa <br /> Process Rate</span>
+                    <div className='justify-center flex px-1 w-full lg:w-[50%]'>
+                        <div className="">
+                            <div className="w-[180%]"><img className='w-full border-8 border-[#F4F4F5] flex justify-center items-center rounded-xl' src={"https://wordpress.zozothemes.com/hegira/wp-content/uploads/sites/21/elementor/thumbs/about-us-1-qn840u0nlbinvnvm88hesh8scfwt5a1gnzqj4mllzc.jpg"} alt="" /></div>
+                            <div className="text-white p-2 border-y-[2rem] flex justify-center items-center border-[#F4F4F5] text-center rounded-xl h-[35%]" style={{ backgroundImage: "url(https://wordpress.zozothemes.com/hegira/wp-content/uploads/sites/21/2024/04/testi-section-vector.png)", backgroundColor: "#111111", backgroundRepeat: "no-repeat", backgroundPosition: 'top' }}>
+                                <div>
+                                    <h1 className="text-5xl font-medium">{useNumReacher(0, 100, 50, 1)}</h1>
+                                    <span className="text-lg font-styled">Successful Visa <br /> Process Rate</span>
+                                </div>
                             </div>
                         </div>
-                        <div className='z-50 w-1/2'>
-                            <img className='-ml-5 w-3/4 border-8 border-[#F4F4F5] -mt-5 animation-updown rounded-xl' src={logoIcon} alt="" />
-                            <img className=' w-full -ml-20 mt-10 flex justify-center items-center rounded-e-2xl border-[2rem] border-[#F4F4F5] rounded-ss-xl' src={Img2} alt="" />
+                        <div className=''>
+                            <img className='ml-32 -z-[20] w-3/5 mt-12 mb-0 animation-updown rounded-xl' src={"https://wordpress.zozothemes.com/hegira/wp-content/uploads/sites/21/2024/04/send-icon-2.png"} alt="" />
+                            <div className='w-[90%]'>
+                                <img className=' w-full ml-0 z-50 -mt-8 flex justify-center items-center rounded-[0.3rem] border-[2rem] border-[#F4F4F5] rounded-ss-xl' src={"https://wordpress.zozothemes.com/hegira/wp-content/uploads/sites/21/elementor/thumbs/about-us-2-qn7wlq7udl1nldubxi548ayrvvqlqkhg2lruaj2xao.jpg"} alt="" />
+                            </div>
                         </div>
                     </div>
-                    <div className='lg:w-1/2 text-left pl-2 pb-10' style={{ backgroundImage: "url(https://wordpress.zozothemes.com/hegira/wp-content/uploads/sites/21/2024/04/bg.png)", backgroundPosition: "right", backgroundRepeat: 'no-repeat', backgroundSize: "cover" }}>
+                    <div className='lg:w-[50%] text-left pl-2 pb-10' style={{ backgroundImage: "url(https://wordpress.zozothemes.com/hegira/wp-content/uploads/sites/21/2024/04/bg.png)", backgroundPosition: "right", backgroundRepeat: 'no-repeat', backgroundSize: "cover" }}>
                         <div className="w-full flex justify-start items-start">
                             <div className=" text-start w-3/4">
                                 <h2 className='flex text-xl items-center justify-start font-semibold text-[#1E6DEB] font-styled' ><IoPaperPlane className='rotate-45 mr-2' /> About Us <BsGlobeAmericas className='ml-1' /></h2>
@@ -50,7 +54,7 @@ const AboutUs = () => {
                             <div className="flex justify-start items-center font-medium"><FaCheckCircle className='text-[#B70404] bg-white text-xl p-0 mr-2.5 rounded-full'></FaCheckCircle> Lorem Ipsum has been the industry's standard dummy</div>
                             <div className="flex justify-start items-center font-medium"><FaCheckCircle className='text-[#B70404] bg-white text-xl p-0 mr-2.5 rounded-full'></FaCheckCircle> Many desktop publishing packages and web page</div>
                         </div>
-                        <div className="md:flex items-center my-3 border border-[#EAEAEA] p-6">
+                        <div className="md:flex items-center my-3 border border-[#EAEAEA] py-6 pr-6">
                             <div className='w-7/12'>
                                 <img src="https://wordpress.zozothemes.com/hegira/wp-content/uploads/sites/21/elementor/thumbs/about-h3-img-qn7wbdzio7btl9lfva398q5ojgmln6l3r784qmpbmo.jpg" alt="" className="w-full" />
                             </div>
@@ -89,7 +93,6 @@ const AboutUs = () => {
                         </div>
                     </div>
                 </div>
-
             </div>
         </div>
     );
