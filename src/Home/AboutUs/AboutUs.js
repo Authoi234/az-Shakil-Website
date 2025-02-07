@@ -16,22 +16,24 @@ const AboutUs = () => {
 
     return (
         <div className='bg-[#F4F4F5] min-h-screen  h-auto flex justify-center items-center'>
-            <div data-theme="light" className='px-5 py-16 text-center flex justify-center items-center max-w-[1200px]' style={{ background: "#F4F4F5" }}>
-                <div className='lg:flex lg:justify-center lg:items-center text-center mr-2' data-aos="flip-right">
-                    <div className='justify-center flex px-1 w-full lg:w-[50%]'>
+            <div data-theme="light" className='px-5 py-16 text-center flex justify-center items-center max-w-[1300px]' style={{ background: "#F4F4F5" }}>
+                <div className='lg:flex lg:justify-around lg:items-center text-center mr-2]' data-aos="flip-right">
+                    <div className='justify-center flex px-1 w-full lg:w-[47%]'>
                         <div className="">
-                            <div className="w-[180%]"><img className='w-full border-8 border-[#F4F4F5] flex justify-center items-center rounded-xl' src={"https://wordpress.zozothemes.com/hegira/wp-content/uploads/sites/21/elementor/thumbs/about-us-1-qn840u0nlbinvnvm88hesh8scfwt5a1gnzqj4mllzc.jpg"} alt="" /></div>
-                            <div className="text-white p-2 border-y-[2rem] flex justify-center items-center border-[#F4F4F5] text-center rounded-xl h-[35%]" style={{ backgroundImage: "url(https://wordpress.zozothemes.com/hegira/wp-content/uploads/sites/21/2024/04/testi-section-vector.png)", backgroundColor: "#111111", backgroundRepeat: "no-repeat", backgroundPosition: 'top' }}>
+                            <div className="w-[190%]"><img className='w-full border-8 border-[#F4F4F5] flex justify-center items-center rounded-xl' src={"https://wordpress.zozothemes.com/hegira/wp-content/uploads/sites/21/elementor/thumbs/about-us-1-qn840u0nlbinvnvm88hesh8scfwt5a1gnzqj4mllzc.jpg"} alt="" /></div>
+                            <div className="text-white p-2 z-30 border-y-[2rem] w-[125%] flex justify-center items-center border-[#F4F4F5] text-center h-[37%] rounded-2xl" style={{ backgroundImage: "url(https://wordpress.zozothemes.com/hegira/wp-content/uploads/sites/21/2024/04/testi-section-vector.png)", backgroundColor: "#111111", backgroundRepeat: "no-repeat", backgroundPosition: 'top' }}>
                                 <div>
-                                    <h1 className="text-5xl font-medium">{useNumReacher(0, 100, 50, 1)}</h1>
+                                    <h1 className="text-6xl font-semibold">{useNumReacher(0, 100, 50, 1)}%</h1>
                                     <span className="text-lg font-styled">Successful Visa <br /> Process Rate</span>
                                 </div>
                             </div>
                         </div>
                         <div className=''>
-                            <img className='ml-32 -z-[20] w-3/5 mt-12 mb-0 animation-updown rounded-xl' src={"https://wordpress.zozothemes.com/hegira/wp-content/uploads/sites/21/2024/04/send-icon-2.png"} alt="" />
-                            <div className='w-[90%]'>
-                                <img className=' w-full ml-0 z-50 -mt-8 flex justify-center items-center rounded-[0.3rem] border-[2rem] border-[#F4F4F5] rounded-ss-xl' src={"https://wordpress.zozothemes.com/hegira/wp-content/uploads/sites/21/elementor/thumbs/about-us-2-qn7wlq7udl1nldubxi548ayrvvqlqkhg2lruaj2xao.jpg"} alt="" />
+                            <div className='relative ml-36 -z-[20] w-3/5 mt-12 mb-0 animation-updown'>
+                                <img className=' rounded-xl absolute' src={"https://wordpress.zozothemes.com/hegira/wp-content/uploads/sites/21/2024/04/send-icon-2.png"} alt="" />
+                            </div>
+                            <div className='w-[80%] h-[60%] ml-10'>
+                                <img className=' w-full h-full  ml-0 border-e-0  mt-64 z-10 flex justify-center items-center rounded-[0.3rem] border-[2rem] border-[#F4F4F5] rounded-ss-xl' src={"https://wordpress.zozothemes.com/hegira/wp-content/uploads/sites/21/elementor/thumbs/about-us-2-qn7wlq7udl1nldubxi548ayrvvqlqkhg2lruaj2xao.jpg"} alt="" />
                             </div>
                         </div>
                     </div>
