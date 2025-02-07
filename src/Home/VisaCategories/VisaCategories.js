@@ -8,13 +8,13 @@ import "../../css/style.css";
 
 const VisaCategories = () => {
     return (
-        <div className='py-5 bg-[#FFFFFF] before-bg-bg'>
+        <div className='pt-5 lg:pb-20 bg-[#FFFFFF] before-bg-bg '>
             <div className=' flex justify-center items-center'>
-                <div className="w-full flex justify-center my-0 mx-auto p-5 max-w-[1200px] gap-7 flex-row  items-end">
-                    <div className="w-1/2 text-start rounded-lg bg-white flex-col">
+                <div className="w-full lg:flex lg:justify-center my-0  mx-auto p-5 lg:max-w-[1200px] gap-7 flex-row lg:items-end">
+                    <div className="lg:w-1/2 w-full text-start rounded-lg bg-white flex-col">
                         <div className=" after:content-[''] after:opacity-95 after:absolute after:mix-blend-lighten" style={{ backgroundImage: "url(https://wordpress.zozothemes.com/hegira/wp-content/uploads/sites/21/2024/04/visa-1.jpeg)", backgroundPosition: "cover", backgroundSize: "cover" }}>
                             <div className='p-10' style={{ background: "rgba(20, 20, 20, 0.9)" }}>
-                                <h2 className='flex items-center py-2 font-semibold text-lg text-[#1E6DEB]' ><IoPaperPlane className='rotate-45 mr-2' /> Visa Categories  <BsGlobeAmericas className='ml-1' /></h2>
+                                <h2 className='flex items-center py-2 font-semibold text-lg text-[#1E6DEB]' ><IoPaperPlane className='rotate-45 mr-2' /> VISA CATEGORIES  <BsGlobeAmericas className='ml-1' /></h2>
                                 <h2 className="text-white text-[2.7rem] py-2 leading-[50px] font-semibold mb-5">
                                     We Offers Citizenship & Immigration Services
                                 </h2>
@@ -36,14 +36,14 @@ const VisaCategories = () => {
                             </div>
                         </div>
                     </div>
-                    <div className='px-5 w-auto mb-4 shadow-lg group' style={{ flexWrap: "initial", justifyContent: "flex-end", flexGrow: 1, }}>
+                    <div className='px-5 mt-5 lg:mt-0 w-auto ml-0 shadow group z-10 bg-[#FEFEFE]' style={{ flexWrap: "initial", justifyContent: "flex-end", flexGrow: 1, padding: "25px 40px 25px 25px" }}>
                         <div className='rounded-lg px-2 py-1 flex items-start max-w-full'>
-                            <div>
-                                <img src="https://wordpress.zozothemes.com/hegira/wp-content/uploads/sites/21/2022/07/tourist-80x80.png" alt="" />
+                            <div className='bg-[#F6F6F8]'>
+                                <img className='max-w-full w-auto p-5' src="https://wordpress.zozothemes.com/hegira/wp-content/uploads/sites/21/2022/07/tourist-80x80.png" alt="" />
                             </div>
-                            <div className='pl-5'>
-                                <h2 className='text-3xl font-medium group-hover:text-[#1E6CEA] transition-colors'>Tourist Visa</h2>
-                                <p className="py-2 font-styled text-[#797979] text-base">
+                            <div className='pl-[18px]'>
+                                <h2 className='text-3xl font-medium group-hover:text-[#1E6CEA] transition-colors mb-2'>Tourist Visa</h2>
+                                <p className="font-styled text-[#797979] text-base">
                                     Lorem Ipsum has been the industry's standard <br /> dummy text ever since the 1500s
                                 </p>
                             </div>
@@ -51,33 +51,35 @@ const VisaCategories = () => {
                     </div>
                 </div>
             </div>
-            <div className=" bg-[#ffffff] flex pt-10 justify-center items-center gap-7 max-w-[1200px] my-0 mx-auto">
-                <div className='px-5 w-auto mb-4 shadow-lg group' style={{ flexWrap: "initial", justifyContent: "flex-end", flexGrow: 1, }}>
-                    <div className='rounded-lg px-2 py-1 flex items-start max-w-full'>
-                        <div>
-                            <img src="https://wordpress.zozothemes.com/hegira/wp-content/uploads/sites/21/2022/07/student-80x80.png" alt="" />
-                        </div>
-                        <div className='pl-5'>
-                            <h2 className='text-3xl font-medium group-hover:text-[#1E6CEA] transition-colors'>Business Visa</h2>
-                            <p className="py-2 font-styled text-[#797979] text-base">
-                            Lorem Ipsum has been the industry's standard <br /> dummy text ever since the 1500s
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div className='px-5 ml-5 w-auto mb-4 shadow-lg group' style={{ flexWrap: "initial", justifyContent: "flex-end", flexGrow: 1, }}>
-                    <div className='rounded-lg px-2 py-1 flex items-start max-w-full'>
-                        <div>
-                            <img src="https://wordpress.zozothemes.com/hegira/wp-content/uploads/sites/21/2022/07/Bussiness-80x80.png" alt="" />
-                        </div>
-                        <div className='pl-5'>
-                            <h2 className='text-3xl font-medium group-hover:text-[#1E6CEA] transition-colors'>Student Visa</h2>
-                            <p className="py-2 font-styled text-[#797979] text-base">
-                            Lorem Ipsum has been the industry's standard <br /> dummy text ever since the 1500s
-                            </p>
+            <div className="flex justify-center items-center lg:mt-4 ">
+                <div className=" bg-[#ffffff] lg:flex lg:pt-1 pt-0 p-5 lg:justify-center lg:items-center gap-0 w-full lg:max-w-[1200px] ">
+                    <div className='px-5 lg:mb-0 mb-5 lg:mx-0 lg:w-1/2  shadow group z-10 bg-[#FEFEFE]' style={{ flexWrap: "initial", justifyContent: "flex-end", flexGrow: 1, padding: "25px 40px 25px 25px" }}>
+                        <div className='rounded-lg px-2 py-1 flex z-10 items-start max-w-full'>
+                            <div className='bg-[#F6F6F8]'>
+                                <img className='max-w-full w-auto p-5' src="https://wordpress.zozothemes.com/hegira/wp-content/uploads/sites/21/2022/07/student-80x80.png" alt="" />
+                            </div>
+                            <div className='pl-5'>
+                                <h2 className='text-3xl font-medium group-hover:text-[#1E6CEA] transition-colors'>Student Visa</h2>
+                                <p className="py-2 font-styled text-[#797979] text-base">
+                                    Lorem Ipsum has been the industry's standard <br /> dummy text ever since the 1500s
+                                </p>
+                            </div>
                         </div>
                     </div>
-                </div>
+                    <div className='px-5 lg:ml-5 lg:mr-0 lg:w-1/2 shadow group z-10 bg-[#FEFEFE]' style={{ flexWrap: "initial", justifyContent: "flex-end", flexGrow: 1, padding: "25px 40px 25px 25px" }}>
+                        <div className='rounded-lg px-2 py-1 flex z-10 items-start max-w-full'>
+                            <div className='bg-[#F6F6F8]'>
+                                <img className='max-w-full w-auto p-5' src="https://wordpress.zozothemes.com/hegira/wp-content/uploads/sites/21/2022/07/Bussiness-80x80.png" alt="" />
+                            </div>
+                            <div className='pl-5'>
+                                <h2 className='text-3xl font-medium group-hover:text-[#1E6CEA] transition-colors'>Business Visa</h2>
+                                <p className="py-2 font-styled text-[#797979] text-base">
+                                    Lorem Ipsum has been the industry's standard <br /> dummy text ever since the 1500s
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>  
             </div>
         </div>
     );
