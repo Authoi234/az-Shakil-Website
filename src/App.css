@@ -1,13 +1,3 @@
-.swiper-pagination.swiper-pagination-progressbar {
-  top: inherit;
-  bottom: 0;
-}
-
-body /deep/ .swiper-pagination.swiper-pagination-progressbar {
-  top: inherit;
-  bottom: 0;
-}
-
 .App {
   text-align: center;
 }

@@ -93,21 +93,6 @@
     }
 }
 
-.swiper-pagination.swiper-pagination-progressbar {
-    top: inherit;
-    bottom: 0;
-}
-
-body /deep/ .swiper-pagination.swiper-pagination-progressbar {
-    top: inherit;
-    bottom: 0;
-}
-
-body .swiper-pagination.swiper-pagination-progressbar {
-    top: inherit;
-    bottom: 0;
-}
-
 .instagram-style:hover {
     background-image: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
     color: white;
@@ -120,4 +105,20 @@ body .swiper-pagination.swiper-pagination-progressbar {
     border-radius: 5px;
     border: none;
     outline: none;
+}
+
+.swiper-container {
+    position: relative;
+}
+
+.custom-progress-bar {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0%;
+    height: 5px;
+    background-color: #1E6DEB;  /* Color of the progress bar */
+    transition: width 0.3s ease-in-out;  /* Smooth transition */
+    border-radius: 10px;
+    z-index: 50;
 }

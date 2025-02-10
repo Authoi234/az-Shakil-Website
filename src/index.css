@@ -25,12 +25,3 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
-.swiper-pagination.swiper-pagination-progressbar {
-  top: inherit;
-  bottom: 0;
-}
-
-body /deep/ .swiper-pagination.swiper-pagination-progressbar {
-  top: inherit;
-  bottom: 0;
-}
