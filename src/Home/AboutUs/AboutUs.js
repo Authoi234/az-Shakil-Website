@@ -15,9 +15,9 @@ import { Link } from 'react-router-dom';
 const AboutUs = () => {
 
     return (
-        <div className='bg-[#F4F4F5] min-h-screen  h-auto flex justify-center items-center'>
-            <div data-theme="light" className='px-5 py-16 text-center flex justify-center items-center max-w-[1300px]' style={{ background: "#F4F4F5" }}>
-                <div className='lg:flex lg:justify-around lg:items-center text-center mr-2]' data-aos="flip-right">
+        <div className='bg-[#F4F4F5] min-h-screen pt-10 h-auto flex justify-center items-center' style={{ backgroundImage: "url(https://wordpress.zozothemes.com/hegira/wp-content/uploads/sites/21/2024/04/bg.png)", backgroundPosition: "center center", backgroundRepeat: 'no-repeat', backgroundSize: "cover" }}>
+            <div data-theme="light" className='px-5 py-16 text-center flex justify-center items-center max-w-[1300px]' style={{ background: "transparent" }}>
+                <div className='lg:flex lg:justify-around lg:items-center text-center mr-2'>
                     <div className='justify-center flex px-1 w-full lg:w-[47%]'>
                         <div className="">
                             <div className="w-[190%]"><img className='w-full border-8 border-[#F4F4F5] flex justify-center items-center rounded-xl' src={"https://wordpress.zozothemes.com/hegira/wp-content/uploads/sites/21/elementor/thumbs/about-us-1-qn840u0nlbinvnvm88hesh8scfwt5a1gnzqj4mllzc.jpg"} alt="" /></div>
@@ -37,7 +37,7 @@ const AboutUs = () => {
                             </div>
                         </div>
                     </div>
-                    <div className='lg:w-[50%] text-left pl-2 pb-10' style={{ backgroundImage: "url(https://wordpress.zozothemes.com/hegira/wp-content/uploads/sites/21/2024/04/bg.png)", backgroundPosition: "right", backgroundRepeat: 'no-repeat', backgroundSize: "cover" }}>
+                    <div className='lg:w-[50%] text-left pl-2 pb-10'>
                         <div className="w-full flex justify-start items-start">
                             <div className=" text-start w-3/4">
                                 <h2 className='flex text-xl items-center justify-start font-semibold text-[#1E6DEB] font-styled' ><IoPaperPlane className='rotate-45 mr-2' /> About Us <BsGlobeAmericas className='ml-1' /></h2>

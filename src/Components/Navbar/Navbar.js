@@ -5,13 +5,13 @@ import { Link } from 'react-router-dom';
 
 const Navbar = () => {
     const navMenu = [
-        <li className='list-item font-medium text-black ' style={{textShadow: "1px 1px 8px white"}}><Link to='/'>Home</Link></li>,
-        <li className='list-item font-medium text-black ' style={{textShadow: "1px 1px 8px white"}}><a href='/'>Study Abroad</a></li>,
-        <li className='list-item font-medium text-black ' style={{textShadow: "1px 1px 8px white"}}><a href='/'>Institutions</a></li>,
+        <li className='list-item font-medium rounded-md abc hover:text-white transition-all text-black mx-5'><Link to='/'>Home</Link></li>,
+        <li className='list-item font-medium rounded-md abc hover:text-white transition-all text-black mx-5' ><a href='/'>Study Abroad</a></li>,
+        <li className='list-item font-medium rounded-md abc hover:text-white transition-all text-black mx-5' ><a href='/'>Institutions</a></li>,
     ];
 
     return (
-        <div className="fixed top-0 left-0 right-0 z-50 h-20 bg-transparent backdrop-blur-[15px] " data-theme="light">
+        <div className="fixed top-0 left-0 right-0 z-50 h-20 backdrop-blur-sm " style={{backgroundColor: "rgba(225,225,225, 0.3)"}} data-theme="light">
             <div className='container mx-auto flex justify-between items-center h-full'>
                 <div className="w-72 border-0 outline-none pt-2" data-aos="fade-right">
                     <img className='w-full' src={logo} alt="" />

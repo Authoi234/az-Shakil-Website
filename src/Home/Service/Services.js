@@ -60,7 +60,7 @@ const Services = () => {
                 <div className="w-full flex justify-center items-center">
                     <div className="w-1/2 text-center">
                         <h2 className='flex text-base items-center justify-center font-semibold text-[#1E6DEB]' ><IoPaperPlane className='rotate-45 mr-2' /> OUR SERVICES <BsGlobeAmericas className='ml-1' /></h2>
-                        <h2 className="text-white text-[2.65rem] leading-[50px] font-semibold mb-5">
+                        <h2 className=" text-[2.65rem] leading-[50px] font-semibold mb-5 text-black">
                             Empowering Newcomers A Handbook on Immigration
                         </h2>
                     </div>

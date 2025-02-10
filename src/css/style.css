@@ -24,16 +24,22 @@
 }
 
 .custom-pagination .swiper-pagination-bullet {
-    width: 70px;
+    width: 150px;
     height: 7px;
     background: black;
     transition: all 0.3s ease;
     border-radius: 0%;
 }
 
+.custom-pagination {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
 .custom-pagination .swiper-pagination-bullet-active {
     background: #1E6DEB;
-    width: 70px;
+    width: 150px;
 }
 
 .animation-updown {
@@ -85,4 +91,33 @@
     .before-bg-bg::before {
         background-image: url("");
     }
+}
+
+.swiper-pagination.swiper-pagination-progressbar {
+    top: inherit;
+    bottom: 0;
+}
+
+body /deep/ .swiper-pagination.swiper-pagination-progressbar {
+    top: inherit;
+    bottom: 0;
+}
+
+body .swiper-pagination.swiper-pagination-progressbar {
+    top: inherit;
+    bottom: 0;
+}
+
+.instagram-style:hover {
+    background-image: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+    color: white;
+}
+
+.instagram-style{
+    transition: all;
+    transition-duration: 500ms;
+    color: white;
+    border-radius: 5px;
+    border: none;
+    outline: none;
 }
