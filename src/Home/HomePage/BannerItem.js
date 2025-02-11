@@ -48,10 +48,10 @@ const BannerItem = ({ item }) => {
             <div className="px-6 lg:px-5 text-center lg:text-left w-full lg:max-w-[48%] flex justify-center items-center lg:py-0 py-10 z-30">
                 <div className=''>
                     <p className="text-[#1E6DEB] text-xl lg:text-xl font-bold flex justify-center lg:justify-start items-center font-styled">
-                        <IoPaperPlane className="rotate-45 mr-1" /> {item?.mainText}{" "}
+                        <IoPaperPlane className="rotate-45 mr-1" /> <p className='uppercase'>{item?.mainText}</p>{" "}
                         <BsGlobeAmericas className="ml-1" />
                     </p>
-                    <div className="lg:w-[36rem] xl:w-[40rem]"> <h1 className='leading-[81px] text-white font-styled lg:font-medium xl:font-semibold text-[60px]' >{item?.title}</h1></div>
+                    <div className="lg:w-[36rem] xl:w-[37rem]"> <h1 className='leading-[81px] text-white font-styled lg:font-medium xl:font-semibold text-[60px]' >{item?.title}</h1></div>
                     <div className='lg:w-[520px] xl:w-[540px] text-left'>
                         <p className='text-[18px] font-normal leading-[32px] my-3 xl:my-8 text-[#f7f7f7]'>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration</p>
                     </div>

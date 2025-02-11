@@ -1,20 +1,17 @@
 import React from 'react';
 
-const ContributionCard = ({card}) => {
+const ContributionCard = ({ card }) => {
     return (
-        <div className={`rounded-3xl flip-card flex-shrink-0 w-11/12 mt-5 sm:w-80 md:w-96 lg:w-1/4 text-white bg-[#0c1222] shadow-xl`} style={{ transition: 'all 0.5s ease', }}>
-            <figure className='flex justify-center items-center overflow-hidden rounded-t-2xl'>
-                <img
-                    className=' w-full max-w-[600px] h-full p-2 rounded-t-2xl overflow-hidden transition-transform duration-500 ease-in-out hover:scale-125'
-                    src={card.img}
-                    alt=''
-                />
-            </figure>
-            <div className="card-body p-2 sm:p-1 text-center">
-                <h2 className="text-lg text-wrap font-mono" >{card.name}</h2>
-                <p className='text-sm md:text-md text-wrap'>{card.para}</p>
-                <div className="card-actions justify-center">
-                    <button className="bg-[#24148b] mb-1 px-3 text-sm md:text-base py-1 text-wrap rounded-lg shadow-sm shadow-white "><a target='_blank' rel="noreferrer"  href={card.link}>ভিডিও দেখুন</a></button>
+        <div className={`rounded-sm text-black flip-card before:content-[""] w-[370px] before:absolute before:left-0 before:top-[112px] before:right-0 before:bottom-0 before:bg-[#F6F6F8] before:transition-all before:duration-500 before:rounded-md bg-white shadow-xl`} style={{ transition: 'all 0.5s ease', padding: "0px 25px 15px 20px", margin: "20px 10px", }}>
+            <div className='mb-[6px]  relative ml-[52px] -right-[38px] z-10'>
+                <img className='w-[253px] max-w-full h-[160px]' style={{ borderRadius: "5px 5px 5px 0px" }} src={card?.img} alt="" />
+            </div>
+            <div className='ml-0 mb-0 mt-0 shadow-none static mr-0 p-0 text-left -translate-y-20'>
+                <div className='w-full'>
+                    <div className="w-[28%] text-center bg-blue-600 p-2 rounded-s-md text-white">
+                        <h1 className="text-xl font-semibold">11 Feb <br /> 2025</h1>
+                    </div>
+                    <h1></h1>
                 </div>
             </div>
         </div>

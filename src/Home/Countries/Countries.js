@@ -45,8 +45,8 @@ const Countries = () => {
             <div className="w-full flex justify-center items-center">
                 <div className="w-1/2 text-center">
                     <h2 className='flex text-xl items-center justify-center font-semibold text-[#1E6DEB]' ><IoPaperPlane className='rotate-45 mr-2' /> COUNTRIES <BsGlobeAmericas className='ml-1' /></h2>
-                    <h2 className="text-[#262626] text-[2.7rem] leading-[50px] font-semibold mb-10">
-                        Countries We Support for Immigration.
+                    <h2 className="text-[#262626] text-[2.7rem] leading-[50px] font-semibold mb-8">
+                        Countries We Support for <br /> Immigration.
                     </h2>
                 </div>
             </div>
@@ -60,19 +60,21 @@ const Countries = () => {
                                     backgroundRepeat: "no-repeat",
                                     backgroundSize: "100% 100%"
                                 }}>
-                                    <div className='w-1/2 flex justify-start  bg-[#084fc2] hover:bg-[#111111] transition-all duration-500 py-0'>
+                                    <div className='w-1/2 flex justify-start  bg-[#084fc2] hover:bg-[#111111] transition-all h-[440px] duration-500 py-1'>
                                         <div className="absolute text-[10rem] font-semibold opacity-45 pl-5">0{item?.id}</div>
-                                        <div className='px-14 pt-16 py-auto z-20'>
-                                            <div className='py-2 w-12 h-12 rounded-full'>
-                                                <img className='w-full' src={item?.icon} alt="" />
+                                        <div className='flex justify-center items-center lg:-translate-y-10'>
+                                            <div className='px-14 pt-16 py-auto z-20 '>
+                                                <div className='my-5 w-12 h-12 rounded-full'>
+                                                    <img className='w-full py-5' src={item?.icon} alt="" />
+                                                </div>
+                                                <h1 className='text-2xl py-2 font-styled text-white font-semibold'>
+                                                    {item?.title}
+                                                </h1>
+                                                <p className="py-2 text-[1.08rem] text-white leading-8">{item?.text}</p>
+                                                <button className={`btn mb-5 bg-transparent border-none text-white px-0 hover:bg-transparent outline-none text-lg hover:scale-105 group transition-all duration-500`}>
+                                                    <BsGlobeAmericas className='hidden group-hover:inline transition-all duration-1000'></BsGlobeAmericas> Read More <IoPaperPlane className=' group-hover:translate-x-0.5 transition-translate duration-500'></IoPaperPlane>
+                                                </button>
                                             </div>
-                                            <h1 className='text-2xl py-2 font-styled text-white font-semibold'>
-                                                {item?.title}
-                                            </h1>
-                                            <p className="py-2 text-[1.08rem] text-white leading-8">{item?.text}</p>
-                                            <button className={`btn mb-5 bg-transparent border-none text-white px-0 hover:bg-transparent outline-none text-lg hover:scale-105 group transition-all duration-500`}>
-                                                <BsGlobeAmericas className='hidden group-hover:inline transition-all duration-1000'></BsGlobeAmericas> Read More <IoPaperPlane className=' group-hover:translate-x-0.5 transition-translate duration-500'></IoPaperPlane>
-                                            </button>
                                         </div>
                                     </div>
                                 </div>
@@ -83,21 +85,23 @@ const Countries = () => {
                                 <div className=' ' style={{
                                     backgroundImage: `url(${item?.img})`,
                                     backgroundRepeat: "no-repeat",
-                                    backgroundSize: "100%"
-                                }}>
-                                    <div className='w-1/2 ml-auto relative flex justify-end bg-[#111111] hover:bg-[#084fc2] transition-all duration-500 py-0'>
+                                    backgroundSize: "100% 100%"
+                                }}> 
+                                    <div className='w-1/2 ml-auto relative flex justify-end bg-[#111111] hover:bg-[#084fc2] transition-all h-[440px] duration-500 py-1'>
                                         <div className="absolute text-[10rem] font-semibold opacity-45 pl-5">0{item?.id}</div>
-                                        <div className='px-14 pt-16 py-auto z-20'>
-                                            <div className='py-2 w-12 h-12 rounded-full'>
-                                                <img className='w-full rounded-full' src={item?.icon} alt="" />
+                                        <div className='flex justify-center items-center lg:-translate-y-10'>
+                                            <div className='px-14 pt-16 py-auto z-20'>
+                                                <div className='py-2 w-12 h-12 rounded-full'>
+                                                    <img className='w-full rounded-full' src={item?.icon} alt="" />
+                                                </div>
+                                                <h1 className='text-2xl py-2 font-styled text-white font-semibold'>
+                                                    {item?.title}
+                                                </h1>
+                                                <p className="py-2 text-[1.08rem] text-white leading-8">{item?.text}</p>
+                                                <button className={`btn mb-5 bg-transparent border-none text-white px-0 hover:bg-transparent outline-none text-lg hover:scale-105 group transition-all duration-500`}>
+                                                    <BsGlobeAmericas className='hidden group-hover:inline transition-all duration-1000'></BsGlobeAmericas> Read More <IoPaperPlane className=' group-hover:translate-x-0.5 transition-translate duration-500'></IoPaperPlane>
+                                                </button>
                                             </div>
-                                            <h1 className='text-2xl py-2 font-styled text-white font-semibold'>
-                                                {item?.title}
-                                            </h1>
-                                            <p className="py-2 text-[1.08rem] text-white leading-8">{item?.text}</p>
-                                            <button className={`btn mb-5 bg-transparent border-none text-white px-0 hover:bg-transparent outline-none text-lg hover:scale-105 group transition-all duration-500`}>
-                                                <BsGlobeAmericas className='hidden group-hover:inline transition-all duration-1000'></BsGlobeAmericas> Read More <IoPaperPlane className=' group-hover:translate-x-0.5 transition-translate duration-500'></IoPaperPlane>
-                                            </button>
                                         </div>
                                     </div>
                                 </div>

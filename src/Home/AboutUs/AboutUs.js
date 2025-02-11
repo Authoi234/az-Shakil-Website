@@ -42,7 +42,7 @@ const AboutUs = () => {
                             <div className=" text-start w-3/4">
                                 <h2 className='flex text-xl items-center justify-start font-semibold text-[#1E6DEB] font-styled' ><IoPaperPlane className='rotate-45 mr-2' /> About Us <BsGlobeAmericas className='ml-1' /></h2>
                                 <h2 className="text-[#262626] text-[2.4rem] leading-[50px] font-semibold mb-5 font-styled">
-                                    Visa & Immigration Consulting Firm in USA
+                                    Visa & Immigration <br /> Consulting Firm in USA
                                 </h2>
                             </div>
                         </div>

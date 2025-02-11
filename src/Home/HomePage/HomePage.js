@@ -4,8 +4,8 @@ import BannerItem from './BannerItem';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
+import 'swiper/css/effect-fade';
 import { Autoplay, Navigation, Pagination } from 'swiper/modules';
-import { RxArrowBottomLeft, RxArrowTopRight } from "react-icons/rx";
 import '../../App.css';
 import "../../css/style.css";
 import "../../index.css";
@@ -34,16 +34,16 @@ const HomePage = () => {
             prev: 1,
             id: 2,
             next: 3,
-            title: "Navigate Your Visa Process With Confidence.",
-            mainText: "Step-by-Step Guidance",
+            title: "Step-by-Step Guidance for Visa Succes.",
+            mainText: "Visa Consultation Services",
         },
         {
             image: "https://wordpress.zozothemes.com/hegira/wp-content/uploads/sites/21/2024/05/sliderbg1.jpg",
             prev: 2,
             id: 3,
             next: 1,
-            title: "Navigate Your Visa Process With Confidence.",
-            mainText: "Step-by-Step Guidance",
+            title: "Expert Guidance for Your Next Destination.",
+            mainText: "WELCOME TO IMMIGWAY VISA AGENCY",
         }
     ];
 
@@ -73,7 +73,10 @@ const HomePage = () => {
                                 type: "progressbar",
                             }}
                             loop={true}
-                            autoplay={false}
+                            autoplay={{
+                                disableOnInteraction: false,
+                                waitForTransition: true,
+                            }}
                         >
                             {bannerData.map(item => (
                                 <SwiperSlide key={item?.id}>
