@@ -98,7 +98,7 @@
     color: white;
 }
 
-.instagram-style{
+.instagram-style {
     transition: all;
     transition-duration: 500ms;
     color: white;
@@ -107,18 +107,30 @@
     outline: none;
 }
 
-.swiper-container {
-    position: relative;
-}
-
 .custom-progress-bar {
     position: absolute;
+    /* Sticks inside the nearest relative parent */
     bottom: 0;
+    /* Moves it to the bottom */
     left: 0;
     width: 0%;
     height: 5px;
-    background-color: #1E6DEB;  /* Color of the progress bar */
-    transition: width 0.3s ease-in-out;  /* Smooth transition */
+    background-color: #1E6DEB;
+    transition: width 0.3s ease-in-out;
     border-radius: 10px;
-    z-index: 50;
+    z-index: 10;
+    /* Adjust if necessary to stay above content but below nav */
+}
+
+.custom-progress-bar.swiper-pagination-progressbar.swiper-pagination-horizontal {
+    top: auto !important;
+    /* Disable Swiper's top positioning */
+    bottom: 0 !important;
+    /* Force it to the bottom */
+    height: 5px !important;
+    /* Ensure height matches your design */
+    background-color: #1E6DEB !important;
+    /* Your custom color */
+    border-radius: 10px;
+    z-index: 10;
 }

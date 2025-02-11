@@ -55,40 +55,36 @@ const HomePage = () => {
                     style={{
                         backgroundImage: "url(https://wordpress.zozothemes.com/hegira/wp-content/uploads/sites/21/2024/05/shape-15.png)",
                         backgroundSize: 'cover',
-                        position: 'relative',
                         backgroundRepeat: "no-repeat",
                         backgroundPosition: "center",
                         width: "100%",
+                        position: "relative"
                     }}
                 >
-                    <Swiper
-                        modules={[Pagination, Navigation, Autoplay]}
-                        spaceBetween={1}
-                        slidesPerView={1}
-                        navigation={{ enabled: true, nextEl: ".nextEl", prevEl: '.prevEl' }}
-                        onSlideChange={(swiper) => updateProgressBar(swiper)}
-                        pagination={{
-                            el: ".custom-progress-bar", 
-                            type: "progressbar", 
-                            render: () => '', 
-                        }}
-                        loop={true}
-                        autoplay={{
-                            delay: 2500,
-                            disableOnInteraction: true,
-                            waitForTransition: true
-                        }}
-
-                    >
-                        {
-                            bannerData.map(item => (
+                    <div style={{ position: "relative" }}>
+                        <Swiper
+                            modules={[Pagination, Navigation, Autoplay]}
+                            spaceBetween={1}
+                            slidesPerView={1}
+                            navigation={{ enabled: true, nextEl: ".nextEl", prevEl: '.prevEl' }}
+                            onSlideChange={(swiper) => updateProgressBar(swiper)}
+                            pagination={{
+                                el: ".custom-progress-bar",
+                                type: "progressbar",
+                            }}
+                            loop={true}
+                            autoplay={false}
+                        >
+                            {bannerData.map(item => (
                                 <SwiperSlide key={item?.id}>
-                                    <BannerItem item={item}></BannerItem>
+                                    <BannerItem item={item} />
                                 </SwiperSlide>
-                            ))
-                        }
-                    </Swiper>
-                    <div className="custom-progress-bar"></div>
+                            ))}
+                        </Swiper>
+
+                        {/* Progress bar positioned at bottom */}
+                        <div className="custom-progress-bar"  style={{ bottom: 0, top: 'auto', height: '5px', backgroundColor: '#1E6DEB', borderRadius: '10px' }}></div>
+                    </div>
                 </div>
             </div>
         </div>
