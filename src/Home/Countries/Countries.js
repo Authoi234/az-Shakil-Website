@@ -55,15 +55,15 @@ const Countries = () => {
                     countriesData.map((item) => {
                         if (item?.side === "left") {
                             return (
-                                <div className=' ' style={{
+                                <div className='h-screen md:h-full' style={{
                                     backgroundImage: `url(${item?.img})`,
                                     backgroundRepeat: "no-repeat",
                                     backgroundSize: "100% 100%"
                                 }}>
-                                    <div className='w-1/2 flex justify-start  bg-[#084fc2] hover:bg-[#111111] transition-all h-[440px] duration-500 py-1'>
+                                    <div className='w-full md:w-1/2 h-1/2 flex justify-start items-center mt-[45%] md:mt-0 md:items-center bg-[#084fc2] hover:bg-[#111111] transition-all md:h-[440px] duration-500 py-1'>
                                         <div className="absolute text-[10rem] font-semibold opacity-45 pl-5">0{item?.id}</div>
                                         <div className='flex justify-center items-center lg:-translate-y-10'>
-                                            <div className='px-14 pt-16 py-auto z-20 '>
+                                            <div className='px-14 pt-0 md:pt-16 py-auto z-20 '>
                                                 <div className='my-5 w-12 h-12 rounded-full'>
                                                     <img className='w-full py-5' src={item?.icon} alt="" />
                                                 </div>
@@ -82,15 +82,15 @@ const Countries = () => {
                         }
                         else if (item?.side === "right") {
                             return (
-                                <div className=' ' style={{
+                                <div className=' h-screen md:h-full ' style={{
                                     backgroundImage: `url(${item?.img})`,
                                     backgroundRepeat: "no-repeat",
                                     backgroundSize: "100% 100%"
                                 }}> 
-                                    <div className='w-1/2 ml-auto relative flex justify-end bg-[#111111] hover:bg-[#084fc2] transition-all h-[440px] duration-500 py-1'>
+                                    <div className='w-full md:w-1/2 ml-auto h-1/2  flex justify-end items-center mt-[45%] md:mt-0 md:items-center bg-[#111111] hover:bg-[#084fc2] transition-all md:h-[440px] duration-500 py-1'>
                                         <div className="absolute text-[10rem] font-semibold opacity-45 pl-5">0{item?.id}</div>
                                         <div className='flex justify-center items-center lg:-translate-y-10'>
-                                            <div className='px-14 pt-16 py-auto z-20'>
+                                            <div className='px-14 md:pt-16 p-0 py-auto z-20'>
                                                 <div className='py-2 w-12 h-12 rounded-full'>
                                                     <img className='w-full rounded-full' src={item?.icon} alt="" />
                                                 </div>

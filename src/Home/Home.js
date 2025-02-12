@@ -19,8 +19,8 @@ const Home = () => {
             <Services></Services>
             <VisaCategories></VisaCategories>
             <Countries></Countries>
-            <Contributions></Contributions>
             <LearnersReviews></LearnersReviews>
+            <Contributions></Contributions>
             <SkillsPage></SkillsPage>
         </div >
     );

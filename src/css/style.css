@@ -134,3 +134,16 @@
     border-radius: 10px;
     z-index: 10;
 }
+.swiper-pagination-bullet-active{
+    transform: scale(1.4);
+    background-color: #1E6DEB;
+}
+.card1000translate{
+    transform: translateX(110%);
+}
+
+@media (min-width: 1000px) {
+    .card1000translate{
+        transform: translateX(0);
+    }
+}

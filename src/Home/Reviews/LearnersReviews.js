@@ -1,50 +1,10 @@
 import React, { useEffect, useRef, useState } from 'react';
 import introImg from '../../assets/peep1.f4841716.svg';
+import { IoPaperPlane } from 'react-icons/io5';
+import { BsGlobeAmericas } from 'react-icons/bs';
 
 const LearnersReviews = () => {
     const [showAll, setShowAll] = useState(false);
-    const [bgColor, setBgColor] = useState("rgb(14,40,80)");
-    const [isInView, setIsInView] = useState(false);
-    const componentRef = useRef(null);
-
-    useEffect(() => {
-        const observer = new IntersectionObserver(
-            ([entry]) => setIsInView(entry.isIntersecting),
-            { threshold: 0.1 }
-        );
-
-        if (componentRef.current) {
-            observer.observe(componentRef.current);
-        }
-
-        return () => {
-            if (componentRef.current) {
-                observer.unobserve(componentRef.current);
-            }
-        };
-    }, []);
-
-    useEffect(() => {
-        if (!isInView) return;
-
-        const handleScroll = () => {
-            const componentTop = componentRef.current.getBoundingClientRect().top;
-            const maxScroll = 200;
-            const scrollPercent = Math.min(Math.max(1 - componentTop / maxScroll, 0), 1);
-
-            const startColor = [14,40,80];
-            const endColor = [ 23, 49, 88  ];
-
-            const currentColor = startColor.map((start, i) =>
-                Math.round(start + (endColor[i] - start) * scrollPercent)
-            );
-
-            setBgColor(`rgb(${currentColor.join(",")})`);
-        };
-
-        window.addEventListener("scroll", handleScroll);
-        return () => window.removeEventListener("scroll", handleScroll);
-    }, [isInView])
 
     const reviewsData = [
         {
@@ -137,23 +97,26 @@ const LearnersReviews = () => {
     };
 
     return (
-        <div className='px-5 md:px-20 py-12' ref={componentRef} style={{
-            backgroundColor: bgColor,
+        <div className='px-5 md:px-20 py-12' style={{
+            backgroundColor: '#FEFEFE',
             transition: 'background-color 0.5s ease-in'
         }}>
-            <div className="bg-[#0f172a] pt-5 px-3 md:px-16 text-center">
+            <div className="bg-[#edf2ff] pt-5 px-3 md:px-16 text-center">
                 <div>
                     <div className="flex justify-center items-center" data-aos="fade-up">
                         <div className="w-40">
                             <img src={introImg} alt="" />
                         </div>
                     </div>
-                    <h1 className='text-3xl font-bold text-white'><span className='text-[#36b7f0]'>লার্নাররা</span> আমাদের সম্পর্কে যা ভাবেন</h1>
-                    <p className='text-md font-semibold text-[#8f9eb3]'>সর্বদাই এপরেন্ট এর প্রতি তাদের ভালবাসা প্রকাশ করেছেন</p>
+                    <h2 className='flex text-xl items-center justify-center font-semibold text-[#1E6DEB]' ><IoPaperPlane className='rotate-45 mr-2' /> OUR TESTIMONIALS <BsGlobeAmericas className='ml-1' /></h2>
+                    <h2 className="text-[#262626] text-[2.7rem] leading-[50px] font-semibold mb-1">
+                        What did Learners Think <br /> About Us.
+                    </h2>
+                    <p className='text-md font-semibold text-black'>They always expressed their endearment and love to us</p>
                 </div>
                 <div className='mt-5 columns-1 md:columns-2 lg:columns-3 flex-wrap gap-10'>
                     {visibleReviews.map((data, index) => (
-                        <div key={index} className="bg-[#182234] px-2 text-white rounded-3xl my-10 py-3 break-inside-avoid" data-aos="zoom-in">
+                        <div key={index} className="bg-[#173158] px-2 text-white rounded-3xl my-10 py-3 break-inside-avoid" data-aos="zoom-in">
                             <div className='flex justify-center items-start'>
                                 <div className='w-1/4 text-center flex justify-center items-center'>
                                     <div className='w-12 h-12 rounded-full border border-white'>
@@ -176,7 +139,7 @@ const LearnersReviews = () => {
                 {!showAll && (
                     <div className="absolute inset-x-0 -m-52 h-52 mx-5 md:mx-20"
                         style={{
-                            background: 'linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.8) 60%, rgba(0, 0, 0, 1) 100%)'
+                            background: 'linear-gradient(to bottom, rgba(225, 225, 225, 0.001) 0%, rgba(225, 225, 225, 0.48) 60%, rgba(225, 225, 225, 1) 100%)'
                         }}>
                         <div className="absolute inset-0 flex justify-center items-center">
                             <button
