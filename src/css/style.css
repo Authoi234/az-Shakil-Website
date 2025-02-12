@@ -147,3 +147,9 @@
         transform: translateX(0);
     }
 }
+.grid-item:hover{
+    border: 1px solid #1E6DEB;
+}
+.grid-item{
+    border: 1px solid #eaeaea;
+}

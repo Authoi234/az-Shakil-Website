@@ -9,6 +9,7 @@ import '../css/style.css';
 import Services from './Service/Services';
 import Countries from './Countries/Countries';
 import VisaCategories from './VisaCategories/VisaCategories';
+import Coaching from './Coaching/Coaching';
 
 const Home = () => {
 
@@ -19,6 +20,7 @@ const Home = () => {
             <Services></Services>
             <VisaCategories></VisaCategories>
             <Countries></Countries>
+            <Coaching></Coaching>
             <LearnersReviews></LearnersReviews>
             <Contributions></Contributions>
             <SkillsPage></SkillsPage>

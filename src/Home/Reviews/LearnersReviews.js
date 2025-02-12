@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import introImg from '../../assets/peep1.f4841716.svg';
 import { IoPaperPlane } from 'react-icons/io5';
-import { BsGlobeAmericas } from 'react-icons/bs';
+import { BsChatSquareQuote, BsGlobeAmericas } from 'react-icons/bs';
 
 const LearnersReviews = () => {
     const [showAll, setShowAll] = useState(false);
