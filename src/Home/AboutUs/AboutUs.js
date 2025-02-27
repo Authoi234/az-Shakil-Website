@@ -23,7 +23,7 @@ const AboutUs = () => {
                             <div className="w-[190%]"><img className='w-full border-8 border-[#F4F4F5] flex justify-center items-center rounded-xl' src={"https://wordpress.zozothemes.com/hegira/wp-content/uploads/sites/21/elementor/thumbs/about-us-1-qn840u0nlbinvnvm88hesh8scfwt5a1gnzqj4mllzc.jpg"} alt="" /></div>
                             <div className="text-white p-2 z-30 border-y-[2rem] w-[125%] flex justify-center items-center border-[#F4F4F5] text-center h-[37%] rounded-2xl" style={{ backgroundImage: "url(https://wordpress.zozothemes.com/hegira/wp-content/uploads/sites/21/2024/04/testi-section-vector.png)", backgroundColor: "#111111", backgroundRepeat: "no-repeat", backgroundPosition: 'top' }}>
                                 <div>
-                                    <h1 className="text-6xl font-semibold">{useNumReacher(0, 100, 50, 1)}%</h1>
+                                    <h1 className="text-6xl font-semibold">{useNumReacher(0, 100, 20, 1)}%</h1>
                                     <span className="text-lg font-styled">Successful Visa <br /> Process Rate</span>
                                 </div>
                             </div>
@@ -39,10 +39,15 @@ const AboutUs = () => {
                     </div>
                     <div className='lg:w-[50%] text-left pl-2 pb-10'>
                         <div className="w-full flex justify-start items-start">
-                            <div className=" text-start w-3/4">
-                                <h2 className='flex text-xl items-center justify-start font-semibold text-[#1E6DEB] font-styled' ><IoPaperPlane className='rotate-45 mr-2' /> About Us <BsGlobeAmericas className='ml-1' /></h2>
-                                <h2 className="text-[#262626] text-[2.4rem] leading-[50px] font-semibold mb-5 font-styled">
-                                    Visa & Immigration <br /> Consulting Firm in USA
+                            <div className=" text-start w-10/12">
+                                <h2 className='flex text-xl mb-[10px] items-center justify-start font-semibold -ml-2 text-[#1E6DEB] font-styled' >  <img src={require('../../assets/logo.png')} className='  mx-2' style={{
+                                    width: "25px",
+                                    height: "25px",
+                                    objectFit: "cover",
+                                    objectPosition: "0% 25%",
+                                }} alt="" /> About Us </h2>
+                                <h2 className="text-[#262626] text-[2.4rem] leading-[40px] font-semibold mb-5 font-styled">
+                                    Education & Immigration Consulting Firm in Canada
                                 </h2>
                             </div>
                         </div>
@@ -62,7 +67,7 @@ const AboutUs = () => {
                             </div>
                             <div className=''>
                                 <h1 className='text-2xl font-semibold mx-5'>
-                                    25+ Years of experience in visa and immigrations services.
+                                    06+ Years of experience in visa and immigrations services.
                                 </h1>
                             </div>
                         </div>

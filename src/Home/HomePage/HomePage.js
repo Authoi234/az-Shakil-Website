@@ -43,7 +43,7 @@ const HomePage = () => {
             id: 3,
             next: 1,
             title: "Expert Guidance for Your Next Destination.",
-            mainText: "WELCOME TO IMMIGWAY VISA AGENCY",
+            mainText: "WELCOME TO Apprent",
         }
     ];
 

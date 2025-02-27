@@ -60,10 +60,17 @@ const Contributions = () => {
   return (
     <div className='w-full bg-[#FEFEFE] py-10'>
       <div className="w-full flex justify-center items-center">
-        <div className="w-1/2 text-center">
-          <h2 className='flex text-xl items-center justify-center font-semibold text-[#1E6DEB]' ><IoPaperPlane className='rotate-45 mr-2' /> OUR CONTRIBUTIONS <BsGlobeAmericas className='ml-1' /></h2>
+        <div className="w-2/3 text-center">
+          <h2 className='flex text-xl items-center justify-center font-semibold text-[#1E6DEB]' >  <div className='overflow-hidden'>
+            <img src={require('../../assets/logo.png')} className='  mx-2' style={{
+              width: "25px",
+              height: "25px",
+              objectFit: "cover",
+              objectPosition: "0% 25%",
+            }} alt="" />
+          </div> OUR CONTRIBUTIONS</h2>
           <h2 className="text-[#262626] text-[2.7rem] leading-[50px] font-semibold mb-8">
-            OUR CONTRIBUTIONS TO <br /> HELP STUDENTS
+            For Helping Students
           </h2>
         </div>
       </div>

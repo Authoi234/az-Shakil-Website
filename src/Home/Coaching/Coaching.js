@@ -8,8 +8,15 @@ const Coaching = () => {
             <div className="w-full my-10 flex justify-center items-center">
                 <div className="flex justify-center items-center gap-4 max-w-[1200px]">
                     <div className="w-1/2 text-start">
-                        <h2 className='flex text-xl items-center justify-start mb-1 font-semibold text-[#1E6DEB]' ><IoPaperPlane className='rotate-45 mr-2' /> COACHING WE OFFER
-                            <BsGlobeAmericas className='ml-1' /></h2>
+                        <h2 className='flex text-xl items-center justify-start mb-1 font-semibold text-[#1E6DEB] -ml-1' >  <div className='overflow-hidden'>
+                                        <img src={require('../../assets/logo.png')} className='  mx-2' style={{
+                                            width: "25px",
+                                            height: "25px",
+                                            objectFit: "cover",
+                                        objectPosition: "0% 25%",
+                                        }} alt="" />
+                                    </div> COACHING WE OFFER
+                          </h2>
                         <h2 className="text-[#262626] text-[2.7rem] leading-[50px] font-semibold mb-8">
                             Get The Immigration <b></b> Trainings You Deserve.
                         </h2>
@@ -31,7 +38,7 @@ const Coaching = () => {
                                     <h1 className="text-[24px] leading-[45px] font-bold text-[#1E6DEB]">01</h1>
                                 </div>
                                 <div className='text-center ml-2' style={{ alignSelf: "center !important" }}>
-                                    <h1 className='text-[#000000] text-[28px] leading-[36px] font-bold'>Citizenship Test</h1>
+                                    <h1 className='text-[#000000] text-[28px] leading-[36px] font-bold'>Interview Grooming</h1>
                                 </div>
                             </div>
                             <div className='text-start text-[#929293] font-normal'>
@@ -73,7 +80,7 @@ const Coaching = () => {
                                     <h1 className="text-[24px] leading-[45px] font-bold text-[#1E6DEB]">04</h1>
                                 </div>
                                 <div className='text-center ml-2 ' style={{ alignSelf: "center !important" }}>
-                                    <h1 className='text-[#000000] text-[28px] leading-[36px] font-bold'>SAT Coaching</h1>
+                                    <h1 className='text-[#000000] text-[28px] leading-[36px] font-bold'>Duolingo Coaching</h1>
                                 </div>
                             </div>
                             <div className='text-start text-[#929293] font-normal'>

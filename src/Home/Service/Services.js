@@ -59,7 +59,12 @@ const Services = () => {
             <div className='px-10 py-5 '>
                 <div className="w-full flex justify-center items-center">
                     <div className="w-1/2 text-center">
-                        <h2 className='flex text-base items-center justify-center font-semibold text-[#1E6DEB]' ><IoPaperPlane className='rotate-45 mr-2' /> OUR SERVICES <BsGlobeAmericas className='ml-1' /></h2>
+                        <h2 className='flex text-base items-center mb-[10px] justify-center font-semibold text-[#1E6DEB]' >  <img src={require('../../assets/logo.png')} className='  mx-2' style={{
+                            width: "25px",
+                            height: "25px",
+                            objectFit: "cover",
+                            objectPosition: "0% 25%",
+                        }} alt="" /> OUR SERVICES </h2>
                         <h2 className=" text-[2.65rem] leading-[50px] font-semibold mb-5 text-black">
                             Empowering Newcomers A <br /> Handbook on Immigration
                         </h2>

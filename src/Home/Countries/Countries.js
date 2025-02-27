@@ -42,11 +42,18 @@ const Countries = () => {
 
     return (
         <div className='w-full bg-[#FEFEFE]'>
-            <div className="w-full flex justify-center items-center">
-                <div className="w-1/2 text-center">
-                    <h2 className='flex text-xl items-center justify-center font-semibold text-[#1E6DEB]' ><IoPaperPlane className='rotate-45 mr-2' /> COUNTRIES <BsGlobeAmericas className='ml-1' /></h2>
+            <div className="w-full flex justify-center items-center mt-5">
+                <div className="w-3/4 text-center">
+                    <h2 className='flex text-xl items-center justify-center font-semibold text-[#1E6DEB]' >  <div className='overflow-hidden'>
+                        <img src={require('../../assets/logo.png')} className='  mx-2' style={{
+                            width: "25px",
+                            height: "25px",
+                            objectFit: "cover",
+                            objectPosition: "0% 25%",
+                        }} alt="" />
+                    </div> COUNTRIES</h2>
                     <h2 className="text-[#262626] text-[2.7rem] leading-[50px] font-semibold mb-8">
-                        Countries We Support for <br /> Immigration.
+                        We Support for Immigration.
                     </h2>
                 </div>
             </div>
@@ -72,7 +79,14 @@ const Countries = () => {
                                                 </h1>
                                                 <p className="py-2 text-[1.08rem] text-white leading-8">{item?.text}</p>
                                                 <button className={`btn mb-5 bg-transparent border-none text-white px-0 hover:bg-transparent outline-none text-lg hover:scale-105 group transition-all duration-500`}>
-                                                    <BsGlobeAmericas className='hidden group-hover:inline transition-all duration-1000'></BsGlobeAmericas> Read More <IoPaperPlane className=' group-hover:translate-x-0.5 transition-translate duration-500'></IoPaperPlane>
+                                                    <div className='overflow-hidden'>
+                                                        <img src={require('../../assets/logo.png')} className='  mx-2' style={{
+                                                            width: "25px",
+                                                            height: "25px",
+                                                            objectFit: "cover",
+                                                            objectPosition: "0% 25%",
+                                                        }} alt="" />
+                                                    </div> Read More <IoPaperPlane className=' group-hover:translate-x-0.5 transition-translate duration-500'></IoPaperPlane>
                                                 </button>
                                             </div>
                                         </div>
@@ -86,7 +100,7 @@ const Countries = () => {
                                     backgroundImage: `url(${item?.img})`,
                                     backgroundRepeat: "no-repeat",
                                     backgroundSize: "100% 100%"
-                                }}> 
+                                }}>
                                     <div className='w-full md:w-1/2 ml-auto h-1/2  flex justify-end items-center mt-[45%] md:mt-0 md:items-center bg-[#111111] hover:bg-[#084fc2] transition-all md:h-[440px] duration-500 py-1'>
                                         <div className="absolute text-[10rem] font-semibold opacity-45 pl-5">0{item?.id}</div>
                                         <div className='flex justify-center items-center lg:-translate-y-10'>
@@ -98,8 +112,15 @@ const Countries = () => {
                                                     {item?.title}
                                                 </h1>
                                                 <p className="py-2 text-[1.08rem] text-white leading-8">{item?.text}</p>
-                                                <button className={`btn mb-5 bg-transparent border-none text-white px-0 hover:bg-transparent outline-none text-lg hover:scale-105 group transition-all duration-500`}>
-                                                    <BsGlobeAmericas className='hidden group-hover:inline transition-all duration-1000'></BsGlobeAmericas> Read More <IoPaperPlane className=' group-hover:translate-x-0.5 transition-translate duration-500'></IoPaperPlane>
+                                                <button className={`btn mb-5 bg-transparent group border-none text-white px-0 hover:bg-transparent outline-none text-lg hover:scale-105 group transition-all duration-500`}>
+                                                    <div className='overflow-hidden'>
+                                                        <img src={require('../../assets/logo.png')} className='  mx-2' style={{
+                                                            width: "25px",
+                                                            height: "25px",
+                                                            objectFit: "cover",
+                                                            objectPosition: "0% 25%",
+                                                        }} alt="" />
+                                                    </div> Read More <IoPaperPlane className=' group-hover:translate-x-0.5 transition-translate duration-500'></IoPaperPlane>
                                                 </button>
                                             </div>
                                         </div>

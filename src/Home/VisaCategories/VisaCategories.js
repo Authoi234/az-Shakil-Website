@@ -14,9 +14,18 @@ const VisaCategories = () => {
                     <div className="lg:w-1/2 w-full text-start rounded-lg bg-white flex-col">
                         <div className=" after:content-[''] after:opacity-95 after:absolute after:mix-blend-lighten" style={{ backgroundImage: "url(https://wordpress.zozothemes.com/hegira/wp-content/uploads/sites/21/2024/04/visa-1.jpeg)", backgroundPosition: "cover", backgroundSize: "cover" }}>
                             <div className='p-10' style={{ background: "rgba(20, 20, 20, 0.9)" }}>
-                                <h2 className='flex items-center py-2 font-semibold text-lg text-[#1E6DEB]' ><IoPaperPlane className='rotate-45 mr-2' /> VISA CATEGORIES  <BsGlobeAmericas className='ml-1' /></h2>
+                                <h2 className='flex items-center py-2 -ml-2 font-semibold text-lg text-[#1E6DEB]' >
+                                    <div className='overflow-hidden'>
+                                        <img src={require('../../assets/logo.png')} className='  mx-2' style={{
+                                            width: "25px",
+                                            height: "25px",
+                                            objectFit: "cover",
+                                        objectPosition: "0% 25%",
+                                        }} alt="" />
+                                    </div>
+                                    VISA CATEGORIES  </h2>
                                 <h2 className="text-white text-[2.7rem] py-2 leading-[50px] font-semibold mb-5">
-                                    We Offers Citizenship & Immigration Services
+                                    We Offers Education & Immigration Services
                                 </h2>
                                 <p className="py-2 text-base text-[#F2F3F3]">Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries but also the leap into electronic</p>
                                 <motion.div className='flex py-2 justify-center md:justify-start items-center'>
@@ -79,7 +88,7 @@ const VisaCategories = () => {
                             </div>
                         </div>
                     </div>
-                </div>  
+                </div>
             </div>
         </div>
     );
