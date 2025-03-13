@@ -1,44 +1,4 @@
-.logo-animate {
-  animation: moveLogo 2s ease-in-out forwards;
-}
 
-.logo-animate-reverse {
-  animation: moveLogoReverse 2s ease-in-out forwards;
-}
-
-@keyframes moveLogo {
-  0% {
-    transform: translateY(0) rotateY(0deg) rotateZ(0deg) rotateX(0deg);
-    box-shadow: 0 0 0 rgba(255, 255, 255, 0);
-  }
-
-  50% {
-    transform: translateY(25.75vh) rotateY(50deg) rotateZ(5deg) rotateX(10deg);
-    box-shadow: 0 10px 40px rgba(255, 255, 255, 0.5);
-  }
-
-  100% {
-    transform: translateY(51.5vh) rotateY(360deg) rotateZ(360deg) rotateX(360deg);
-    box-shadow: 0 10px 60px rgba(255, 255, 255, 0.7);
-  }
-}
-
-@keyframes moveLogoReverse {
-  0% {
-    transform: translateY(51.5vh) rotateY(360deg) rotateZ(360deg) rotateX(360deg);
-    box-shadow: 0 10px 60px rgba(255, 255, 255, 0.7);
-  }
-
-  50% {
-    transform: translateY(25.75vh) rotateY(50deg) rotateZ(5deg) rotateX(10deg);
-    box-shadow: 0 10px 40px rgba(255, 255, 255, 0.5);
-  }
-
-  100% {
-    transform: translateY(0) rotateY(0deg) rotateZ(0deg) rotateX(0deg);
-    box-shadow: 0 0 0 rgba(255, 255, 255, 0);
-  }
-}
 
 .App {
   text-align: center;

@@ -2,6 +2,8 @@ import React, { useEffect, useRef, useState } from 'react';
 import introImg from '../../assets/peep1.f4841716.svg';
 import { IoPaperPlane } from 'react-icons/io5';
 import { BsChatSquareQuote, BsGlobeAmericas } from 'react-icons/bs';
+import image from "../../assets/erasebg-transformed.webp";
+import ReactParallaxTilt from 'react-parallax-tilt';
 
 const LearnersReviews = () => {
     const [showAll, setShowAll] = useState(false);
@@ -32,7 +34,7 @@ const LearnersReviews = () => {
         {
             name: "(Kim V)ۦ ۦ  ",
             pic: "https://scontent.fdac134-1.fna.fbcdn.net/v/t39.30808-1/391661929_862262098610373_6227395856520867745_n.jpg?stp=c30.0.785.785a_dst-jpg_s200x200&_nc_cat=111&ccb=1-7&_nc_sid=0ecb9b&_nc_ohc=261phGXUUGUQ7kNvgEa_e2u&_nc_ht=scontent.fdac134-1.fna&oh=00_AYAs57GiOx1ZuIUuZ0ZF1zjBoqyflyMnCZpAabkMukxzSw&oe=66FAED8F",
-            message: `Shakil vaiya you are so helpful..Thank you vaiya...jokon e kno dorkar e msg disi shate shate response paise..aijonno thank you so much and also thanks jaber vaiya�`
+            message: `Shakil vaiya you are so helpful..Thank you vaiya...jokon e kno dorkar e msg disi shate shate response paise..aijonno thank you so much and also thanks jaber vaiya.`
         },
         {
             name: "Yasin Arafat Evan ",
@@ -58,7 +60,7 @@ const LearnersReviews = () => {
         {
             name: "Mirazul Islam",
             pic: "https://scontent.fdac134-1.fna.fbcdn.net/v/t39.30808-1/307573963_104928555709874_1791434819519151785_n.jpg?stp=c0.0.460.460a_dst-jpg_s200x200&_nc_cat=102&ccb=1-7&_nc_sid=0ecb9b&_nc_ohc=uBnbHVOJJnYQ7kNvgFCzYBo&_nc_ht=scontent.fdac134-1.fna&oh=00_AYBsDe4CSRnepg4jHzNCnd-Aa1Il0uShQNaaUAK0vfz5_w&oe=66FAFBAF",
-            message: `Thanks vai,, for giving me your valuable time �`
+            message: `Thanks vai,, for giving me your valuable time`
         },
         {
             name: "Sohidul Sojib ",
@@ -68,7 +70,7 @@ const LearnersReviews = () => {
         {
             name: "Md Mahedi Hasan Shaikat",
             pic: "https://scontent.fdac134-1.fna.fbcdn.net/v/t39.30808-1/460627020_2193363781036342_7820301293340354075_n.jpg?stp=dst-jpg_s200x200&_nc_cat=104&ccb=1-7&_nc_sid=0ecb9b&_nc_ohc=YyJgRXCWhQAQ7kNvgHRFo3W&_nc_ht=scontent.fdac134-1.fna&_nc_gid=AbwUvqjfc5nVpTHQjFyFsZu&oh=00_AYAtxVJqi-wnrHTpLn1w7yP_oEdzYQMneKBTTlT82-ANnA&oe=66FAE4F6",
-            message: `Thanks Shakil bhai for your consultancy �`
+            message: `Thanks Shakil bhai for your consultancy `
         },
         {
             name: "Shaheduzzaman Tashin",
@@ -104,47 +106,50 @@ const LearnersReviews = () => {
         top: "30%",
         position: "absolute",
         borderRadius: "50%",
-        boxShadow: "0 0 10px 5px rgba(140, 177, 224, 0.3)"
+        boxShadow: "0 0 10px 5px rgba(140, 177, 224, 0.3)",
+        filter: "blur(25px)",
     };
 
     const Circle2Style = {
-        width: "148px",
+        width: "200px",
         zIndex: "1",
         left: "60%",
-        top: "65%",
+        top: "60%",
         position: "absolute",
+        filter: "blur(25px)",
         borderRadius: "50%",
         boxShadow: "0 0 10px 5px rgba(140, 177, 224, 0.3)"
     };
 
     const Circle3Style = {
         background: "linear-gradient(339deg, rgba(37,121,254,1) 0%, rgba(100,165,255,1) 45%, rgba(102,228,255,1) 100%)",
-        width: "148px",
-        height: "148px",
+        width: "178px",
+        height: "178px",
         zIndex: "1",
         left: "-3%",
-        top: "85%",
+        top: "80%",
         position: "absolute",
         borderRadius: "50%",
-        boxShadow: "0 0 10px 5px rgba(140, 177, 224, 0.3)"
+        boxShadow: "0 0 10px 5px rgba(140, 177, 224, 0.3)",
+        filter: "blur(25px)",
     }
 
     return (
-        <div className='px-5 md:px-20 py-12 flex justify-center items-center' style={{
-            backgroundColor: '#FEFEFE',
-            transition: 'background-color 0.5s ease-in'
+        <div className='px-5 md:px-20 py-12 mt-7 flex justify-center items-center text-white ' style={{
+            transition: 'background-color 0.5s ease-in',
+            background: "radial-gradient(circle, rgba(30,109,235,1) 26%, rgba(23,49,88,1) 86%)"
         }}>
-            <div className="bg-transparent text-center relative max-w-[1300px]">
+            <div className="pb-10 text-center relative max-w-[1300px]">
                 <div>
                     <div className="flex justify-center items-center" data-aos="fade-up">
                         <div className="w-40 -mb-5" style={{
                         }}>
                             <img style={{
                                 clipPath: "polygon(0 0, 100% 1%, 100% 76%, 0 77%)",
-                            }} src={"https://icons8.com/l/3d/images/1_with_coffee_man_3.webp"} alt="" />
+                            }} src={image} alt="" />
                         </div>
                     </div>
-                    <h2 className='flex text-xl items-center justify-center font-semibold text-[#1E6DEB]' >  <div className='overflow-hidden'>
+                    <h2 className='flex text-xl items-center justify-center font-semibold text-[#aecdff]' >  <div className='overflow-hidden'>
                         <img src={require('../../assets/logo.png')} className='  mx-2' style={{
                             width: "25px",
                             height: "25px",
@@ -153,54 +158,64 @@ const LearnersReviews = () => {
                         }} alt="" />
                     </div> OUR TESTIMONIALS
                     </h2>
-                    <h2 className="text-[#262626] text-[2.7rem] leading-[50px] font-semibold mb-1">
+                    <h2 className="text-white text-[2.7rem] leading-[50px] font-semibold mb-1">
                         What did learners think About Us.
                     </h2>
-                    <p className='text-md font-semibold text-black'>They always expressed their endearment and love to us</p>
+                    <p className='text-md font-semibold text-white'>They always expressed their endearment and love to us</p>
                 </div>
                 <img src="https://hype4.academy/_next/static/media/oval.d7781d8a.svg" style={Circle1Style} alt="" />
                 <img src="https://hype4.academy/_next/static/media/oval.d7781d8a.svg" style={Circle2Style} alt="" />
                 <div style={Circle3Style}></div>
-                <div className=' mt-5 columns-1 md:columns-2 lg:columns-3 flex-wrap ' style={{ gridGap: '20px', backgroundImage: "https://img.freepik.com/free-vector/white-abstract-background-design_361591-896.jpg", backgroundRepeat: "no-repeat", backgroundPosition: "cover" }}>
+                <div className=' mt-5 columns-1 md:columns-2 lg:columns-3 flex-wrap break-inside-avoid ' style={{ gridGap: '20px', backgroundImage: "https://img.freepik.com/free-vector/white-abstract-background-design_361591-896.jpg", backgroundRepeat: "no-repeat", backgroundPosition: "cover" }}>
                     {visibleReviews.map((data, index) => (
-                        <div key={index} className="bg-[#173158] px-2 text-black rounded-3xl my-10 py-3 z-10" style={{
-                            background: "rgba(224, 236, 255, 0.45)",
-                            backdropFilter: "blur(7px)",
-                            marginTop: index % 2 === 0 ? "-30px" : "-30px", // Negative margin to overlap
+                        <ReactParallaxTilt className='  px-2 text-white rounded-3xl my-10 py-3 z-10 gradient-container break-inside-avoid ' glareMaxOpacity={0.05} style={{
+                            backdropFilter: "blur(40px)",
+                            marginTop: index % 2 === 0 ? "-20px" : "-20px", // Negative margin to overlap
                             zIndex: 2,  // Ensure it's above the circle image
                             position: "relative",
+                            boxShadow: "inset 0 4px 20px rgba(225, 225, 225, 0.4)"
                         }} data-aos="zoom-in">
-                            <div className='flex justify-center items-start'>
-                                <div className='w-1/4 text-center flex justify-center items-center'>
-                                    <div className='w-12 h-12 rounded-full border border-black'>
-                                        <div className='w-full'>
-                                            <img src={data.pic} className='rounded-full object-cover' alt="" />
+                            <div>
+                                <div className=' flex justify-start text-justify items-start px-5'>
+                                    <div className="text-left break-all break-words flex-wrap">
+                                        <div className='w-full text-left flex justify-start items-center'>
+                                            <div className='w-12 h-12 rounded-full border border-black'>
+                                                <div className='w-full'>
+                                                    <img src={data.pic} className='rounded-full object-cover' alt="" />
+                                                </div>
+                                            </div>
+                                            <div className='text-left ml-3'>
+                                                <h4 className="text-lg">{data.name}</h4>
+                                                <p className="text-white text-sm">Review on Facebook</p>
+                                            </div>
+                                        </div>
+                                        <div className='max-w-[420px]'>
+                                            <div className=' text-left w-full'>
+                                                <p className='text-white text-sm mt-2 mb-2 ' style={{
+                                                    textAlign: "justify",
+                                                    textJustify: data.message,
+                                                    hyphens: "auto",
+                                                }}>{data.message}</p>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
-                                <div className='w-3/4'>
-                                    <div className=' text-left w-full'>
-                                        <h4 className="text-lg">{data.name}</h4>
-                                        <p className="text-gray-700 text-sm">Review on Facebook</p>
-                                        <p className='text-black text-sm mt-2 mb-2'>{data.message}</p>
-                                    </div>
-                                </div>
                             </div>
-                        </div>
+                        </ReactParallaxTilt>
                     ))}
                 </div>
-                <div className="backdrop:blur-md">
+                <div className="">
                     {!showAll && (
-                        <div className="  backdrop:blur-xl mt-3 "
+                        <div className=" "
                             style={{
                                 // background: 'linear-gradient(to bottom, rgba(225, 225, 225, 0.001) 0%, rgba(225, 225, 225, 0.48) 60%, rgba(225, 225, 225, 1) 100%)'
                             }}>
-                            <div className="  h-full flex justify-center items-center  backdrop:blur-xl">
+                            <div className="  flex justify-center items-center ">
                                 <button
                                     className="cursor-pointer bg-[#1E6DEB] text-white text-base px-4 border-0 rounded-full transition ease-in-out py-2 hover:bg-[#3288ff] hover:scale-110"
                                     onClick={handleToggle}
                                 >
-                                    {!showAll && 'আরো কমেন্ট দেখুন'}
+                                    {!showAll && 'See More Reviews'}
                                 </button>
                             </div>
                         </div>

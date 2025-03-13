@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { IoPaperPlane } from 'react-icons/io5';
+import { IoIosPlay } from "react-icons/io";
 
 const ContributionCard = ({ card }) => {
     const [seeMore, setSeeMore] = useState(false);
@@ -7,9 +7,7 @@ const ContributionCard = ({ card }) => {
     return (
         <div className={`rounded-sm group flex justify-center items-center text-black h-[415px] bg-[#F6F6F8]`} style={{ transition: 'all 0.5s ease', padding: "0px 25px 15px 20px", margin: "20px 10px", }}>
             <div className='text-left '>
-                <div className="w-[100px] text-left h-[80px] z-50 -mb-16 p-2 text-white flex justify-left items-center absolute " style={{
-                    backgroundColor : "rgba(37, 99, 235, 0.35)",
-                    backdropFilter: "blur(4px)"
+                <div className="w-[100px] text-left h-[80px] z-50 -mb-16 p-2 text-white flex justify-left items-center absolute  gradient-container-card-date backdrop-blur-sm" style={{
                 }}>
                     <h1 className="text-lg font-semibold">{card?.date}</h1>
                 </div>
@@ -26,7 +24,7 @@ const ContributionCard = ({ card }) => {
                                 {card?.para}
                             </p>
                             <div className="w-44 my-4 text-[#1E6DEB] hover:scale-105 flex justify-center items-center transition-all">
-                                <a href={card?.link} target="_blank" rel="noopener noreferrer" className='w-full'><button className="w-full flex no-underline text-lg hover:no-underline items-center">Watch Now <IoPaperPlane></IoPaperPlane></button></a>
+                                <a href={card?.link} target="_blank" rel="noopener noreferrer" className='w-full'><button className="w-full flex no-underline text-lg hover:no-underline items-center"> <IoIosPlay className='text-3xl -ml-1'></IoIosPlay> Watch Now</button></a>
                             </div>
                         </div>
                     </div>
