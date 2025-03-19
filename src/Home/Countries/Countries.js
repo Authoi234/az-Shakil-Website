@@ -41,8 +41,8 @@ const Countries = () => {
     ];
 
     return (
-        <div className='w-full bg-[#FEFEFE]'>
-            <div className="w-full flex justify-center items-center mt-5">
+        <div className='w-full bg-[#FEFEFE]' id='countries-sect'>
+            <div className="w-full flex justify-center items-center ">
                 <div className="w-3/4 text-center">
                     <h2 className='flex text-xl items-center justify-center font-semibold text-[#1E6DEB]' >  <div className='overflow-hidden'>
                         <img src={require('../../assets/logo.png')} className='  mx-2' style={{

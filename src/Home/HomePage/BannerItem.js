@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import { IoPaperPlane } from "react-icons/io5";
 import { BsGlobeAmericas } from "react-icons/bs";
 import { MdArrowOutward } from "react-icons/md";
@@ -9,7 +9,21 @@ import { SiYoutube } from "react-icons/si";
 import { RiTwitterXFill } from "react-icons/ri";
 import "../../css/style.css";
 
+import { animate, stagger } from 'motion';
+
 const BannerItem = ({ item }) => {
+
+    const springLetterAnimation = {
+        hidden: { y: -100, opacity: 0 },
+        visible: (index) => ({
+            y: 0,
+            opacity: 1,
+            transition: { delay: index * 0.1, type: 'spring', stiffness: 100, damping: 10 },
+        }),
+    };
+
+    const text = item?.title;
+
     return (
         <div> <div
             className="flex flex-col lg:flex-row justify-evenly p-0 m-0 items-center overflow-hidden h-full w-full"
@@ -47,15 +61,26 @@ const BannerItem = ({ item }) => {
             {/* Left Content Section */}
             <div className="px-6 lg:px-5 text-center lg:text-left w-full lg:max-w-[48%] flex justify-center items-center lg:py-0 py-10 z-30">
                 <div className=''>
-                    <p className="text-[#1E6DEB] text-xl lg:text-xl font-bold flex justify-center -ml-[5px] lg:justify-start items-center font-styled">
+                    <p  className="text-[#1E6DEB] text-xl lg:text-xl font-bold flex justify-center -ml-[5px] lg:justify-start items-center font-styled">
                         <img src={require('../../assets/logo.png')} className='  mx-2' style={{
                             width: "25px",
                             height: "25px",
                             objectFit: "cover",
                             objectPosition: "0% 25%",
-                        }} alt="" /> <p className='uppercase'>{item?.mainText}</p>
+                        }} alt="" /> <p className='uppercase '>{item?.mainText}</p>
                     </p>
-                    <div className="lg:w-[36rem] xl:w-[37rem]"> <h1 className='leading-[81px] text-white font-styled lg:font-medium xl:font-semibold text-[60px]' >{item?.title}</h1></div>
+                    <div className="lg:w-[36rem] xl:w-[37rem]"> <h1 className='leading-[81px] text-white font-styled lg:font-medium xl:font-semibold text-[60px]' >
+                        {text.split('').map((letter, index) => (
+                            <motion.span
+                                key={index}
+                                initial="hidden"
+                                animate="visible"
+                                variants={springLetterAnimation}
+                                custom={index} // Pass the index to control the delay
+                            >
+                                {letter}
+                            </motion.span>
+                        ))}</h1></div>
                     <div className='lg:w-[520px] xl:w-[540px] text-left'>
                         <p className='text-[18px] font-normal leading-[32px] my-3 xl:my-8 text-[#f7f7f7]'>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration</p>
                     </div>
@@ -63,13 +88,22 @@ const BannerItem = ({ item }) => {
                         <Link to={"/book/booking"}>
                             <motion.button
                                 whileHover={{
-                                    scale: 1.02,
+                                    scale: 1.05,
                                     transition: { duration: 0.2 },
+                                    x: 5
                                 }}
-                                className="h-[61px] leading-[17px] text-[16px] relative w-[213px] z-10 overflow-hidden flex justify-around items-center  font-medium py-5 px-9 rounded-md text-white hover:text-black bg-[#1E6CEA]  active:ring-4 before:content-[''] before:absolute before:left-[-100%] before:w-full before:h-full before:bg-white before:transition-all before:duration-300 before:ease-in-out hover:before:left-0"
-                                whileTap={{ scale: 0.9 }}
+                                initial={{ opacity: 0, y: 20 }}
+                                animate={{ opacity: 1, y: 0 }}
+                                transition={{ duration: 0.5, delay: 0.2 }}
+                                className="h-[61px] leading-[17px] text-[16px] relative w-[213px] z-10 overflow-hidden flex justify-around items-center font-medium py-5 px-9 rounded-md text-white hover:text-black bg-[#1E6CEA] active:ring-4 before:content-[''] before:absolute before:left-[-100%] before:w-full before:h-full before:bg-white before:transition-all before:duration-300 before:ease-in-out hover:before:left-0"
+                                whileTap={{ rotate: 20, scale: 0.90 }}
                             >
-                                <span className='z-20 leading-[17px] font-bold text-[16px] uppercase'>Learn More</span> <MdArrowOutward className="font-black text-xl z-20" />
+                                <motion.span
+                                    className='z-20 leading-[17px] font-bold text-[16px] uppercase'
+                                    transition={{ duration: 0.2 }}
+                                >
+                                    Learn More
+                                </motion.span>
                             </motion.button>
                         </Link>
                     </motion.div>
@@ -78,7 +112,7 @@ const BannerItem = ({ item }) => {
 
             {/* Right Image Section */}
             <div
-                className="overflow-hidden w-full flex origin-top-left lg:origin-left justify-start items-center lg:w-full lg:max-w-[43%] object-cover 2xl:min-w-[50%] xl:max-w-[1025px] lg:h-[857px] "
+                className=" overflow-hidden w-full flex origin-top-left lg:origin-left justify-start items-center lg:w-full lg:max-w-[43%] object-cover 2xl:min-w-[50%] xl:max-w-[1025px] lg:h-[857px] "
             >
                 <img
                     src={item?.image}

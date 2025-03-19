@@ -47,12 +47,12 @@ const SkillsPage = () => {
 
         window.addEventListener("scroll", handleScroll);
         return () => window.removeEventListener("scroll", handleScroll);
-    }, [isInView]);
+    }, [isInView]); 
 
     const { isPending, error, data: skillsData = 0 } = useQuery({
         queryKey: ['skillsData'],
         queryFn: async () => {
-            const res = await fetch("https://az-shakil-website-server.vercel.app/videos/");
+            const res = await fetch("https://az-shakil-website-server-kwe1eyc20-authoi234s-projects.vercel.app/videos/");
             const data = await res.json();
             return data;
         }

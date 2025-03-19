@@ -55,11 +55,11 @@ const Services = () => {
     ];
 
     return (
-        <div className='services-bg '>
+        <div className='services-bg pt-5 ' id='services-sect'>
             <div className='px-10 py-5 '>
                 <div className="w-full flex justify-center items-center">
                     <div className="w-1/2 text-center">
-                        <h2 className='flex text-base items-center mb-[10px] justify-center font-semibold text-[#1E6DEB]' >  <img src={require('../../assets/logo.png')} className='  mx-2' style={{
+                        <h2 className='flex text-lg items-center mb-[10px] justify-center font-semibold text-[#1E6DEB]' >  <img src={require('../../assets/logo.png')} className='  mx-2' style={{
                             width: "25px",
                             height: "25px",
                             objectFit: "cover",
@@ -94,7 +94,7 @@ const Services = () => {
                                 else if (!item.special && item?.isOdd === true) {
                                     return (
                                         <Tilt scale={0.9} glareEnable={false} className="background-stripes rounded-md parallax-effect shadow-md" perspective={1300}>
-                                            <div className='p-11 w-full bg-white rounded-md transition-all duration-700 group ' style={{backgroundImage: "url(https://wordpress.zozothemes.com/hegira/wp-content/uploads/sites/21/2024/05/black.png)", backgroundRepeat: "no-repeat", backgroundSize: "cover"}}>
+                                            <div className='p-11 w-full bg-white rounded-md transition-all duration-700 group ' style={{ backgroundImage: "url(https://wordpress.zozothemes.com/hegira/wp-content/uploads/sites/21/2024/05/black.png)", backgroundRepeat: "no-repeat", backgroundSize: "cover" }}>
                                                 <figure className='mb-9'><img src={item?.img} className='w-auto max-w-full' alt="" /></figure>
                                                 <h1 className='font-urbanist text-[28px] leading-9 font-[700] text-[#262626] group-hover:text-[#1E6DEB]'>
                                                     {item?.text}

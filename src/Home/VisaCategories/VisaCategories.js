@@ -8,7 +8,7 @@ import "../../css/style.css";
 
 const VisaCategories = () => {
     return (
-        <div className='pt-5 lg:pb-20 bg-[#FFFFFF] before-bg-bg '>
+        <div className='pt-5 bg-[#FFFFFF] before-bg-bg ' id='visa-categories'>
             <div className=' flex justify-center items-center'>
                 <div className="w-full lg:flex lg:justify-center my-0  mx-auto p-5 lg:max-w-[1200px] gap-7 flex-row lg:items-end">
                     <div className="lg:w-1/2 w-full text-start rounded-lg bg-white flex-col">

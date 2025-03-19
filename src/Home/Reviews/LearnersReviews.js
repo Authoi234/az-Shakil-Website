@@ -135,92 +135,32 @@ const LearnersReviews = () => {
     }
 
     return (
-        <div className='px-5 md:px-20 py-12 mt-7 flex justify-center items-center text-white ' style={{
-            transition: 'background-color 0.5s ease-in',
-            background: "radial-gradient(circle, rgba(30,109,235,1) 26%, rgba(23,49,88,1) 86%)"
+        <div className='px-5 md:px-20 py-12 -mt-5 flex justify-center items-center text-white' id='reviews-sect' style={{
+            backgroundColor: "#FFEBEB",
         }}>
-            <div className="pb-10 text-center relative max-w-[1300px]">
-                <div>
-                    <div className="flex justify-center items-center" data-aos="fade-up">
-                        <div className="w-40 -mb-5" style={{
-                        }}>
-                            <img style={{
-                                clipPath: "polygon(0 0, 100% 1%, 100% 76%, 0 77%)",
-                            }} src={image} alt="" />
-                        </div>
-                    </div>
-                    <h2 className='flex text-xl items-center justify-center font-semibold text-[#aecdff]' >  <div className='overflow-hidden'>
-                        <img src={require('../../assets/logo.png')} className='  mx-2' style={{
-                            width: "25px",
-                            height: "25px",
-                            objectFit: "cover",
-                            objectPosition: "0% 25%",
-                        }} alt="" />
-                    </div> OUR TESTIMONIALS
-                    </h2>
-                    <h2 className="text-white text-[2.7rem] leading-[50px] font-semibold mb-1">
-                        What did learners think About Us.
-                    </h2>
-                    <p className='text-md font-semibold text-white'>They always expressed their endearment and love to us</p>
-                </div>
-                <img src="https://hype4.academy/_next/static/media/oval.d7781d8a.svg" style={Circle1Style} alt="" />
-                <img src="https://hype4.academy/_next/static/media/oval.d7781d8a.svg" style={Circle2Style} alt="" />
-                <div style={Circle3Style}></div>
-                <div className=' mt-5 columns-1 md:columns-2 lg:columns-3 flex-wrap break-inside-avoid ' style={{ gridGap: '20px', backgroundImage: "https://img.freepik.com/free-vector/white-abstract-background-design_361591-896.jpg", backgroundRepeat: "no-repeat", backgroundPosition: "cover" }}>
-                    {visibleReviews.map((data, index) => (
-                        <ReactParallaxTilt className='  px-2 text-white rounded-3xl my-10 py-3 z-10 gradient-container break-inside-avoid ' glareMaxOpacity={0.05} style={{
-                            backdropFilter: "blur(40px)",
-                            marginTop: index % 2 === 0 ? "-20px" : "-20px", // Negative margin to overlap
-                            zIndex: 2,  // Ensure it's above the circle image
-                            position: "relative",
-                            boxShadow: "inset 0 4px 20px rgba(225, 225, 225, 0.4)"
-                        }} data-aos="zoom-in">
-                            <div>
-                                <div className=' flex justify-start text-justify items-start px-5'>
-                                    <div className="text-left break-all break-words flex-wrap">
-                                        <div className='w-full text-left flex justify-start items-center'>
-                                            <div className='w-12 h-12 rounded-full border border-black'>
-                                                <div className='w-full'>
-                                                    <img src={data.pic} className='rounded-full object-cover' alt="" />
-                                                </div>
-                                            </div>
-                                            <div className='text-left ml-3'>
-                                                <h4 className="text-lg">{data.name}</h4>
-                                                <p className="text-white text-sm">Review on Facebook</p>
-                                            </div>
-                                        </div>
-                                        <div className='max-w-[420px]'>
-                                            <div className=' text-left w-full'>
-                                                <p className='text-white text-sm mt-2 mb-2 ' style={{
-                                                    textAlign: "justify",
-                                                    textJustify: data.message,
-                                                    hyphens: "auto",
-                                                }}>{data.message}</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </ReactParallaxTilt>
-                    ))}
-                </div>
-                <div className="">
-                    {!showAll && (
-                        <div className=" "
-                            style={{
-                                // background: 'linear-gradient(to bottom, rgba(225, 225, 225, 0.001) 0%, rgba(225, 225, 225, 0.48) 60%, rgba(225, 225, 225, 1) 100%)'
+            <div className='w-full'>
+                <div className="pb-0 text-center relative max-w-[1300px]">
+                    <div>
+                        <div className="flex justify-center items-center" data-aos="fade-up">
+                            <div className="w-40 -mb-5" style={{
                             }}>
-                            <div className="  flex justify-center items-center ">
-                                <button
-                                    className="cursor-pointer bg-[#1E6DEB] text-white text-base px-4 border-0 rounded-full transition ease-in-out py-2 hover:bg-[#3288ff] hover:scale-110"
-                                    onClick={handleToggle}
-                                >
-                                    {!showAll && 'See More Reviews'}
-                                </button>
+                                <img style={{
+                                    clipPath: "polygon(0 0, 100% 1%, 100% 76%, 0 77%)",
+                                }} src={image} alt="" />
                             </div>
                         </div>
-                    )}
+                        <h2 className='flex text-xl items-center justify-center font-semibold text-black' >  <div className='overflow-hidden'>
+                            <img src={require('../../assets/logo.png')} className='  mx-2' style={{
+                                width: "25px",
+                                height: "25px",
+                                objectFit: "cover",
+                                objectPosition: "0% 25%",
+                            }} alt="" />
+                        </div> OUR TESTIMONIALS
+                        </h2>
+                    </div>
                 </div>
+                <div class="elfsight-app-2fe45f6b-7267-4998-a3b3-b1b4357bf9f4 w-full" data-elfsight-app-lazy></div>
             </div>
         </div >
     );

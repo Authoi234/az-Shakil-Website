@@ -10,19 +10,27 @@ import Services from './Service/Services';
 import Countries from './Countries/Countries';
 import VisaCategories from './VisaCategories/VisaCategories';
 import Coaching from './Coaching/Coaching';
+import MiddleBox from './HomePage/MiddleBox';
+import ContactUs from './ContactUs/ContactUs';
+import Faq from './Faq/Faq';
+import Gallery from './Gallery/Gallery';
 
 const Home = () => {
 
     return (
         <div className=''>
             <HomePage></HomePage>
-            <AboutUs></AboutUs>
             <Services></Services>
             <VisaCategories></VisaCategories>
             <Countries></Countries>
             <Coaching></Coaching>
+            <AboutUs></AboutUs>
+            <MiddleBox></MiddleBox>
             <LearnersReviews></LearnersReviews>
             <Contributions></Contributions>
+            <ContactUs></ContactUs>
+            <Gallery></Gallery>
+            <Faq></Faq>
         </div >
     );
 };

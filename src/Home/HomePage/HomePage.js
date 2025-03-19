@@ -34,7 +34,7 @@ const HomePage = () => {
             prev: 1,
             id: 2,
             next: 3,
-            title: "Step-by-Step Guidance for Visa Succes.",
+            title: "Step-by-Step Guidance for Visa Success.",
             mainText: "Visa Consultation Services",
         },
         {
@@ -48,7 +48,7 @@ const HomePage = () => {
     ];
 
     return (
-        <div className="" >
+        <div className="" id='homepage' >
             <div className='mt-20  md:min-h-[90vh] lg:min-h-[100vh]' >
                 <div
                     data-theme="dark"
@@ -77,7 +77,8 @@ const HomePage = () => {
                                 disableOnInteraction: false,
                                 waitForTransition: true,
                             }}
-                        >
+                            
+                            >
                             {bannerData.map(item => (
                                 <SwiperSlide key={item?.id}>
                                     <BannerItem item={item} />

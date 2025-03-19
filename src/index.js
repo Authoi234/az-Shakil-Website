@@ -7,6 +7,7 @@ import './css/style.css';
 import reportWebVitals from './reportWebVitals';
 import { ParallaxProvider } from 'react-scroll-parallax';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
+import AuthProvider from './context/AuthProvider';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
@@ -15,10 +16,11 @@ const queryClient = new QueryClient()
 root.render(
   <React.StrictMode>
     <QueryClientProvider client={queryClient}>
-      <ParallaxProvider>
-
-        <App />
-      </ParallaxProvider>
+        <ParallaxProvider>
+      <AuthProvider>
+          <App />
+      </AuthProvider>
+        </ParallaxProvider>
     </QueryClientProvider>
   </React.StrictMode>
 );

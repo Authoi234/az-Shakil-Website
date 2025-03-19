@@ -58,7 +58,7 @@ const Contributions = () => {
   ]
 
   return (
-    <div className='w-full bg-[#FEFEFE] py-10'>
+    <div className='w-full bg-[#FEFEFE] py-10' id='contributions-sect'>
       <div className="w-full flex justify-center items-center">
         <div className="w-2/3 text-center">
           <h2 className='flex text-xl items-center justify-center font-semibold text-[#1E6DEB]' >  <div className='overflow-hidden'>

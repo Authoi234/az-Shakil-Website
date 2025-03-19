@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import Img1 from '../../assets/aboutImg1.jpg';
 import Img2 from '../../assets/aboutImg2.jpg';
 import { FaCheckCircle, FaTelegram } from "react-icons/fa";
@@ -13,9 +13,8 @@ import { motion } from 'motion/react';
 import { Link } from 'react-router-dom';
 
 const AboutUs = () => {
-
     return (
-        <div className='bg-[#F4F4F5] min-h-screen pt-10 h-auto flex justify-center items-center' style={{ backgroundImage: "url(https://wordpress.zozothemes.com/hegira/wp-content/uploads/sites/21/2024/04/bg.png)", backgroundPosition: "center center", backgroundRepeat: 'no-repeat', backgroundSize: "cover" }}>
+        <div id='about-us-sect' className='bg-[#F4F4F5] min-h-screen pt-10 -pb-5 h-auto flex justify-center items-center' style={{ backgroundImage: "url(https://wordpress.zozothemes.com/hegira/wp-content/uploads/sites/21/2024/04/bg.png)", backgroundPosition: "center center", backgroundRepeat: 'no-repeat', backgroundSize: "cover" }}>
             <div data-theme="light" className='px-5 py-16 text-center flex justify-center items-center max-w-[1300px]' style={{ background: "transparent" }}>
                 <div className='lg:flex lg:justify-around lg:items-center text-center mr-2'>
                     <div className='justify-center flex px-1 w-full lg:w-[47%]'>
