@@ -1,12 +1,14 @@
-import React, { useState } from 'react';
+import React, { useRef, useState } from 'react';
 import logo from "../../assets/logoIcon-bgless.png";
 import emailjs from 'emailjs-com';
 import toast from 'react-hot-toast';
+import { motion } from 'framer-motion';
 
-const ContactUs = () => {
+const ContactUs = ({ id }) => {
     const [name, setName] = useState("");
     const [email, setEmail] = useState("");
     const [message, setMessage] = useState("");
+
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -38,7 +40,7 @@ const ContactUs = () => {
 
 
     return (
-        <div className='bg-[#FEFEFE]' id="contact-us">
+        <motion.div className='bg-[#FEFEFE]' id="contact-us" >
             <div className="hero mt-36 mb-10 ">
                 <div className="w-full max-w-3xl h-full relative flex-row-reverse mx-auto flex justify-center items-center pb-12 ">
                     <img src={logo} className='absolute w-32 top-10 -right-20' alt="" />
@@ -114,7 +116,7 @@ const ContactUs = () => {
                     </div>
                 </div>
             </div>
-        </div>
+        </motion.div>
     );
 };
 

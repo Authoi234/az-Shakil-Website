@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import HomePage from './HomePage/HomePage';
 import "../App.css"
 import SkillsPage from './SkillsPage/SkillsPage';
@@ -27,8 +27,8 @@ const Home = () => {
             <AboutUs></AboutUs>
             <MiddleBox></MiddleBox>
             <LearnersReviews></LearnersReviews>
-            <Contributions></Contributions>
-            <ContactUs></ContactUs>
+            <Contributions ></Contributions>
+            <ContactUs ></ContactUs>
             <Gallery></Gallery>
             <Faq></Faq>
         </div >

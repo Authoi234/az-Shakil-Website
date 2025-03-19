@@ -26,7 +26,7 @@ const BannerItem = ({ item }) => {
 
     return (
         <div> <div
-            className="flex flex-col lg:flex-row justify-evenly p-0 m-0 items-center overflow-hidden h-full w-full"
+            className="flex flex-col lg:flex-row lg:justify-evenly p-0 m-0 items-center overflow-hidden h-full w-screen"
             style={{ backgroundColor: "rgba(0,0,0,0.8)" }}
         >
             <div className="flex xl:justify-center justify-center lg:justify-start items-center text-center lg:mt-1/2 lg:w-[2%] 2xl:w-min lg:transform lg:-translate-y-[0%] lg:rotate-90  space-y-4">

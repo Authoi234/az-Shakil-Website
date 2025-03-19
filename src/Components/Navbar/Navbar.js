@@ -70,14 +70,15 @@ const Navbar = () => {
 
     return (
         <div className="fixed top-0 left-0 right-0 z-50 h-20 " style={{ backgroundColor: "rgba(225,225,225, 0.3)", backdropFilter: "blur(5px)" }} data-theme="light">
-            <div className={`container ml-auto flex justify-between items-center h-full`}>
-                <div className={`w-72 border-0 outline-none pt-2`} >
+            <div className={`flex justify-between items-center h-full w-full pl-4`}>
+                <div className={`w-72`} >
                     <img
                         src={logo}
                         alt=""
+                        className="border-0 outline-none pt-2"
                     />
                 </div>
-                <div className='flex items-center '>
+                <div className='flex-grow flex justify-center'>
                     <div className="hidden-special-on-small md:flex">
                         <ul className="menu menu-horizontal py-5 px-1">
                             {navMenu}
@@ -108,7 +109,7 @@ const Navbar = () => {
                     </div>
                 </div>
                 <div className="flex justify-end mx-0 my-0 h-full">
-                    <button className='rounded-none h-full w-60 btn btn-before-bg hover:bg-white bg-[#1E6DEB] border-0 text-white group text-lg transition-all relative overflow-hidden'><Link className=' z-10 group-hover:text-[#1E6DEB]' to={'/book/booking'}>BOOK APPRENT</Link></button>
+                    <Link to={'/book/booking'}><button className='rounded-none h-full w-60 btn btn-before-bg hover:bg-white bg-[#1E6DEB] border-0 text-white group text-lg transition-all relative overflow-hidden'><p className=' z-10 group-hover:text-[#1E6DEB]' to={'/book/booking'}>BOOK APPRENT</p></button></Link>
                 </div>
             </div>
         </div >

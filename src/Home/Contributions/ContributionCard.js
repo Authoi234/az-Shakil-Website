@@ -7,7 +7,7 @@ const ContributionCard = ({ card }) => {
     return (
         <div className={`rounded-sm group flex justify-center items-center text-black h-[415px] bg-[#F6F6F8]`} style={{ transition: 'all 0.5s ease', padding: "0px 25px 15px 20px", margin: "20px 10px", }}>
             <div className='text-left '>
-                <div className="w-[100px] text-left h-[80px] z-50 -mb-16 p-2 text-white flex justify-left items-center absolute  gradient-container-card-date backdrop-blur-sm" style={{
+                <div className="w-[70px] sm:w-[80px] lg:w-[100px] text-left h-[80px] z-50 -mb-16 p-2 text-white flex justify-left items-center absolute  gradient-container-card-date backdrop-blur-sm" style={{
                 }}>
                     <h1 className="text-lg font-semibold">{card?.date}</h1>
                 </div>
