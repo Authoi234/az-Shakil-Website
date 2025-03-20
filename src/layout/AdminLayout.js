@@ -136,7 +136,7 @@ const AdminLayout = () => {
                                 whileTap="tap"
                             >
                                 <FaUserFriends size={24} />
-                                {isDrawerOpen && <span className="ml-2">Friends</span>}
+                                {isDrawerOpen && <span className="ml-2">Applicants</span>}
                             </motion.a>
 
                             {/* Notifications */}
