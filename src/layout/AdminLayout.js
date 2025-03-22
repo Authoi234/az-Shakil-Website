@@ -39,13 +39,13 @@ const AdminLayout = () => {
                         />
                     </div>
 
-                    <div className="my-0 h-full">
-                        <div className="dropdown dropdown-end">
+                    <div className="pt-2 mt-5 h-full">
+                        <div className="dropdown dropdown-end ">
                             <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar">
-                                <div className="w-10 rounded-full">
+                                <div className="w-20 rounded-full">
                                     <img
-                                        alt="Tailwind CSS Navbar component"
-                                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSr2rdIfWm4DLPz1-p7oeAjK9l0yKzNS4wGLQ&s" />
+                                        alt="Profile of AzShakil"
+                                        src="https://scontent.fzyl7-1.fna.fbcdn.net/v/t39.30808-1/372915154_716579217150448_8459710957527313208_n.jpg?stp=dst-jpg_s200x200_tt6&_nc_cat=104&ccb=1-7&_nc_sid=2d3e12&_nc_ohc=Ze0q-xy9HKQQ7kNvgFx35-3&_nc_oc=Adl0PVuIzlECKeWHJPm2FWZr-j2amiEpbiF4z0uVs9CMNdkZFpeYBUHk_tYJmy_7-_Y&_nc_zt=24&_nc_ht=scontent.fzyl7-1.fna&_nc_gid=dICWwHyoeZncOiT4Py3W4g&oh=00_AYEyOjkGy8XPNHa2YG4vTcObh0Vxhvy-XH4UuxTt_SiE0g&oe=67E4F3FC" />
                                 </div>
                             </div>
                             <ul

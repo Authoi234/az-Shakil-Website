@@ -16,11 +16,11 @@ const queryClient = new QueryClient()
 root.render(
   <React.StrictMode>
     <QueryClientProvider client={queryClient}>
-        <ParallaxProvider>
-      <AuthProvider>
+      <ParallaxProvider>
+        <AuthProvider>
           <App />
-      </AuthProvider>
-        </ParallaxProvider>
+        </AuthProvider>
+      </ParallaxProvider>
     </QueryClientProvider>
   </React.StrictMode>
 );

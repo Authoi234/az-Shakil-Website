@@ -23,9 +23,9 @@ const Gallery = () => {
 
     return (
         <div className="w-full flex justify-center items-center">
-            <div className="max-w-[1350px] flex justify-center items-center">
+            <div className="md:max-w-[1350px] sm:max-w-[768px] max-w-[600px] flex justify-center items-center">
                 <Swiper
-                    slidesPerView={2}
+                    slidesPerView={1}
                     spaceBetween={10}
                     grabCursor={true}
                     centeredSlides={false}

@@ -16,7 +16,7 @@ const LearnersReviews = () => {
             <div className='w-full'>
                 <div className="pb-0 text-center relative max-w-[1300px]">
                     <div>
-                        <div className="flex justify-center items-center" data-aos="fade-up">
+                        <div className="flex justify-center items-center w-full" data-aos="fade-up">
                             <div className="w-40 -mb-5" style={{
                             }}>
                                 <img style={{

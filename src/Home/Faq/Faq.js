@@ -20,11 +20,11 @@ const Faq = () => {
                         </h2>
                     </div>
                 </div>
-                <div className="flex justify-center items-center">
-                    <div className='w-1/2'>
+                <div className="md:flex md:justify-center md:items-center">
+                    <div className='md:w-1/2 flex justify-center items-center'>
                         <img src={img} className='w-[90%]' alt="" />
                     </div>
-                    <div className="join join-vertical bg-base-100 w-1/2">
+                    <div className="join join-vertical bg-base-100 md:w-1/2">
                         <div className="collapse collapse-arrow join-item border-base-300 border transition-all hover:border-[#1E6DEB]">
                             <input type="radio" name="my-accordion-4" defaultChecked />
                             <div className="collapse-title text-2xl font-semibold">Do we need to pay??</div>
@@ -43,7 +43,7 @@ const Faq = () => {
                         <div className="collapse collapse-arrow join-item border-base-300 border transition-all hover:border-[#1E6DEB]">
                             <input type="radio" name="my-accordion-4" />
                             <div className="collapse-title text-2xl font-semibold">Can I trust you?</div>
-                            <div className="collapse-content text-sm">Yes, you have to trust us. We are a dedicated voluntary service organization empowering students to study abroad. Together, we can turn dreams into reality and inspire a brighter future!</div>
+                            <div className="collapse-content text-sm">Yes, you have to <trust></trust> us. We are a dedicated voluntary service organization empowering students to study abroad. Together, we can turn dreams into reality and inspire a brighter future!</div>
                         </div>
                     </div>
                 </div>

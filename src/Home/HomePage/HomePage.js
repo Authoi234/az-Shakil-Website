@@ -23,27 +23,21 @@ const HomePage = () => {
     const bannerData = [
         {
             image: "https://wordpress.zozothemes.com/hegira/wp-content/uploads/sites/21/2024/05/sliderbg.jpg",
-            prev: 3,
-            id: 1,
-            next: 2,
-            title: "Navigate Your Visa Process With Confidence.",
-            mainText: "Step-by-Step Guidance",
+            prev: 2,
+            id: 3,
+            next: 1,
+            title: "Expert Guidance for your next Destination",
+            mainText: "WELCOME TO Apprent",
+            para: " Trust us to guide you with integrity, professionalism and a genuine commitment to your success."
         },
         {
-            image: "https://wordpress.zozothemes.com/hegira/wp-content/uploads/sites/21/2024/08/friends-travel-1.jpg",
+            image: "https://wordpress.zozothemes.com/hegira/wp-content/uploads/sites/21/2024/05/sliderbg1.jpg",
             prev: 1,
             id: 2,
             next: 3,
             title: "Step-by-Step Guidance for Visa Success.",
-            mainText: "Visa Consultation Services",
-        },
-        {
-            image: "https://wordpress.zozothemes.com/hegira/wp-content/uploads/sites/21/2024/05/sliderbg1.jpg",
-            prev: 2,
-            id: 3,
-            next: 1,
-            title: "Expert Guidance for Your Next Destination.",
-            mainText: "WELCOME TO Apprent",
+            mainText: "Step-by-Step Guidance",
+            para: "We are more than consultant; we are partners in your journey to a new chapter with ease."
         }
     ];
 
@@ -77,8 +71,8 @@ const HomePage = () => {
                                 disableOnInteraction: false,
                                 waitForTransition: true,
                             }}
-                            
-                            >
+
+                        >
                             {bannerData.map(item => (
                                 <SwiperSlide key={item?.id}>
                                     <BannerItem item={item} />
@@ -87,7 +81,7 @@ const HomePage = () => {
                         </Swiper>
 
                         {/* Progress bar positioned at bottom */}
-                        <div className="custom-progress-bar"  style={{ bottom: 0, top: 'auto', height: '5px', backgroundColor: '#1E6DEB', borderRadius: '10px' }}></div>
+                        <div className="custom-progress-bar" style={{ bottom: 0, top: 'auto', height: '5px', backgroundColor: '#1E6DEB', borderRadius: '10px' }}></div>
                     </div>
                 </div>
             </div>

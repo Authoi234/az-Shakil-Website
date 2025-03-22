@@ -29,39 +29,16 @@ const Footer = () => {
         { id: 3, name: "House no- 2, Road No- 7, Block- J, Baridhara, Dhaka, Bangladesh", position: [23.8009244, 90.4236441] },
     ];
 
-    /* 
-    Explore
-    Home
-    About Us
-    Contact
-    Faqs
-    Gallery
-    Events
-    Book Appointment
-    visa@apprent.azshakil.com
-    apprentbd@gmail.com
-    */
-    // Baridhara Office: House no- 2, Road No- 7, Block- J, Baridhara, Dhaka, Bangladesh
-    // China office: 8 NO Guandong Road, Hongqiao, Tianjin, China
-    // Dhaka South: 35/7/1, Golapbag, Sayedabad,Dhaka-1203
-    // Baridhara Office: House no- 2, Road No- 7, Block- J, Baridhara, Dhaka, Bangladesh
-
-
     return (
         <div id='footer' className='text-wrap break-words   text-white '>
-            {/* <div className="w-80 ">
-                <img src={plane} className='relative -top-48 -mt-24 w-full -rotate-[7deg]' style={{
-                    filter: "drop-shadow(rgba(254, 254, 254, 0.5) 33px 32px 25px)"
-                }} alt="" />
-            </div> */}
             <div className="bg-[#16171A] w-full flex justify-center items-center text-white border-t-8 border-t-blue-700 rounded-t-3xl">
                 <footer className={` footer max-w-[1350px] w-full bg-transparent bg-[#16171A]  z-10  text-white pt-24 pb-10 pl-16 pr-5 `} style={{
 
                 }}>
-                    <div className="w-full flex justify-between items-start">
-                        <div className='flex justify-center w-full max-w-5/12'>
+                    <div className="w-full md:flex md:justify-between md:items-start mx-auto">
+                        <div className='md:flex md:justify-center w-full md:max-w-5/12'>
                             <div>
-                                <aside className='w-full max-w-sm mr-5'>
+                                <aside className='w-full max-w-sm md:mr-5 mb-3 md:mb-0'>
                                     <div className={``} >
                                         <img src={logo} className={`w-80 py-2 rounded-x`} alt="" />
                                     </div>
@@ -83,7 +60,7 @@ const Footer = () => {
                                     </div>
                                 </aside>
                             </div>
-                            <div className='text-[#68696C] ml-5 mr-10'>
+                            <div className='text-[#68696C] md:ml-5 mr-10'>
                                 <nav className='flex flex-col gap-2'>
                                     <h6 className="opacity-65 text-white text-xl uppercase mb-2 font-medium">Services</h6>
                                     <a className="link link-hover text-base" href='#homepage'>Home</a>
@@ -96,8 +73,8 @@ const Footer = () => {
                                 </nav>
                             </div>
                         </div>
-                        <div className='flex justify-center items-start w-full max-w-5/12'>
-                            <div className="w-[450px] h-[370px] rounded-lg overflow-hidden shadow-lg border border-gray-700">
+                        <div className='md:flex md:justify-center md:items-start w-full md:max-w-5/12 mt-3 md:mt-0'>
+                            <div className="md:w-[450px] md:h-[370px] w-3/4 h-[400px] mb-3 md:mb-0 rounded-lg overflow-hidden shadow-lg border border-gray-700">
                                 <MapContainer
                                     center={[23.7223012, 90.425395]}
                                     zoom={13}
@@ -113,7 +90,7 @@ const Footer = () => {
                                     ))}
                                 </MapContainer>
                             </div>
-                            <div className='text-[#68696C] ml-5 mr-10 px-5 break-words break-all'>
+                            <div className='text-[#68696C] md:ml-5 md:mr-10 px-5 break-words break-all'>
                                 <nav className='flex flex-col gap-2'>
                                     <h6 className="opacity-65 text-white text-xl uppercase mb-2 font-medium">Contact</h6>
                                     <div className="text-base flex items-center" ><FaEnvelope className='text-[#1E6DEB] mr-2'></FaEnvelope><span>visa@apprent.azshakil.com</span></div>

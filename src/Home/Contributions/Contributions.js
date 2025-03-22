@@ -78,30 +78,28 @@ const Contributions = () => {
         <div className='flex justify-center items-center w-auto max-w-[1200px]'>
           <Swiper
             ref={swiperRef}
-            slidesPerView={2}
-            spaceBetween={100}
+            slidesPerView={1}
+            spaceBetween={20}
             centeredSlides={true}
-            pagination={{
-              clickable: true,
-            }}
+            pagination={{ clickable: true }}
             modules={[Pagination]}
             breakpoints={{
               600: {
                 slidesPerView: 2,
-                spaceBetween: 30,
-                centeredSlides: true
+                spaceBetween: 20,
+                centeredSlides: true,
               },
               1150: {
                 slidesPerView: 3,
                 spaceBetween: 30,
-                centeredSlides: false
+                centeredSlides: false,
               }
             }}
             resizeObserver={true}
           >
             {
               sectionData?.map((item, index) => <SwiperSlide key={index}>
-                <ContributionCard card={item} className="flex justify-center items-center my-0 mx-auto  max-w-[100px]"></ContributionCard>
+                <ContributionCard card={item} className="flex justify-center items-center my-0 mx-auto max-w-[100px]"></ContributionCard>
               </SwiperSlide>)
             }
           </Swiper>

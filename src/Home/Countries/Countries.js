@@ -53,7 +53,7 @@ const Countries = () => {
                         }} alt="" />
                     </div> COUNTRIES</h2>
                     <h2 className="text-[#262626] text-[2.7rem] leading-[50px] font-semibold mb-8">
-                        We Support for Immigration.
+                        Your Future Awaits
                     </h2>
                 </div>
             </div>
@@ -67,7 +67,7 @@ const Countries = () => {
                                     backgroundRepeat: "no-repeat",
                                     backgroundSize: "100% 100%"
                                 }}>
-                                    <div className='w-full md:w-1/2 h-1/2 flex justify-start items-center mt-[45%] md:mt-0 md:items-center bg-[#084fc2] hover:bg-[#111111] transition-all md:h-[440px] duration-500 py-1'>
+                                    <div className='w-full md:w-1/2 h-1/2 flex justify-start items-center mt-[45%] md:mt-0 md:items-center bg-[#111111] hover:bg-[#084fc2] transition-all md:h-[440px] duration-500 py-1'>
                                         <div className="absolute text-[10rem] font-semibold opacity-45 pl-5">0{item?.id}</div>
                                         <div className='flex justify-center items-center lg:-translate-y-10'>
                                             <div className='px-14 pt-0 md:pt-16 py-auto z-20 '>

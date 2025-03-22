@@ -20,14 +20,18 @@ const VisaCategories = () => {
                                             width: "25px",
                                             height: "25px",
                                             objectFit: "cover",
-                                        objectPosition: "0% 25%",
+                                            objectPosition: "0% 25%",
                                         }} alt="" />
                                     </div>
                                     VISA CATEGORIES  </h2>
                                 <h2 className="text-white text-[2.7rem] py-2 leading-[50px] font-semibold mb-5">
                                     We Offers Education & Immigration Services
                                 </h2>
-                                <p className="py-2 text-base text-[#F2F3F3]">Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries but also the leap into electronic</p>
+                                <p className="py-2 text-base text-[#F2F3F3]">Turning Aspirations into Achievements With expertise honed over years, we’re not
+                                    just a service—we’re
+                                    your partner in transforming ambitions into realities. Let us simplify the
+                                    complex and create a roadmap
+                                    to success together.</p>
                                 <motion.div className='flex py-2 justify-center md:justify-start items-center'>
                                     <Link to={"/book/booking"}>
                                         <motion.button
@@ -45,15 +49,19 @@ const VisaCategories = () => {
                             </div>
                         </div>
                     </div>
-                    <div className='px-5 mt-5 lg:mt-0 w-auto ml-0 shadow group z-10 bg-[#FEFEFE]' style={{ flexWrap: "initial", justifyContent: "flex-end", flexGrow: 1, padding: "25px 40px 25px 25px" }}>
-                        <div className='rounded-lg px-2 py-1 flex items-start max-w-full'>
-                            <div className='bg-[#F6F6F8]'>
-                                <img className='max-w-full w-auto p-5' src="https://wordpress.zozothemes.com/hegira/wp-content/uploads/sites/21/2022/07/tourist-80x80.png" alt="" />
+                    <div className='px-5 lg:w-1/2 h-full mt-5 lg:mt-0 ml-0 shadow group z-10 bg-[#FEFEFE]' style={{ flexWrap: "initial", justifyContent: "flex-end", flexGrow: 1, padding: "25px 40px 25px 25px" }}>
+                        <div className='rounded-lg px-2 py-1 flex items-start max-w-full h-full'>
+                            <div className='bg-[#F6F6F8] w-32'>
+                                <img className='max-w-full p-5' src="https://wordpress.zozothemes.com/hegira/wp-content/uploads/sites/21/2022/07/tourist-80x80.png" alt="" />
                             </div>
-                            <div className='pl-[18px]'>
+                            <div className='pl-[18px] w-[90%]'>
                                 <h2 className='text-3xl font-medium group-hover:text-[#1E6CEA] transition-colors mb-2'>Tourist Visa</h2>
                                 <p className="font-styled text-[#797979] text-base">
-                                    Lorem Ipsum has been the industry's standard <br /> dummy text ever since the 1500s
+                                    Explore Without Limits From breathtaking landscapes to cultural
+                                    wonders, your dream
+                                    destinations await. Our Tourist Visa ensures a hassle-free travel experience, so
+                                    you can focus on
+                                    making memories.
                                 </p>
                             </div>
                         </div>
@@ -63,27 +71,35 @@ const VisaCategories = () => {
             <div className="flex justify-center items-center lg:mt-4 ">
                 <div className=" bg-[#ffffff] lg:flex lg:pt-1 pt-0 p-5 lg:justify-center lg:items-center gap-0 w-full lg:max-w-[1200px] ">
                     <div className='px-5 lg:mb-0 mb-5 lg:mx-0 lg:w-1/2  shadow group z-10 bg-[#FEFEFE]' style={{ flexWrap: "initial", justifyContent: "flex-end", flexGrow: 1, padding: "25px 40px 25px 25px" }}>
-                        <div className='rounded-lg px-2 py-1 flex z-10 items-start max-w-full'>
-                            <div className='bg-[#F6F6F8]'>
+                        <div className='rounded-lg px-2 py-1 flex z-10 items-start max-w-full h-full'>
+                            <div className='bg-[#F6F6F8] w-32'>
                                 <img className='max-w-full w-auto p-5' src="https://wordpress.zozothemes.com/hegira/wp-content/uploads/sites/21/2022/07/student-80x80.png" alt="" />
                             </div>
-                            <div className='pl-5'>
+                            <div className='pl-5 w-[90%]'>
                                 <h2 className='text-3xl font-medium group-hover:text-[#1E6CEA] transition-colors'>Student Visa</h2>
                                 <p className="py-2 font-styled text-[#797979] text-base">
-                                    Lorem Ipsum has been the industry's standard <br /> dummy text ever since the 1500s
+                                    Your First Step to Global Success Embark on an educational
+                                    adventure that transforms your
+                                    future. We ensure a seamless visa process so that you can focus on what matters
+                                    most—your studies and your
+                                    experiences abroad.
                                 </p>
                             </div>
                         </div>
                     </div>
                     <div className='px-5 lg:ml-5 lg:mr-0 lg:w-1/2 shadow group z-10 bg-[#FEFEFE]' style={{ flexWrap: "initial", justifyContent: "flex-end", flexGrow: 1, padding: "25px 40px 25px 25px" }}>
-                        <div className='rounded-lg px-2 py-1 flex z-10 items-start max-w-full'>
-                            <div className='bg-[#F6F6F8]'>
+                        <div className='rounded-lg px-2 py-1 flex z-10 items-start max-w-full h-full'>
+                            <div className='bg-[#F6F6F8] w-32'>
                                 <img className='max-w-full w-auto p-5' src="https://wordpress.zozothemes.com/hegira/wp-content/uploads/sites/21/2022/07/Bussiness-80x80.png" alt="" />
                             </div>
-                            <div className='pl-5'>
+                            <div className='pl-5 w-[90%]'>
                                 <h2 className='text-3xl font-medium group-hover:text-[#1E6CEA] transition-colors'>Business Visa</h2>
                                 <p className="py-2 font-styled text-[#797979] text-base">
-                                    Lorem Ipsum has been the industry's standard <br /> dummy text ever since the 1500s
+                                    Empowering Your Ambitions Expand your network, close deals, and
+                                    achieve global success.
+                                    Our Business Visa services streamline the process to help you seize
+                                    international opportunities with
+                                    confidence.
                                 </p>
                             </div>
                         </div>

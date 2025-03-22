@@ -9,7 +9,7 @@ import { LiaGlobeAmericasSolid } from "react-icons/lia";
 import { BiSolidCategoryAlt } from "react-icons/bi";
 import { SiAmazonsimpleemailservice } from "react-icons/si";
 import { GiCommercialAirplane } from "react-icons/gi";
-import { FaHandsHelping, FaHome, FaPhone, FaUniversity } from 'react-icons/fa';
+import { FaHandsHelping, FaHome, FaPhone } from 'react-icons/fa';
 import { TiMessages } from "react-icons/ti";
 import { ImBlog } from "react-icons/im";
 import "../../css/style.css";

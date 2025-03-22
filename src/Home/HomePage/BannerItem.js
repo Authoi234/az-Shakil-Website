@@ -82,7 +82,7 @@ const BannerItem = ({ item }) => {
                             </motion.span>
                         ))}</h1></div>
                     <div className='lg:w-[520px] xl:w-[540px] text-left'>
-                        <p className='text-[18px] font-normal leading-[32px] my-3 xl:my-8 text-[#f7f7f7]'>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration</p>
+                        <p className='text-[18px] font-normal leading-[32px] my-3 xl:my-8 text-[#f7f7f7]'>{item?.para}</p>
                     </div>
                     <motion.div className='flex justify-center lg:justify-start items-center'>
                         <Link to={"/book/booking"}>
