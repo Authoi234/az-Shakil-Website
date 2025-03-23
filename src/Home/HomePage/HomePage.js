@@ -38,7 +38,16 @@ const HomePage = () => {
             title: "Step-by-Step Guidance for Visa Success.",
             mainText: "Step-by-Step Guidance",
             para: "We are more than consultant; we are partners in your journey to a new chapter with ease."
-        }
+        },
+        {
+            image: "https://wordpress.zozothemes.com/hegira/wp-content/uploads/sites/21/2024/08/friends-travel-1.jpg",
+            prev: 1,
+            id: 2,
+            next: 3,
+            title: "Navigate Your Visa Process with Confidence.",
+            mainText: "Get Confidence",
+            para: "Let us help turn your dreams into reality with our trusted expertise and personalized support. "
+        },
     ];
 
     return (

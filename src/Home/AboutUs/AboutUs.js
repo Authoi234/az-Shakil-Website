@@ -1,16 +1,10 @@
-import React, { useEffect, useRef } from 'react';
-import Img1 from '../../assets/aboutImg1.jpg';
-import Img2 from '../../assets/aboutImg2.jpg';
-import { FaCheckCircle, FaTelegram } from "react-icons/fa";
-import logoIcon from "../../assets/logoIcon-bgless.png";
+import React from 'react';
 import useNumReacher from './../../hooks/useNumReacher';
-import { IoPaperPlane } from 'react-icons/io5';
-import { BsGlobeAmericas } from 'react-icons/bs';
 import '../../css/style.css';
 import '../../App.css';
-import { MdArrowOutward } from 'react-icons/md';
 import { motion } from 'motion/react';
-import { Link } from 'react-router-dom';
+import blueHeading from "../../assets/blue-header-aboutUs.png";
+import { LuMessagesSquare } from "react-icons/lu";
 
 const AboutUs = () => {
     return (
@@ -39,51 +33,63 @@ const AboutUs = () => {
                     <div className='lg:w-[50%] text-left pl-2 pb-10'>
                         <div className="w-full flex justify-start items-start">
                             <div className=" text-start w-10/12">
-                                <h2 className='flex text-xl mb-[10px] items-center justify-start font-semibold -ml-2 text-[#1E6DEB] font-styled' >  <img src={require('../../assets/logo.png')} className='  mx-2' style={{
+                                <h2 className='flex text-xl mb-[10px]  items-center justify-start font-semibold -ml-2 text-[#1E6DEB] font-styled' >  <img src={require('../../assets/logo.png')} className='  mx-2' style={{
                                     width: "25px",
                                     height: "25px",
                                     objectFit: "cover",
                                     objectPosition: "0% 25%",
                                 }} alt="" /> About Us </h2>
-                                <h2 className="text-[#262626] text-[2.4rem] leading-[40px] font-semibold mb-5 font-styled">
-                                    Education & Immigration Consulting Firm in Canada
-                                </h2>
+                                <div className="w-[70%]">
+                                    <img src={blueHeading} className='w-full' alt="" />
+                                </div>
                             </div>
                         </div>
-                        <p className='text-[#818181] py-1' style={{
+                        <p className='text-[#404040] py-1 mt-3 font-light font-styled' style={{
                             fontSize: "17px",
                             lineHeight: "27px "
                         }}>
-                            Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries.
+                            Welcome to apprent global, your trusted partner in achieving global education and career aspirations for aspiratnts.
                         </p>
-                        <div className='text-[#818181] text-base leading-7 my-1'>
-                            <div className="flex justify-start items-center font-medium"><FaCheckCircle className='text-[#B70404] bg-white text-xl p-0 mr-2.5 rounded-full'></FaCheckCircle> Lorem Ipsum has been the industry's standard dummy</div>
-                            <div className="flex justify-start items-center font-medium"><FaCheckCircle className='text-[#B70404] bg-white text-xl p-0 mr-2.5 rounded-full'></FaCheckCircle> Many desktop publishing packages and web page</div>
-                        </div>
-                        <div className="md:flex items-center my-3 border border-[#EAEAEA] py-6 pr-6">
-                            <div className='w-7/12'>
-                                <img src="https://wordpress.zozothemes.com/hegira/wp-content/uploads/sites/21/elementor/thumbs/about-h3-img-qn7wbdzio7btl9lfva398q5ojgmln6l3r784qmpbmo.jpg" alt="" className="w-full" />
+                        <div className='text-[#404040] text-[17px] leading-7 my-1'>
+                            <div className="flex justify-start items-start font-styled font-light text-justify my-2 h-auto">
+                                Based in Dhaka, Bangladesh, where unparalleled expertise combines with
+                                personalized care to create life-changing
+                                opportunities in education and immigration.
                             </div>
-                            <div className=''>
-                                <h1 className='text-2xl font-semibold mx-5'>
-                                    06+ Years of experience in visa and immigrations services.
-                                </h1>
+                            <div className="flex justify-start items-start font-normal my-2 text-justify h-auto">
+                                Our unwavering dedication to excellence and integrity has earned us a strong
+                                reputation, not only in Bangladesh but
+                                across international borders. Let us help you turn your aspirations into reality
+                                with confidence and ease.
                             </div>
                         </div>
-                        <div className='flex items-center py-4'>
-                            <motion.div className="flex justify-center md:justify-start items-center" >
-                                <Link to={"/book/booking"}>
+                        <div className='flex items-center  py-4'>
+                            <motion.div className="flex  justify-center md:justify-start items-center  mr-4" >
+                                <a href='https://wa.me/+8801757333731' target='_blank' rel="noreferrer">
                                     <motion.button
                                         whileHover={{ scale: 1.02 }}
                                         whileTap={{ scale: 0.9 }}
-                                        className="relative z-10 overflow-hidden flex justify-around items-center px-8 font-medium py-4 text-lg text-white bg-[#1E6CEA] rounded-md active:ring-4 before:content-[''] before:absolute before:left-[-100%] before:w-full before:h-full before:bg-black before:transition-all before:duration-300 before:ease-in-out hover:before:left-0"
+                                        className="relative z-10 h-24 w-80 overflow-hidden flex justify-around items-center px-8 font-medium py-4 text-xl text-white bg-blue-500 rounded-md active:ring-4 before:content-[''] before:absolute before:left-[-100%] before:w-full before:h-full before:bg-gray-700 before:transition-all before:duration-300 before:ease-in-out hover:before:left-0"
                                     >
-                                        <span className='z-20'>Get Started</span>
-                                        <MdArrowOutward className="relative z-10 font-black text-2xl" />
+                                        <p className="z-20 flex justify-center items-center">
+                                        <LuMessagesSquare className='pr-2 text-4xl' /><span className='z-20'>Drop a message</span>
+                                        </p>
                                     </motion.button>
-                                </Link>
+                                </a>
                             </motion.div>
-                            <div className=" px-3 flex items-center ml-8">
+                            <motion.div className="flex justify-center md:justify-start items-center  ml-4" >
+                                <motion.button
+                                    whileHover={{ scale: 1.02 }}
+                                    whileTap={{ scale: 0.9 }}
+                                    disabled={true}
+                                    className="z-10 h-24 w-80 flex justify-around items-center px-8 font-medium py-4 text-white bg-blue-500 rounded-md "
+                                >
+                                    <p className='z-20'>
+                                        <p className=''><span className="text-2xl font-medium">06+</span>Years <br />Experience</p>
+                                    </p>
+                                </motion.button>
+                            </motion.div>
+                            {/* <div className=" px-3 flex items-center ml-8">
                                 <div className='mr-2'>
                                     <FaTelegram className='text-sky-600 text-5xl'></FaTelegram>
                                 </div>
@@ -95,7 +101,8 @@ const AboutUs = () => {
                                         </a>
                                     </div>
                                 </div>
-                            </div>
+                            </div> */}
+
                         </div>
                     </div>
                 </div>

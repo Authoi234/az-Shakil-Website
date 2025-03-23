@@ -1,6 +1,4 @@
 import React from 'react';
-import { BsGlobeAmericas } from 'react-icons/bs';
-import { IoPaperPlane } from 'react-icons/io5';
 import { motion } from 'motion/react';
 import { Link } from 'react-router-dom';
 import { MdArrowOutward } from 'react-icons/md';
@@ -27,8 +25,8 @@ const VisaCategories = () => {
                                 <h2 className="text-white text-[2.7rem] py-2 leading-[50px] font-semibold mb-5">
                                     We Offers Education & Immigration Services
                                 </h2>
-                                <p className="py-2 text-base text-[#F2F3F3]">Turning Aspirations into Achievements With expertise honed over years, we’re not
-                                    just a service—we’re
+                                <p className="py-2 text-base text-[#F2F3F3] text-justify">Turning Aspirations into Achievements With expertise honed over years, we’re not
+                                    just a service; We’re
                                     your partner in transforming ambitions into realities. Let us simplify the
                                     complex and create a roadmap
                                     to success together.</p>
@@ -56,7 +54,7 @@ const VisaCategories = () => {
                             </div>
                             <div className='pl-[18px] w-[90%]'>
                                 <h2 className='text-3xl font-medium group-hover:text-[#1E6CEA] transition-colors mb-2'>Tourist Visa</h2>
-                                <p className="font-styled text-[#797979] text-base">
+                                <p className="font-styled text-[#797979] text-base text-justify">
                                     Explore Without Limits From breathtaking landscapes to cultural
                                     wonders, your dream
                                     destinations await. Our Tourist Visa ensures a hassle-free travel experience, so
@@ -77,7 +75,7 @@ const VisaCategories = () => {
                             </div>
                             <div className='pl-5 w-[90%]'>
                                 <h2 className='text-3xl font-medium group-hover:text-[#1E6CEA] transition-colors'>Student Visa</h2>
-                                <p className="py-2 font-styled text-[#797979] text-base">
+                                <p className="py-2 font-styled text-[#797979] text-base text-justify ">
                                     Your First Step to Global Success Embark on an educational
                                     adventure that transforms your
                                     future. We ensure a seamless visa process so that you can focus on what matters
@@ -94,7 +92,7 @@ const VisaCategories = () => {
                             </div>
                             <div className='pl-5 w-[90%]'>
                                 <h2 className='text-3xl font-medium group-hover:text-[#1E6CEA] transition-colors'>Business Visa</h2>
-                                <p className="py-2 font-styled text-[#797979] text-base">
+                                <p className="py-2 font-styled text-[#797979] text-base text-justify">
                                     Empowering Your Ambitions Expand your network, close deals, and
                                     achieve global success.
                                     Our Business Visa services streamline the process to help you seize

@@ -1,14 +1,7 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import logo from '../../assets/logo.png';
 import { FaEnvelope, FaFacebook, FaLinkedinIn, FaMapMarkerAlt } from "react-icons/fa";
-import { FaTwitter } from "react-icons/fa";
-import { FaYoutube } from "react-icons/fa";
-import { FaLinkedin } from "react-icons/fa";
-import { FaInstagram, FaLink, FaX, FaXTwitter } from "react-icons/fa6";
-import { FaTelegram } from "react-icons/fa";
-import { IoIosCall, IoIosMail } from "react-icons/io";
-import azShakilPortfolioImage from '../../assets/azShakilPortfolioImage.png';
-import plane from '../../assets/plane.png';
+import { FaInstagram, FaXTwitter } from "react-icons/fa6";
 import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
 import L from 'leaflet';
 import 'leaflet/dist/leaflet.css';

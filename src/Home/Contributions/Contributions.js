@@ -3,8 +3,6 @@ import '../../App.css';
 import contributionImg1 from '../../assets/contribution1.webp';
 import contributionImg2 from '../../assets/contributionImg2.png';
 import contributionImg3 from '../../assets/contributionImg3.jpg';
-import { IoPaperPlane } from 'react-icons/io5';
-import { BsGlobeAmericas } from 'react-icons/bs';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Pagination } from 'swiper/modules';
 import 'swiper/css';
@@ -70,7 +68,7 @@ const Contributions = () => {
             }} alt="" />
           </div> OUR CONTRIBUTIONS</h2>
           <h2 className="text-[#262626] text-[2.7rem] leading-[50px] font-semibold mb-8">
-            For Helping Students
+            For Guiding Students
           </h2>
         </div>
       </div>

@@ -1,7 +1,6 @@
 import { createBrowserRouter, Outlet } from "react-router-dom";
 import Main from "../layout/Main";
 import Home from "../Home/Home";
-import VideoSect from "../Home/Videos/VideoSect";
 import BookInfo from "../booking/BookNow/BookInfo";
 import BookingLayout from "../layout/BookingLayout";
 import ContactUs from "../Home/ContactUs/ContactUs";
@@ -19,11 +18,6 @@ export const router = createBrowserRouter([
             {
                 path: "/",
                 element: <Home></Home>
-            },
-            {
-                path: "/video/:id",
-                element: <VideoSect></VideoSect>,
-                loader: ({ params }) => fetch(`https://az-shakil-website-server-kwe1eyc20-authoi234s-projects.vercel.app/videos/${params.id}`)
             },
             {
                 path: "contact-us",

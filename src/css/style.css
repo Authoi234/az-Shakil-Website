@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
 @keyframes animation-move {
     0% {
@@ -13,6 +15,10 @@
     100% {
         transform: translate3d(0, 0, 0)
     }
+}
+
+.font-with-vibes {
+    font-family: "Great Vibes", cursive;
 }
 
 .font-styled {
@@ -107,26 +113,28 @@
     .before-bg-bg::before {
         background-image: url("");
     }
-};
+}
+
+;
 
 .swiper {
     width: 100%;
     padding-top: 50px;
     padding-bottom: 50px;
-  }
-  
-  .swiper-slide {
+}
+
+.swiper-slide {
     background-position: center;
     background-size: cover;
     width: 300px;
     height: 300px;
-  }
-  
-  .swiper-slide img {
+}
+
+.swiper-slide img {
     display: block;
     width: 100%;
-  }
-  
+}
+
 
 .instagram-style:hover {
     background-image: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
