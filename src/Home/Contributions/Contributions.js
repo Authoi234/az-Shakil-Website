@@ -4,10 +4,11 @@ import contributionImg1 from '../../assets/contribution1.webp';
 import contributionImg2 from '../../assets/contributionImg2.png';
 import contributionImg3 from '../../assets/contributionImg3.jpg';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Pagination } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import ContributionCard from './ContributionCard';
+import { Navigation } from 'swiper/modules';
+import contributionHead from "../../assets/ContributionHeading.png";
 
 const Contributions = () => {
   const swiperRef = useRef(null);
@@ -67,9 +68,11 @@ const Contributions = () => {
               objectPosition: "0% 25%",
             }} alt="" />
           </div> OUR CONTRIBUTIONS</h2>
-          <h2 className="text-[#262626] text-[2.7rem] leading-[50px] font-semibold mb-8">
-            For Guiding Students
-          </h2>
+          <div className="flex justify-center items-start w-full">
+            <div className="w-[350px] mb-4">
+              <img src={contributionHead} className='w-full' alt="" />
+            </div>
+          </div>
         </div>
       </div>
       <div className='flex justify-center items-center '>
@@ -79,8 +82,9 @@ const Contributions = () => {
             slidesPerView={1}
             spaceBetween={20}
             centeredSlides={true}
-            pagination={{ clickable: true }}
-            modules={[Pagination]}
+            navigation={{ enabled: true }}
+            loop={true}
+            modules={[Navigation]}
             breakpoints={{
               600: {
                 slidesPerView: 2,

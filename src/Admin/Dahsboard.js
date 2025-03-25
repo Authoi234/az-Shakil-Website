@@ -1,6 +1,5 @@
 import React from 'react';
 import { motion } from "framer-motion";
-import { FaHome, FaEdit, FaCalendarPlus, FaUserFriends, FaBell, FaCog } from "react-icons/fa";
 
 const Dahsboard = () => {
     const iconVariants = {

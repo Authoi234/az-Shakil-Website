@@ -91,7 +91,7 @@ const AdminLayout = () => {
                             <motion.a
                                 href="#"
                                 className={`text-gray-700 hover:text-[#1E6DEB] transition duration-300 flex p-2 ${isDrawerOpen ? "justify-start pl-4" : "justify-center"
-                                    } items-center`}
+                                    } items-center text-base`}
                                 variants={iconVariants}
                                 whileHover="hover"
                                 whileTap="tap"
@@ -104,7 +104,7 @@ const AdminLayout = () => {
                             <motion.a
                                 href="#"
                                 className={`text-gray-700 hover:text-[#1E6DEB] transition duration-300 flex p-2 ${isDrawerOpen ? "justify-start pl-4" : "justify-center"
-                                    } items-center`}
+                                    } items-center text-base`}
                                 variants={iconVariants}
                                 whileHover="hover"
                                 whileTap="tap"
@@ -117,7 +117,7 @@ const AdminLayout = () => {
                             <motion.a
                                 href="#"
                                 className={`text-gray-700 hover:text-[#1E6DEB] transition duration-300 flex p-2 ${isDrawerOpen ? "justify-start pl-4" : "justify-center"
-                                    } items-center`}
+                                    } items-center text-base`}
                                 variants={iconVariants}
                                 whileHover="hover"
                                 whileTap="tap"
@@ -130,7 +130,7 @@ const AdminLayout = () => {
                             <motion.a
                                 href="#"
                                 className={`text-gray-700 hover:text-[#1E6DEB] transition duration-300 flex p-2 ${isDrawerOpen ? "justify-start pl-4" : "justify-center"
-                                    } items-center`}
+                                    } items-center text-base`}
                                 variants={iconVariants}
                                 whileHover="hover"
                                 whileTap="tap"
@@ -143,7 +143,7 @@ const AdminLayout = () => {
                             <motion.a
                                 href="#"
                                 className={`text-gray-700 hover:text-[#1E6DEB] transition duration-300 flex p-2 ${isDrawerOpen ? "justify-start pl-4" : "justify-center"
-                                    } items-center`}
+                                    } items-center text-base`}
                                 variants={iconVariants}
                                 whileHover="hover"
                                 whileTap="tap"
@@ -156,7 +156,7 @@ const AdminLayout = () => {
                             <motion.a
                                 href="#"
                                 className={`text-gray-700 hover:text-[#1E6DEB] transition duration-300 flex p-2 ${isDrawerOpen ? "justify-start pl-4" : "justify-center"
-                                    } items-center`}
+                                    } items-center text-base`}
                                 variants={iconVariants}
                                 whileHover="hover"
                                 whileTap="tap"

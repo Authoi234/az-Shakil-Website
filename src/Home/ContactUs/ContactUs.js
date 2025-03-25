@@ -74,11 +74,10 @@ const ContactUs = ({ id }) => {
                                     <legend className="fieldset-legend text-lg font-medium">Your Message*</legend>
                                     <textarea
                                         name="message"
-                                        className="textarea mt-3 pt-3 text-md border textarea-bordered"
+                                        className="textarea-md md:textarea-lg mt-3 pt-3 text-md border textarea-bordered"
                                         value={message}
                                         onChange={e => setMessage(e.target.value)}
                                         required
-                                        rows={5}
                                         cols={45}
                                         placeholder="Enter Your Message">
                                     </textarea>

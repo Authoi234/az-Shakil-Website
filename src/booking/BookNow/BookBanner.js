@@ -96,10 +96,10 @@ const BookBanner = ({ selectedDate, setSelectedDate }) => {
                                         {...register("type", { required: "Appointment Type is required" })}
                                         className={`select select-bordered w-full pl-10 ${errors.type ? 'select-error' : ''}`}
                                     >
-                                        <option value="">Select Appointment Type</option>
-                                        <option value="General Checkup">General Checkup</option>
-                                        <option value="Consultation">Consultation</option>
-                                        <option value="Follow-up">Follow-up</option>
+                                        <option value="" disabled>Select Appointment Type</option>
+                                        <option value="General Checkup">Student Visa</option>
+                                        <option value="Consultation">Bussiness Visa</option>
+                                        <option value="Follow-up">General Visa</option>
                                     </select>
                                     {errors.type && <p className="text-red-500 text-sm mt-1">{errors.type.message}</p>}
                                 </div>

@@ -1,21 +1,24 @@
 import React from 'react';
+import coachingHeading from "../../assets/coaching.png";
 
 const Coaching = () => {
     return (
         <div id='coaching-sect'>
             <div className='bg-[#fefefe] pb-5'>
-                <div className="w-full my-10 flex justify-center items-center text-center">
-                    <div className="flex flex-col md:flex-row justify-center items-center gap-4 max-w-[1200px]">
+                <div className="w-full ml-6 my-10 flex justify-center items-center text-center">
+                    <div className="  max-w-[1200px]">
                         <div className="w-full md:w-1/2 text-center md:text-start">
-                            <h2 className='flex text-xl items-center justify-center md:justify-start mb-1 font-semibold text-[#1E6DEB] -ml-1'>
+                            <h2 className='flex text-xl items-center justify-center md:justify-start font-semibold text-[#1E6DEB] -ml-1'>
                                 <div className='overflow-hidden'>
                                     <img src={require('../../assets/logo.png')} className='mx-2' style={{ width: "25px", height: "25px", objectFit: "cover", objectPosition: "0% 25%" }} alt="" />
                                 </div>
                                 COACHING WE OFFER
                             </h2>
-                            <h2 className="text-[#262626] text-[2.7rem] leading-[50px] font-semibold mb-8">
-                                Get the <span className='text-[#1E6DEB] uppercase'>Trainings <br /> You Deserve</span>.
-                            </h2>
+                            <div className="flex justify-start items-start w-full">
+                                <div className="w-[350px] my-4">
+                                    <img src={coachingHeading} className='w-full' alt="" />
+                                </div>
+                            </div>
                         </div>
                         <div className="w-full md:w-1/2 text-center md:text-start flex flex-col justify-center">
                             <p className='text-[#929293] font-normal text-justify'>
@@ -26,8 +29,8 @@ const Coaching = () => {
                 </div>
 
                 <div className="flex justify-center w-full items-center text-center">
-                    <div className='max-w-[1200px] flex-row md:flex md:justify-center gap-4 md:items-center'>
-                        <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-6 content-between mb-10  md:mb-1 justify-between">
+                    <div className='max-w-[1200px] flex-row md:flex md:justify-center gap-0 md:items-center'>
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-x-6 gap-y-6 content-between mb-10  md:mb-1 justify-between">
                             {/* grid Item */}
                             <div className='grid-item bg-[#FFFFFF] w-[396px] group transition-all duration-500' style={{ padding: "24px 34px 30px 33px" }}>
                                 <div className='mb-6 flex items-start'>
@@ -94,8 +97,8 @@ const Coaching = () => {
                                 </div>
                             </div>
                         </div>
-                        <div className="flex justify-center items-center  gap-4 px-4 ml-4 w-[300px]">
-                            <img src="https://wordpress.zozothemes.com/hegira/wp-content/uploads/sites/21/elementor/thumbs/couching-qnlooc8tvo3z28b3nl8y75jl6srjhq55dbpx9bj78o.jpg" className='w-full rounded-md' alt="" />
+                        <div className="flex justify-center items-center  gap-4 px-4 ml-4 w-[316px] h-[515px] -mt-2" >
+                            <img src="https://wordpress.zozothemes.com/hegira/wp-content/uploads/sites/21/elementor/thumbs/couching-qnlooc8tvo3z28b3nl8y75jl6srjhq55dbpx9bj78o.jpg" className='w-full h-full rounded-md' alt="" />
                         </div>
                     </div>
                 </div>

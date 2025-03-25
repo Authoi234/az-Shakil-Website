@@ -9,7 +9,7 @@ import { LiaGlobeAmericasSolid } from "react-icons/lia";
 import { BiSolidCategoryAlt } from "react-icons/bi";
 import { SiAmazonsimpleemailservice } from "react-icons/si";
 import { GiCommercialAirplane } from "react-icons/gi";
-import { FaHandsHelping, FaHome, FaPhone } from 'react-icons/fa';
+import { FaHandsHelping, FaHome, FaPhone, FaQuoteLeft } from 'react-icons/fa';
 import { TiMessages } from "react-icons/ti";
 import { ImBlog } from "react-icons/im";
 import "../../css/style.css";
@@ -29,6 +29,7 @@ const Navbar = () => {
                     <ul className='gap-1'>
                         <li className='list-item my-2'><a href='#reviews-sect'><MdOutlineReviews className='text-[#1E6DEB]' /> Reviews</a></li>
                         <li className='list-item my-2'><a href='#contributions-sect'> <FaNetworkWired className='text-[#1E6DEB]' /> Contributions</a></li>
+                        <li className='list-item my-2'><a href='#faq-sect'> <FaQuoteLeft className='text-[#1E6DEB]' /> FAQ</a></li>
                     </ul>
                 </div>
             </div>

@@ -5,6 +5,7 @@ import '../../App.css';
 import { motion } from 'motion/react';
 import blueHeading from "../../assets/blue-header-aboutUs.png";
 import { LuMessagesSquare } from "react-icons/lu";
+import img1 from "../../assets/aboutImg2.jpg";
 
 const AboutUs = () => {
     return (
@@ -25,8 +26,8 @@ const AboutUs = () => {
                             <div className='relative ml-36 -z-[20] w-3/5 mt-12 mb-0 animation-updown'>
                                 <img className=' rounded-xl absolute' src={"https://wordpress.zozothemes.com/hegira/wp-content/uploads/sites/21/2024/04/send-icon-2.png"} alt="" />
                             </div>
-                            <div className='w-[80%] h-[60%] ml-10'>
-                                <img className=' w-full h-full  ml-0 border-e-0  mt-64 z-10 flex justify-center items-center rounded-[0.3rem] border-[2rem] border-[#F4F4F5] rounded-ss-xl' src={"https://wordpress.zozothemes.com/hegira/wp-content/uploads/sites/21/elementor/thumbs/about-us-2-qn7wlq7udl1nldubxi548ayrvvqlqkhg2lruaj2xao.jpg"} alt="" />
+                            <div className='w-[303px] h-[372px] ml-10'>
+                                <img className=' w-full h-full  ml-0 border-e-0  mt-64 z-10 flex justify-center items-center rounded-[0.3rem] border-[2rem] border-[#F4F4F5] rounded-ss-xl' src={img1} alt="" />
                             </div>
                         </div>
                     </div>
@@ -69,7 +70,7 @@ const AboutUs = () => {
                                     <motion.button
                                         whileHover={{ scale: 1.02 }}
                                         whileTap={{ scale: 0.9 }}
-                                        className="relative z-10 h-24 w-80 overflow-hidden flex justify-around items-center px-8 font-medium py-4 text-xl text-white bg-blue-500 rounded-md active:ring-4 before:content-[''] before:absolute before:left-[-100%] before:w-full before:h-full before:bg-gray-700 before:transition-all before:duration-300 before:ease-in-out hover:before:left-0"
+                                        className="relative z-10 h-20 w-64 overflow-hidden flex justify-around items-center font-medium  text-xl text-white bg-blue-500 rounded-md active:ring-4 before:content-[''] before:absolute before:left-[-100%] before:w-full before:h-full before:bg-gray-700 before:transition-all before:duration-300 before:ease-in-out hover:before:left-0"
                                     >
                                         <p className="z-20 flex justify-center items-center">
                                         <LuMessagesSquare className='pr-2 text-4xl' /><span className='z-20'>Drop a message</span>
@@ -82,7 +83,7 @@ const AboutUs = () => {
                                     whileHover={{ scale: 1.02 }}
                                     whileTap={{ scale: 0.9 }}
                                     disabled={true}
-                                    className="z-10 h-24 w-80 flex justify-around items-center px-8 font-medium py-4 text-white bg-blue-500 rounded-md "
+                                    className="z-10 h-20 w-64 flex justify-around items-center font-medium  text-white bg-blue-500 rounded-md "
                                 >
                                     <p className='z-20'>
                                         <p className=''><span className="text-2xl font-medium">06+</span>Years <br />Experience</p>

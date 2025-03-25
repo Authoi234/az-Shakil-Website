@@ -3,7 +3,7 @@ import { BsGlobeAmericas } from 'react-icons/bs';
 import { IoPaperPlane } from 'react-icons/io5';
 import Tilt from 'react-parallax-tilt';
 import { BsFillGrid3X3GapFill } from "react-icons/bs";
-
+import servicesHeading from "../../assets/Services.png";
 
 const Services = () => {
     const servicesData = [
@@ -65,9 +65,11 @@ const Services = () => {
                             objectFit: "cover",
                             objectPosition: "0% 25%",
                         }} alt="" /> OUR SERVICES </h2>
-                        <h2 className=" text-[2.65rem] leading-[50px] font-semibold mb-5 text-black">
-                            Empowering Newcomers A <br /> Handbook on Immigration
-                        </h2>
+                        <div className="flex justify-center items-center w-full">
+                            <div className="w-[300px] my-4">
+                                <img src={servicesHeading} className='w-full' alt="" />
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div className="flex justify-center items-center w-full ">

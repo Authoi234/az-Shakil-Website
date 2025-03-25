@@ -3,6 +3,7 @@ import { motion } from 'motion/react';
 import { Link } from 'react-router-dom';
 import { MdArrowOutward } from 'react-icons/md';
 import "../../css/style.css";
+import visaCategoriesHeading from "../../assets/Visa Categories.png";
 
 const VisaCategories = () => {
     return (
@@ -11,7 +12,7 @@ const VisaCategories = () => {
                 <div className="w-full lg:flex lg:justify-center my-0  mx-auto p-5 lg:max-w-[1200px] gap-7 flex-row lg:items-end">
                     <div className="lg:w-1/2 w-full text-start rounded-lg bg-white flex-col">
                         <div className=" after:content-[''] after:opacity-95 after:absolute after:mix-blend-lighten" style={{ backgroundImage: "url(https://wordpress.zozothemes.com/hegira/wp-content/uploads/sites/21/2024/04/visa-1.jpeg)", backgroundPosition: "cover", backgroundSize: "cover" }}>
-                            <div className='p-10' style={{ background: "rgba(20, 20, 20, 0.9)" }}>
+                            <div className='p-10' style={{ background: "rgba(225, 225, 225, 0.6)" }}>
                                 <h2 className='flex items-center py-2 -ml-2 font-semibold text-lg text-[#1E6DEB]' >
                                     <div className='overflow-hidden'>
                                         <img src={require('../../assets/logo.png')} className='  mx-2' style={{
@@ -22,10 +23,12 @@ const VisaCategories = () => {
                                         }} alt="" />
                                     </div>
                                     VISA CATEGORIES  </h2>
-                                <h2 className="text-white text-[2.7rem] py-2 leading-[50px] font-semibold mb-5">
-                                    We Offers Education & Immigration Services
-                                </h2>
-                                <p className="py-2 text-base text-[#F2F3F3] text-justify">Turning Aspirations into Achievements With expertise honed over years, we’re not
+                                <div className="flex justify-start items-center w-full">
+                                    <div className="w-[60%]">
+                                        <img src={visaCategoriesHeading} className='w-full' alt="" />
+                                    </div>
+                                </div>
+                                <p className="py-2 text-base text-[#081F39] text-justify" style={{fontWeight: 500}}>Turning Aspirations into Achievements With expertise honed over years, we’re not
                                     just a service; We’re
                                     your partner in transforming ambitions into realities. Let us simplify the
                                     complex and create a roadmap

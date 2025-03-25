@@ -92,11 +92,11 @@ const BannerItem = ({ item }) => {
                                     transition: { duration: 0.2 },
                                     x: 5
                                 }}
-                                initial={{ opacity: 0, y: 20 }}
+                                initial={{ opacity: 0, y: 50 }}
                                 animate={{ opacity: 1, y: 0 }}
                                 transition={{ duration: 0.5, delay: 0.2 }}
                                 className="h-[61px] leading-[17px] text-[16px] relative w-[213px] z-10 overflow-hidden flex justify-around items-center font-medium py-5 px-9 rounded-md text-white hover:text-black bg-[#1E6CEA] active:ring-4 before:content-[''] before:absolute before:left-[-100%] before:w-full before:h-full before:bg-white before:transition-all before:duration-300 before:ease-in-out hover:before:left-0"
-                                whileTap={{ rotate: 20, scale: 0.90 }}
+                                whileTap={{ scale: 0.90 }}
                             >
                                 <motion.span
                                     className='z-20 leading-[17px] font-bold text-[16px] uppercase'

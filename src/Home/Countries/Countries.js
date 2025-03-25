@@ -2,6 +2,7 @@ import React from 'react';
 import { IoPaperPlane } from 'react-icons/io5';
 import "../../css/style.css";
 import "../../App.css";
+import countriesHeading from "../../assets/Countries.png"
 
 const Countries = () => {
     const countriesData = [
@@ -51,9 +52,11 @@ const Countries = () => {
                             objectPosition: "0% 25%",
                         }} alt="" />
                     </div> COUNTRIES</h2>
-                    <h2 className="text-[#262626] text-[2.25rem] leading-[50px] font-semibold mb-8">
-                        Destination Spotlight: Your Future Awaits
-                    </h2>
+                    <div className="flex justify-center items-center w-full">
+                        <div className="w-[400px]">
+                            <img src={countriesHeading} className='w-full' alt="" />
+                        </div>
+                    </div>
                 </div>
             </div>
             <div className="grid grid-cols-1 lg:grid-cols-2 ">
