@@ -43,7 +43,7 @@ const BookBanner = ({ selectedDate, setSelectedDate }) => {
                         <h2 className="text-3xl font-bold mb-8 text-gray-800 text-center">Book an Appointment</h2>
                         <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
                             <div className="relative">
-                                <FaUser className="absolute left-3 top-3 text-gray-400" />
+                                <FaUser className="absolute left-3 top-[17px] text-gray-400" />
                                 <input
                                     {...register("name", { required: "Name is required" })}
                                     type="text"
@@ -54,7 +54,7 @@ const BookBanner = ({ selectedDate, setSelectedDate }) => {
                             </div>
 
                             <div className="relative">
-                                <FaEnvelope className="absolute left-3 top-3 text-gray-400" />
+                                <FaEnvelope className="absolute left-3 top-[17px] text-gray-400" />
                                 <input
                                     {...register("email", { required: "Email is required", pattern: /^\S+@\S+$/i })}
                                     type="email"
@@ -65,7 +65,7 @@ const BookBanner = ({ selectedDate, setSelectedDate }) => {
                             </div>
 
                             <div className="relative">
-                                <FaPhoneAlt className="absolute left-3 top-3 text-gray-400" />
+                                <FaPhoneAlt className="absolute left-3 top-[17px] text-gray-400" />
                                 <input
                                     {...register("phone", { required: "Phone number is required", pattern: /^[0-9]+$/ })}
                                     type="tel"
@@ -77,7 +77,7 @@ const BookBanner = ({ selectedDate, setSelectedDate }) => {
 
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                                 <div className="relative">
-                                    <FaClock className="absolute left-3 top-3 text-gray-400" />
+                                    <FaClock className="absolute left-3 top-[17px] text-gray-400" />
                                     <select
                                         {...register("timeSlot", { required: "Time Slot is required" })}
                                         className={`select select-bordered w-full pl-10 ${errors.timeSlot ? 'select-error' : ''}`}
@@ -91,22 +91,22 @@ const BookBanner = ({ selectedDate, setSelectedDate }) => {
                                 </div>
 
                                 <div className="relative">
-                                    <FaCalendarAlt className="absolute left-3 top-3 text-gray-400" />
+                                    <FaCalendarAlt className="absolute left-4 top-[17px] text-gray-400" />
                                     <select
                                         {...register("type", { required: "Appointment Type is required" })}
                                         className={`select select-bordered w-full pl-10 ${errors.type ? 'select-error' : ''}`}
                                     >
-                                        <option value="" disabled>Select Appointment Type</option>
+                                        <option value="" disabled>Select Visa Type</option>
                                         <option value="General Checkup">Student Visa</option>
                                         <option value="Consultation">Bussiness Visa</option>
-                                        <option value="Follow-up">General Visa</option>
+                                        <option value="Follow-up">Tourist Visa</option>
                                     </select>
                                     {errors.type && <p className="text-red-500 text-sm mt-1">{errors.type.message}</p>}
                                 </div>
                             </div>
 
                             <div className="relative">
-                                <FaCommentAlt className="absolute left-3 top-3 text-gray-400" />
+                                <FaCommentAlt className="absolute left-3 top-[17px] text-gray-400" />
                                 <textarea
                                     {...register("message")}
                                     placeholder="Your Message"
