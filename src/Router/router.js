@@ -9,6 +9,7 @@ import AdminRoute from "../route/AdminRoute";
 import Login from "../Admin/Login";
 import PrivateRoute from "../route/PrivateRoute";
 import Dahsboard from "../Admin/Dahsboard";
+import Assessment from "../Home/Assesments/Assessment";
 
 export const router = createBrowserRouter([
     {
@@ -22,7 +23,11 @@ export const router = createBrowserRouter([
             {
                 path: "contact-us",
                 element: <ContactUs></ContactUs>
-            }
+            },
+            {
+                path: "assessment",
+                element: <Assessment></Assessment>
+            },
         ]
     },
     {

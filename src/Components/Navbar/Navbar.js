@@ -57,14 +57,9 @@ const Navbar = () => {
                 </div>
             </div>
         </div>,
-        <div className="dropdown dropdown-hover">
-            <li className='list-item font-medium rounded-md abc hover:text-white transition-all text-black mx-5'><Link to='/'><TiMessages className='text-[#1E6DEB]' />Free Assessment</Link></li>
-            <div className="dropdown-content menu bg-base-100 min-w-fit w-full rounded-box z-[1] p-2 shadow">
-                <div className="flex justify-center gap-3">
-                    <ul className='gap-1'>
-                    </ul>
-                </div>
-            </div>
+        <div className="">
+            <li className='list-item font-medium rounded-md abc hover:text-white transition-all text-black mx-5'><Link to='/assessment'><TiMessages className='text-[#1E6DEB]' />Free Assessment</Link></li>
+    
         </div>,
     ];
 
