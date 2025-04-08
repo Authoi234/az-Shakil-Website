@@ -90,7 +90,6 @@ const Assessment = () => {
                                         <option value="">Select Purpose</option>
                                         <option value="USA">Study</option>
                                         <option value="Canada">Tourism</option>
-                                        <option value="UK">UK</option>
                                         <option value="Australia">Bussiness</option>
                                         <option value="Australia">Immigration</option>
                                         {/* Add more options as needed */}

@@ -18,7 +18,7 @@ const Navbar = () => {
 
     const navMenu = [
         <div className="dropdown dropdown-hover">
-            <li className='list-item font-medium rounded-md abc hover:text-white transition-all text-black mx-5'><Link to='/'><FaHome className='text-[#1E6DEB]' ></FaHome> Home</Link></li>
+            <li className='list-item font-medium rounded-md abc hover:text-white transition-all text-black mx-2'><Link to='/'><FaHome className='text-[#1E6DEB]' ></FaHome> Home</Link></li>
             <div className="dropdown-content menu bg-base-100 min-w-fit w-full rounded-box z-[1] p-2 shadow">
                 <div className="flex justify-center gap-3">
                     <ul className='gap-1'>
@@ -35,7 +35,7 @@ const Navbar = () => {
             </div>
         </div>,
         <div className="dropdown dropdown-hover">
-            <li className='list-item font-medium rounded-md abc hover:text-white transition-all text-black mx-5'><Link to='/'><GiCommercialAirplane className='text-[#1E6DEB]' /> Study Abroad</Link></li>
+            <li className='list-item font-medium rounded-md abc hover:text-white transition-all text-black mx-2'><Link to='/'><GiCommercialAirplane className='text-[#1E6DEB]' /> Study Abroad</Link></li>
             <div className="dropdown-content menu bg-base-100 min-w-fit w-full rounded-box z-[1] p-2 shadow">
                 <div className="flex justify-center gap-3">
                     <ul className='gap-1'>
@@ -49,7 +49,7 @@ const Navbar = () => {
             </div>
         </div>,
         <div className="dropdown dropdown-hover">
-            <li className='list-item font-medium rounded-md abc hover:text-white transition-all text-black mx-5'><Link to='/'><ImBlog className='text-[#1E6DEB]' />Blogs</Link></li>
+            <li className='list-item font-medium rounded-md abc hover:text-white transition-all text-black mx-2'><Link to='/'><ImBlog className='text-[#1E6DEB]' />Blogs</Link></li>
             <div className="dropdown-content menu bg-base-100 min-w-fit w-full rounded-box z-[1] p-2 shadow">
                 <div className="flex justify-center gap-3">
                     <ul className='gap-1'>
@@ -58,7 +58,11 @@ const Navbar = () => {
             </div>
         </div>,
         <div className="">
-            <li className='list-item font-medium rounded-md abc hover:text-white transition-all text-black mx-5'><Link to='/assessment'><TiMessages className='text-[#1E6DEB]' />Free Assessment</Link></li>
+            <li className='list-item font-medium rounded-md abc hover:text-white transition-all text-black mx-2'><Link to='/assessment'><TiMessages className='text-[#1E6DEB]' />Free Assessment</Link></li>
+    
+        </div>,
+        <div className="">
+            <li className='list-item font-medium rounded-md abc hover:text-white transition-all text-black mx-2'><Link to='/assessment'><TiMessages className='text-[#1E6DEB]' />Login</Link></li>
     
         </div>,
     ];

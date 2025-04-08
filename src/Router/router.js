@@ -10,6 +10,7 @@ import Login from "../Admin/Login";
 import PrivateRoute from "../route/PrivateRoute";
 import Dahsboard from "../Admin/Dahsboard";
 import Assessment from "../Home/Assesments/Assessment";
+import Appointments from "../Admin/Appointments";
 
 export const router = createBrowserRouter([
     {
@@ -55,8 +56,16 @@ export const router = createBrowserRouter([
         element: <PrivateRoute><AdminLayout></AdminLayout></PrivateRoute>,
         children: [
             {
+                path: '/admin',
+                element: <AdminRoute><Dahsboard></Dahsboard></AdminRoute>
+            },
+            {
                 path: '/admin/dashboard',
                 element: <AdminRoute><Dahsboard></Dahsboard></AdminRoute>
+            },
+            {
+                path: '/admin/appointments',
+                element: <AdminRoute><Appointments></Appointments></AdminRoute>
             },
         ]
     },

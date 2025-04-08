@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { DayPicker } from 'react-day-picker';
 import 'react-day-picker/dist/style.css';
 import { motion } from 'framer-motion';
@@ -7,17 +7,73 @@ import { useForm } from 'react-hook-form';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { useEffect } from 'react';
+import { format } from 'date-fns';
+import { useQuery } from '@tanstack/react-query';
+import toast from 'react-hot-toast';
+import { useNavigate } from 'react-router-dom';
 
-const BookBanner = ({ selectedDate, setSelectedDate }) => {
-    const { register, handleSubmit, formState: { errors } } = useForm();
+const BookBanner = () => {
+    const [selectedDate, setSelectedDate] = useState(new Date());
+    const [visaType, setVisaType] = useState(null);
+    const date = format(selectedDate, 'PP')
+    const { register, handleSubmit, reset, formState: { errors }, setValue } = useForm();
+    const [currentVisaId, setCurrentVisaId] = useState(null);
+    const [selectedVisaName, setSelectedVisaName] = useState('');
+    const navigate = useNavigate();
 
     useEffect(() => {
         AOS.init({ duration: 1000 });
     }, []);
 
+    const { data: appointmentOptions = [], refetch } = useQuery({
+        queryKey: ['appointmentOptions', date, currentVisaId],
+        queryFn: async () => {
+            const res = await fetch(`http://localhost:5000/appointmentOptions?date=${date}`);
+            const data = await res.json();
+            return data;
+        },
+    });
+
+    useEffect(() => {
+        if (appointmentOptions.length > 0 && !currentVisaId) {
+            setCurrentVisaId(appointmentOptions[0]._id);
+            setSelectedVisaName(appointmentOptions[0].name);
+            setValue('type', appointmentOptions[0].name);
+        }
+    }, [appointmentOptions, currentVisaId, setValue]);
+
     const onSubmit = (data) => {
-        console.log(data);
-        // Handle form submission here
+        const booking = {
+            appointmentDate: date,
+            client: data?.name,
+            visa: data?.type,
+            slot: data?.timeSlot,
+            email: data?.email,
+            phone: data?.phone,
+            message: data?.message
+        }
+        console.log(booking)
+
+        fetch('http://localhost:5000/bookings', {
+            method: 'POST',
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(booking)
+        })
+            .then(res => res.json())
+            .then(data => {
+                console.log(data)
+                if (data.acknowledged) {
+                    toast.success('Booking Confirmed');
+                    refetch();
+                    reset();
+                    navigate("/")
+                }
+                else {
+                    toast.error(data.message);
+                }
+            })
     };
 
     return (
@@ -25,7 +81,7 @@ const BookBanner = ({ selectedDate, setSelectedDate }) => {
             <div className="container mx-auto px-4">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
                     <motion.div
-                        className="w-full flex justify-center mx-auto items-center md:w-11/12 mx-auto rounded-lg shadow-lg p-6 bg-white"
+                        className="w-full flex py-10 justify-center mx-auto items-center md:w-11/12 rounded-lg shadow-lg p-6 bg-white"
                         initial={{ opacity: 0, y: -50 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.8, ease: 'easeOut' }}
@@ -40,7 +96,7 @@ const BookBanner = ({ selectedDate, setSelectedDate }) => {
                     </motion.div>
 
                     <div className="w-full md:w-11/12 mx-auto rounded-lg shadow-lg p-8 bg-white" data-aos="fade-left">
-                        <h2 className="text-3xl font-bold mb-8 text-gray-800 text-center">Book an Appointment</h2>
+                        <h2 className="text-3xl font-bold mb-8 text-gray-800 text-center" onClick={() => console.log(appointmentOptions?.find((opt) => opt?._id === currentVisaId))} >Book an Appointment</h2>
                         <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
                             <div className="relative">
                                 <FaUser className="absolute left-3 top-[17px] text-gray-400" />
@@ -82,10 +138,14 @@ const BookBanner = ({ selectedDate, setSelectedDate }) => {
                                         {...register("timeSlot", { required: "Time Slot is required" })}
                                         className={`select select-bordered w-full pl-10 ${errors.timeSlot ? 'select-error' : ''}`}
                                     >
-                                        <option value="">Select a Time Slot</option>
-                                        <option value="9-10 AM">9:00 AM - 10:00 AM</option>
-                                        <option value="10-11 AM">10:00 AM - 11:00 AM</option>
-                                        <option value="11-12 PM">11:00 AM - 12:00 PM</option>
+                                        <option value="" defaultChecked disabled>Select a Time Slot</option>
+                                        {appointmentOptions
+                                            .find((opt) => opt._id === currentVisaId)
+                                            ?.slots?.map((slot, i) => (
+                                                <option key={i} value={slot}>
+                                                    {slot}
+                                                </option>
+                                            ))}
                                     </select>
                                     {errors.timeSlot && <p className="text-red-500 text-sm mt-1">{errors.timeSlot.message}</p>}
                                 </div>
@@ -93,13 +153,25 @@ const BookBanner = ({ selectedDate, setSelectedDate }) => {
                                 <div className="relative">
                                     <FaCalendarAlt className="absolute left-4 top-[17px] text-gray-400" />
                                     <select
+                                        value={selectedVisaName}
                                         {...register("type", { required: "Appointment Type is required" })}
+                                        onChange={(e) => {
+                                            const name = e.target.value;
+                                            const selectedVisa = appointmentOptions.find(opt => opt.name === name);
+
+                                            setCurrentVisaId(selectedVisa?._id);
+                                            setSelectedVisaName(name);
+                                            setValue('type', name);
+                                        }}
+
                                         className={`select select-bordered w-full pl-10 ${errors.type ? 'select-error' : ''}`}
                                     >
-                                        <option value="" disabled>Select Visa Type</option>
-                                        <option value="General Checkup">Student Visa</option>
-                                        <option value="Consultation">Bussiness Visa</option>
-                                        <option value="Follow-up">Tourist Visa</option>
+                                        <option value="" defaultChecked disabled>Select Visa Type</option>
+                                        {appointmentOptions?.map((opt) => (
+                                            <option key={opt._id} value={opt.name}>
+                                                {opt.name}
+                                            </option>
+                                        ))}
                                     </select>
                                     {errors.type && <p className="text-red-500 text-sm mt-1">{errors.type.message}</p>}
                                 </div>
