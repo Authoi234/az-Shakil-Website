@@ -13,6 +13,7 @@ import MiddleBox from './HomePage/MiddleBox';
 import ContactUs from './ContactUs/ContactUs';
 import Faq from './Faq/Faq';
 import Gallery from './Gallery/Gallery';
+import OurBlogs from './Blogs/OurBlogs';
 
 const Home = () => {
 
@@ -26,6 +27,7 @@ const Home = () => {
             <AboutUs></AboutUs>
             <MiddleBox></MiddleBox>
             <LearnersReviews></LearnersReviews>
+            <OurBlogs></OurBlogs>
             <Contributions ></Contributions>
             <ContactUs ></ContactUs>
             <Gallery></Gallery>

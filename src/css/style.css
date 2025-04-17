@@ -264,3 +264,16 @@
     background-blend-mode: hard-light;
 
 }
+
+.bg-img-none-on-small{
+    --img-url: attr(data-img-url);
+    background-image: var(--img-url) !important;
+    background-repeat: no-repeat;
+    background-size: 100% 100%
+}
+
+@media (max-width: 768px) {
+    .bg-img-none-on-small{
+        background-image: none !important;
+    }
+}

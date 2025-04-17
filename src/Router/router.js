@@ -11,6 +11,8 @@ import PrivateRoute from "../route/PrivateRoute";
 import Dahsboard from "../Admin/Dahsboard";
 import Assessment from "../Home/Assesments/Assessment";
 import Appointments from "../Admin/Appointments";
+import PartnerRequestForm from "../Partner/PartnerRequestForm";
+import AppointmentsHistory from "../Admin/AppointmentsHistory";
 
 export const router = createBrowserRouter([
     {
@@ -67,6 +69,20 @@ export const router = createBrowserRouter([
                 path: '/admin/appointments',
                 element: <AdminRoute><Appointments></Appointments></AdminRoute>
             },
+            {
+                path: '/admin/appointments-history',
+                element: <AdminRoute><AppointmentsHistory></AppointmentsHistory></AdminRoute>
+            },
+        ]
+    },
+    {
+        path: "/partnership",
+        element: <PrivateRoute><Outlet></Outlet></PrivateRoute>,
+        children: [
+            {
+                path: '/partnership/request',
+                element: <PartnerRequestForm></PartnerRequestForm>
+            }
         ]
     },
 ])

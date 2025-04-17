@@ -24,11 +24,11 @@ const VisaCategories = () => {
                                     </div>
                                     VISA CATEGORIES  </h2>
                                 <div className="flex justify-start items-center w-full">
-                                    <div className="w-[60%]">
+                                    <div className=" w-[70%] md:w-[60%]">
                                         <img src={visaCategoriesHeading} className='w-full' alt="" />
                                     </div>
                                 </div>
-                                <p className="py-2 text-base text-[#081F39] text-justify" style={{fontWeight: 500}}>Turning Aspirations into Achievements With expertise honed over years, we’re not
+                                <p className="py-2 text-base text-[#081F39] text-justify" style={{ fontWeight: 500 }}>Turning Aspirations into Achievements With expertise honed over years, we’re not
                                     just a service; We’re
                                     your partner in transforming ambitions into realities. Let us simplify the
                                     complex and create a roadmap
@@ -51,11 +51,13 @@ const VisaCategories = () => {
                         </div>
                     </div>
                     <div className='px-5 lg:w-1/2 h-full mt-5 lg:mt-0 ml-0 shadow group z-10 bg-[#FEFEFE]' style={{ flexWrap: "initial", justifyContent: "flex-end", flexGrow: 1, padding: "25px 40px 25px 25px" }}>
-                        <div className='rounded-lg px-2 py-1 flex items-start max-w-full h-full'>
-                            <div className='bg-[#F6F6F8] w-32'>
-                                <img className='max-w-full p-5' src="https://wordpress.zozothemes.com/hegira/wp-content/uploads/sites/21/2022/07/tourist-80x80.png" alt="" />
+                        <div className='rounded-lg md:px-2 py-1 text-center md:flex md:items-t md:max-w-full h-full'>
+                            <div className="w-full flex justify-center items-center md:w-auto">
+                                <div className='bg-[#F6F6F8] w-16 md:w-32'>
+                                    <img className='max-w-full md:p-5 flex items-center justify-center' src="https://wordpress.zozothemes.com/hegira/wp-content/uploads/sites/21/2022/07/tourist-80x80.png" alt="" />
+                                </div>
                             </div>
-                            <div className='pl-[18px] w-[90%]'>
+                            <div className='md:pl-[18px] md:w-[90%]'>
                                 <h2 className='text-3xl font-medium group-hover:text-[#1E6CEA] transition-colors mb-2'>Tourist Visa</h2>
                                 <p className="font-styled text-[#797979] text-base text-justify">
                                     Explore Without Limits From breathtaking landscapes to cultural
@@ -72,11 +74,13 @@ const VisaCategories = () => {
             <div className="flex justify-center items-center lg:mt-4 ">
                 <div className=" bg-[#ffffff] lg:flex lg:pt-1 pt-0 p-5 lg:justify-center lg:items-center gap-0 w-full lg:max-w-[1200px] ">
                     <div className='px-5 lg:mb-0 mb-5 lg:mx-0 lg:w-1/2  shadow group z-10 bg-[#FEFEFE]' style={{ flexWrap: "initial", justifyContent: "flex-end", flexGrow: 1, padding: "25px 40px 25px 25px" }}>
-                        <div className='rounded-lg px-2 py-1 flex z-10 items-start max-w-full h-full'>
-                            <div className='bg-[#F6F6F8] w-32'>
-                                <img className='max-w-full w-auto p-5' src="https://wordpress.zozothemes.com/hegira/wp-content/uploads/sites/21/2022/07/student-80x80.png" alt="" />
+                        <div className='rounded-lg md:px-2 py-1 text-center md:flex md:items-t md:max-w-full h-full'>
+                            <div className='w-full flex justify-center items-center md:w-auto'>
+                                <div className='bg-[#F6F6F8] md:w-32 w-16'>
+                                    <img className='max-w-full md:p-5 flex items-center justify-center' src="https://wordpress.zozothemes.com/hegira/wp-content/uploads/sites/21/2022/07/student-80x80.png" alt="" />
+                                </div>
                             </div>
-                            <div className='pl-5 w-[90%]'>
+                            <div className='md:pl-5 md:w-[90%]'>
                                 <h2 className='text-3xl font-medium group-hover:text-[#1E6CEA] transition-colors'>Student Visa</h2>
                                 <p className="py-2 font-styled text-[#797979] text-base text-justify ">
                                     Your First Step to Global Success Embark on an educational
@@ -89,11 +93,13 @@ const VisaCategories = () => {
                         </div>
                     </div>
                     <div className='px-5 lg:ml-5 lg:mr-0 lg:w-1/2 shadow group z-10 bg-[#FEFEFE]' style={{ flexWrap: "initial", justifyContent: "flex-end", flexGrow: 1, padding: "25px 40px 25px 25px" }}>
-                        <div className='rounded-lg px-2 py-1 flex z-10 items-start max-w-full h-full'>
-                            <div className='bg-[#F6F6F8] w-32'>
-                                <img className='max-w-full w-auto p-5' src="https://wordpress.zozothemes.com/hegira/wp-content/uploads/sites/21/2022/07/Bussiness-80x80.png" alt="" />
+                        <div className='rounded-lg md:px-2 py-1 text-center md:flex md:items-t md:max-w-full h-full'>
+                            <div className='w-full flex justify-center items-center md:w-auto'>
+                                <div className='bg-[#F6F6F8] md:w-32 w-16'>
+                                    <img className='max-w-full md:p-5 flex items-center justify-center' src="https://wordpress.zozothemes.com/hegira/wp-content/uploads/sites/21/2022/07/Bussiness-80x80.png" alt="" />
+                                </div>
                             </div>
-                            <div className='pl-5 w-[90%]'>
+                            <div className='md:pl-5 md:w-[90%]'>
                                 <h2 className='text-3xl font-medium group-hover:text-[#1E6CEA] transition-colors'>Business Visa</h2>
                                 <p className="py-2 font-styled text-[#797979] text-base text-justify">
                                     Empowering Your Ambitions Expand your network, close deals, and

@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import '../../App.css';
 import logo from "../../assets/logo.png";
+import logoIcon from "../../assets/logoIcon-bgless.png";
 import { Link } from 'react-router-dom';
-import { FaNetworkWired } from "react-icons/fa6";
+import { FaNetworkWired, FaRegHandshake } from "react-icons/fa6";
 import { MdOutlineReviews } from "react-icons/md";
 import { FcAbout } from "react-icons/fc";
 import { LiaGlobeAmericasSolid } from "react-icons/lia";
@@ -12,6 +13,7 @@ import { GiCommercialAirplane } from "react-icons/gi";
 import { FaHandsHelping, FaHome, FaPhone, FaQuoteLeft } from 'react-icons/fa';
 import { TiMessages } from "react-icons/ti";
 import { ImBlog } from "react-icons/im";
+import { AiOutlineLogin } from "react-icons/ai";
 import "../../css/style.css";
 
 const Navbar = () => {
@@ -59,60 +61,105 @@ const Navbar = () => {
         </div>,
         <div className="">
             <li className='list-item font-medium rounded-md abc hover:text-white transition-all text-black mx-2'><Link to='/assessment'><TiMessages className='text-[#1E6DEB]' />Free Assessment</Link></li>
-    
-        </div>,
-        <div className="">
-            <li className='list-item font-medium rounded-md abc hover:text-white transition-all text-black mx-2'><Link to='/assessment'><TiMessages className='text-[#1E6DEB]' />Login</Link></li>
-    
-        </div>,
+        </div>
     ];
 
 
+    const mobileNavItems = (
+        <ul className="menu menu-vertical lg:menu-horizontal w-full lg:w-auto bg-white px-4 py-2 gap-2 overflow-y-visible">
+            {/* Home */}
+            <li className="dropdown overflow-y-auto">
+                <details>
+                    <summary>
+                        <Link to="/"><FaHome className="text-[#1E6DEB]" /> Home</Link>
+                    </summary>
+                    <ul className="p-2 bg-base-100 rounded-box shadow-lg">
+                        <li><a href="#services-sect"><SiAmazonsimpleemailservice className="text-[#1E6DEB]" /> Services</a></li>
+                        <li><a href="#about-us-sect"><FcAbout className="text-[#1E6DEB]" /> About Us</a></li>
+                        <li><a href="#contact-us"><FaPhone className="text-[#1E6DEB]" /> Contact Us</a></li>
+                        <li><a href="#reviews-sect"><MdOutlineReviews className="text-[#1E6DEB]" /> Reviews</a></li>
+                        <li><a href="#contributions-sect"><FaNetworkWired className="text-[#1E6DEB]" /> Contributions</a></li>
+                        <li><a href="#faq-sect"><FaQuoteLeft className="text-[#1E6DEB]" /> FAQ</a></li>
+                    </ul>
+                </details>
+            </li>
+
+            {/* Study Abroad */}
+            <li className="dropdown overflow-y-auto">
+                <details>
+                    <summary>
+                        <Link to="/"><GiCommercialAirplane className="text-[#1E6DEB]" /> Study Abroad</Link>
+                    </summary>
+                    <ul className="p-2 bg-base-100 rounded-box shadow-lg">
+                        <li><a href="#visa-categories"><BiSolidCategoryAlt className="text-[#1E6DEB]" /> Visa Categories</a></li>
+                        <li><a href="#countries-sect"><LiaGlobeAmericasSolid className="text-[#1E6DEB]" /> Countries</a></li>
+                        <li><a href="#coaching-sect"><FaHandsHelping className="text-[#1E6DEB]" /> Coaching We Offer</a></li>
+                    </ul>
+                </details>
+            </li>
+
+            {/* Blogs */}
+            <li>
+                <Link to="/"><ImBlog className="text-[#1E6DEB] overflow-y-auto" /> Blogs</Link>
+            </li>
+
+            {/* Free Assessment */}
+            <li>
+                <Link to="/assessment"><TiMessages className="text-[#1E6DEB] overflow-y-auto" /> Free Assessment</Link>
+            </li>
+        </ul>
+    );
+
     return (
-        <div className="fixed top-0 left-0 right-0 z-50 h-20 " style={{ backgroundColor: "rgba(225,225,225, 0.3)", backdropFilter: "blur(5px)" }} data-theme="light">
-            <div className={`flex justify-between items-center h-full w-full pl-4`}>
-                <div className={`w-72`} >
-                    <img
-                        src={logo}
-                        alt=""
-                        className="border-0 outline-none pt-2"
-                    />
-                </div>
-                <div className='flex-grow flex justify-center'>
-                    <div className="hidden-special-on-small md:flex">
-                        <ul className="menu menu-horizontal py-5 px-1">
-                            {navMenu}
-                        </ul>
+        <div className="fixed top-0 left-0 right-0 z-50 ">
+            <div className=" hidden-special-on-small md:flex h-[30px]" style={{ backgroundColor: "#16171A" }} data-theme="light">
+                <div className={`max-w-[1242px] flex justify-end ml-auto items-center h-full px-4  `}>
+                    <div className='flex justify-end w-full'>
+                        <div className="">
+                            <ul className="menu menu-horizontal py-5 px-0">
+                                <li className='list-item font-medium rounded-md abc text-white transition-all mx-2'><Link to='/partnership/request'><FaRegHandshake className='text-[#1E6DEB]' />Partner</Link></li>
+                                <li className='list-item font-medium rounded-md abc text-white transition-all ml-2 '><Link to='/admin/auth/login'><AiOutlineLogin className='text-[#1E6DEB]' />Login</Link></li>
+                            </ul>
+                        </div>
                     </div>
-                    <div className="hidden-special-on-large">
+                </div >
+            </div>
+            <div className="h-[70px]" style={{ backgroundColor: "rgba(225,225,225, 0.3)", backdropFilter: "blur(5px)" }} data-theme="light">
+                <div className={`container mx-auto flex justify-between items-center my-auto h-full px-4 `}>
+                    <div className={`md:w-52 flex justify-center items-center mx-auto my-auto  w-[65px]`} >
+                        <img
+                            src={logo}
+                            alt=""
+                            className="border-0 my-auto outline-none pt-2 hidden hidden-special-on-small md:flex"
+                        />
                         <div className="dropdown">
-                            <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
-                                <svg
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    className="h-5 w-5"
-                                    fill="none"
-                                    viewBox="0 0 24 24"
-                                    stroke="currentColor">
-                                    <path
-                                        strokeLinecap="round"
-                                        strokeLinejoin="round"
-                                        strokeWidth="2"
-                                        d="M4 6h16M4 12h8m-8 6h16" />
-                                </svg>
-                            </div>
+                            <img
+                                src={logoIcon}
+                                alt=""
+                                tabIndex={0}
+                                role="button"
+                                className="border-0 cursor-pointer  outline-none pt-2 hidden-special-on-large"
+                            />
                             <ul
                                 tabIndex={0}
-                                className="menu menu-sm dropdown-content bg-blue-950 rounded-box z-20 mt-3 w-52 p-2 shadow text-black">
+                                className="menu menu-sm dropdown-content bg-white rounded-box z-20 mt-3 w-52 p-2 shadow text-black">
+                                {mobileNavItems}
+                            </ul>
+                        </div>
+                    </div>
+                    <div className=' flex-grow flex justify-end'>
+                        <div className="hidden-special-on-small md:flex">
+                            <ul className="menu menu-horizontal  py-5 px-1">
                                 {navMenu}
                             </ul>
                         </div>
                     </div>
+                    <div className="flex justify-end  mx-0 my-0 h-full">
+                        <Link to={'/book/booking'}><button className='rounded-none h-full max-w-44 w-auto btn btn-before-bg relative hover:bg-white bg-[#1E6DEB] border-0 text-white group text-base transition-all '><p className=' z-10 group-hover:text-[#1E6DEB]' to={'/book/booking'}>BOOK NOW</p></button></Link>
+                    </div>
                 </div>
-                <div className="flex justify-end mx-0 my-0 h-full">
-                    <Link to={'/book/booking'}><button className='rounded-none h-full w-60 btn btn-before-bg hover:bg-white bg-[#1E6DEB] border-0 text-white group text-lg transition-all relative overflow-hidden'><p className=' z-10 group-hover:text-[#1E6DEB]' to={'/book/booking'}>BOOK APPRENT</p></button></Link>
-                </div>
-            </div>
-        </div >
+            </div >
+        </div>
     );
 };
 

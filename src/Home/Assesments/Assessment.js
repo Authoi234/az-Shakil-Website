@@ -308,7 +308,7 @@ const Assessment = () => {
                                                     type="radio"
                                                     value={level}
                                                     {...register("option", { required: "Please select an option" })}
-                                                    className="radio bg-blue-100 border-blue-300 shadow-lg shadow-black checked:bg-[#1E6DEB] checked:text-[#1E6DEB] checked:border-[#1E6DEB]"
+                                                    className="radio bg-blue-100 border-blue-300 checked:bg-[#1E6DEB] checked:text-[#1E6DEB] checked:border-[#1E6DEB]"
                                                 />
                                                 {level}
                                             </label>

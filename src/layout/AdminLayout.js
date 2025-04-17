@@ -5,8 +5,10 @@ import { Link, Outlet } from 'react-router-dom';
 import logo from "../assets/logo.png";
 import { motion } from 'framer-motion';
 import { FaHome, FaEdit, FaCalendarPlus, FaUserFriends, FaBell, FaCog } from "react-icons/fa";
+import { RiChatHistoryFill } from "react-icons/ri";
 import { useQuery } from '@tanstack/react-query';
 import { GiConversation } from "react-icons/gi";
+import logoIcon from "../assets/logoIcon-bgless.png";
 import { MdSupportAgent } from "react-icons/md";
 
 const AdminLayout = () => {
@@ -47,10 +49,16 @@ const AdminLayout = () => {
         <div>
             <div className="z-50 h-20 shadow-md" data-theme="light">
                 <div className={`container mx-auto flex justify-between items-center h-full`}>
-                    <div className={`w-72 border-0 outline-none pt-2`} >
+                    <div className={`md:w-72 w-10 border-0 outline-none pt-2`} >
                         <img
                             src={logo}
                             alt=""
+                            className="border-0 outline-none pt-2 hidden hidden-special-on-small md:flex"
+                        />
+                        <img
+                            src={logoIcon}
+                            alt=""
+                            className="border-0 outline-none pt-2 hidden-special-on-large"
                         />
                     </div>
                     <div className="navbar-center">
@@ -62,7 +70,7 @@ const AdminLayout = () => {
                     <div className="pt-2 mt-5 h-full flex justify-center items-center">
                         <p className='text-lg mr-2'>{adminData?.name}</p>
                         <div className="dropdown dropdown-end ">
-                            <div tabIndex={0} role="button" className="btn  btn-circle avatar">
+                            <div tabIndex={0} role="button" className="btn cursor-pointer btn-circle avatar">
                                 <div className="w-20 rounded-full bg-white">
                                     <img
                                         alt="Profile of AzShakil"
@@ -114,7 +122,7 @@ const AdminLayout = () => {
                                             <FaHome size={24} />
                                             {isDrawerOpen && <span className="ml-2">Home</span>}
                                         </motion.a>
-                                        </Link>
+                                    </Link>
 
                                     {/* Appointments */}
                                     <Link to={"/admin/appointments"}>
@@ -127,6 +135,20 @@ const AdminLayout = () => {
                                         >
                                             <GiConversation size={24} />
                                             {isDrawerOpen && <span className="ml-2">Appointments</span>}
+                                        </motion.a>
+                                    </Link>
+
+                                    {/* Appointments History */}
+                                    <Link to={"/admin/appointments-history"}>
+                                        <motion.a
+                                            className={`text-gray-700 hover:text-[#1E6DEB] transition duration-300 flex p-2 ${isDrawerOpen ? "justify-start pl-4" : "justify-center"
+                                                } items-center text-base`}
+                                            variants={iconVariants}
+                                            whileHover="hover"
+                                            whileTap="tap"
+                                        >
+                                            <RiChatHistoryFill size={24} />
+                                            {isDrawerOpen && <span className="ml-2">Appointments History</span>}
                                         </motion.a>
                                     </Link>
 

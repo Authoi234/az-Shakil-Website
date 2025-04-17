@@ -9,8 +9,6 @@ import { SiYoutube } from "react-icons/si";
 import { RiTwitterXFill } from "react-icons/ri";
 import "../../css/style.css";
 
-import { animate, stagger } from 'motion';
-
 const BannerItem = ({ item }) => {
 
     const springLetterAnimation = {
@@ -81,10 +79,10 @@ const BannerItem = ({ item }) => {
                                 {letter}
                             </motion.span>
                         ))}</h1></div>
-                    <div className='lg:w-[520px] xl:w-[540px] text-left'>
+                    <div className='lg:w-[520px] xl:w-[540px] text-center md:text-left'>
                         <p className='text-[18px] font-normal leading-[32px] my-3 xl:my-8 text-[#f7f7f7]'>{item?.para}</p>
                     </div>
-                    <motion.div className='flex justify-center lg:justify-start items-center'>
+                    <motion.div className='flex w-full justify-center lg:justify-start items-center'>
                         <Link to={"/book/booking"}>
                             <motion.button
                                 whileHover={{
@@ -112,7 +110,7 @@ const BannerItem = ({ item }) => {
 
             {/* Right Image Section */}
             <div
-                className=" overflow-hidden w-full flex origin-top-left lg:origin-left justify-start items-center lg:w-full lg:max-w-[43%] object-cover 2xl:min-w-[50%] xl:max-w-[1025px] lg:h-[857px] "
+                className="h-full overflow-hidden w-full flex origin-top-left lg:origin-left justify-start items-center lg:w-full lg:max-w-[43%] object-cover 2xl:min-w-[50%] xl:max-w-[1025px] lg:h-[857px] "
             >
                 <img
                     src={item?.image}

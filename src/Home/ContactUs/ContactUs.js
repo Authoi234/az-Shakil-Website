@@ -42,54 +42,56 @@ const ContactUs = ({ id }) => {
     return (
         <motion.div className='bg-[#FEFEFE]' id="contact-us" >
             <div className="hero mt-36 mb-10 ">
-                <div className="md:w-full w-11/12 md:max-w-3xl h-full relative md:flex-row-reverse mx-auto md:flex md:justify-center md:items-center pb-12 ">
-                    <img src={logo} className='absolute w-32 md:top-10 -top-5 right-0 md:-right-20' alt="" />
-                    <div className="md:w-full w-11/12">
-                        <div className="bg-base-100 shrink-0 shadow-2xl pb-12">
-                            <div className="flex justify-between">
-                                <h1 className="text-5xl font-bold ml-9 mb-5">Contact Us!</h1>
-                            </div>
-                            <form className="px-10" onSubmit={handleSubmit}>
-                                <label className="text-lg font-medium w-full">Full Name*</label>
-                                <input
-                                    type="text"
-                                    name="name"
-                                    className="h-12 px-4 text-base border w-full"
-                                    required
-                                    placeholder="Full Name"
-                                    value={name}
-                                    onChange={e => setName(e.target.value)}
-                                />
-                                <label className="text-lg font-medium w-full">Email*</label>
-                                <input
-                                    type="email"
-                                    name="email"
-                                    className="h-12 px-4 text-base border w-full"
-                                    required
-                                    placeholder="Email"
-                                    value={email}
-                                    onChange={e => setEmail(e.target.value)}
-                                />
-                                <fieldset className="fieldset">
-                                    <legend className="fieldset-legend text-lg font-medium">Your Message*</legend>
-                                    <textarea
-                                        name="message"
-                                        className="textarea-md md:textarea-lg mt-3 pt-3 text-md border textarea-bordered"
-                                        value={message}
-                                        onChange={e => setMessage(e.target.value)}
+                <div className="max-w-[768px] md:w-full w-11/12 md:max-w-3xl h-full relative md:flex-row-reverse mx-auto md:flex md:justify-center md:items-center pb-12 ">
+                    <img src={logo} className='absolute w-32 md:top-10 -top-5 right-0 md:-right-20 hidden-special-on-small' alt="" />
+                    <div className="w-full flex justify-center items-center">
+                        <div className="md:w-full w-11/12 mx-auto">
+                            <div className="bg-base-100 shrink-0 shadow-2xl pb-12">
+                                <div className="flex justify-between">
+                                    <h1 className="text-5xl font-bold ml-9 mb-5">Contact Us!</h1>
+                                </div>
+                                <form className="px-10" onSubmit={handleSubmit}>
+                                    <label className="text-lg font-medium w-full">Full Name*</label>
+                                    <input
+                                        type="text"
+                                        name="name"
+                                        className="h-12  input-bordered input px-4 text-base border w-full"
                                         required
-                                        cols={45}
-                                        placeholder="Enter Your Message">
-                                    </textarea>
-                                </fieldset>
-                                <button type='submit' className="btn btn-neutral mt-4 w-full rounded-none">Contact</button>
-                            </form>
+                                        placeholder="Full Name"
+                                        value={name}
+                                        onChange={e => setName(e.target.value)}
+                                    />
+                                    <label className="text-lg font-medium w-full">Email*</label>
+                                    <input
+                                        type="email"
+                                        name="email"
+                                        className="h-12 px-4 text-base input-bordered input border w-full"
+                                        required
+                                        placeholder="Email"
+                                        value={email}
+                                        onChange={e => setEmail(e.target.value)}
+                                    />
+                                    <fieldset className="fieldset">
+                                        <legend className="fieldset-legend text-lg font-medium">Your Message*</legend>
+                                        <textarea
+                                            name="message"
+                                            className="textarea-lg sm:textarea-lg w-full mt-3 pt-3 text-md border textarea-bordered"
+                                            value={message}
+                                            rows={3}
+                                            onChange={e => setMessage(e.target.value)}
+                                            required
+                                            placeholder="Enter Your Message">
+                                        </textarea>
+                                    </fieldset>
+                                    <button type='submit' className="btn btn-neutral mt-4 w-full rounded-none">Contact</button>
+                                </form>
+                            </div>
                         </div>
                     </div>
                     <div className="md:w-1/2 hidden md:flex md:h-full">
                         <img className='md:w-full md:h-full w-[15%] h-[12%]' src="https://img.freepik.com/free-photo/modern-empty-business-corporate-office-meeting-room-is-ready-businesspeople-late-night_482257-2168.jpg?t=st=1742023392~exp=1742026992~hmac=ac5b0cc47c19aefdf37ec5b159e74921d6619dd562882ed647987e54bfbbf7d1&w=740" alt="" />
                     </div>
-                    <div className="md:absolute max-w-xs p-5 bg-base-200 md:-left-48 mt-5 mt-10 md:mt-0 mx-auto">
+                    <div className="md:absolute max-w-xs p-5 bg-base-200 md:-left-48 mt-5 md:mt-0 mx-auto">
                         <div className="collapse collapse-arrow bg-base-100 border border-base-300">
                             <input type="radio" name="my-accordion-2" defaultChecked />
                             <div className="collapse-title font-semibold">China Office</div>

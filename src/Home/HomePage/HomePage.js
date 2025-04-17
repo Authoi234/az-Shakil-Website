@@ -52,7 +52,7 @@ const HomePage = () => {
 
     return (
         <div className="" id='homepage' >
-            <div className='mt-20  md:min-h-[90vh] lg:min-h-[100vh]' >
+            <div className='mt-[70px] md:mt-[100px]  md:min-h-[90vh] lg:min-h-[100vh]' >
                 <div
                     data-theme="dark"
                     style={{
@@ -77,7 +77,7 @@ const HomePage = () => {
                             }}
                             loop={true}
                             autoplay={{
-                                disableOnInteraction: false,
+                                disableOnInteraction: true,
                                 waitForTransition: true,
                             }}
 

@@ -66,7 +66,7 @@ const Services = () => {
                             objectPosition: "0% 25%",
                         }} alt="" /> OUR SERVICES </h2>
                         <div className="flex justify-center items-center w-full">
-                            <div className="w-[300px] my-4">
+                            <div className="w-[400px] md:w-[300px] my-4">
                                 <img src={servicesHeading} className='w-full' alt="" />
                             </div>
                         </div>

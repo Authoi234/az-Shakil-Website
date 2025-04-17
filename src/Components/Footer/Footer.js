@@ -25,7 +25,7 @@ const Footer = () => {
     return (
         <div id='footer' className='text-wrap break-words   text-white '>
             <div className="bg-[#16171A] w-full flex justify-center items-center text-white border-t-8 border-t-blue-700 rounded-t-3xl">
-                <footer className={` footer max-w-[1350px] w-full bg-transparent bg-[#16171A]  z-10  text-white pt-24 pb-10 pl-16 pr-5 `} style={{
+                <footer className={` footer max-w-[1350px] w-full bg-transparent bg-[#16171A]  z-10  text-white flex justify-center items-center pt-24 pb-10 pl-16 pr-16 `} style={{
 
                 }}>
                     <div className="w-full md:flex md:justify-between md:items-start mx-auto">

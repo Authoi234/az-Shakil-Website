@@ -61,11 +61,11 @@ const Contributions = () => {
       <div className="w-full flex justify-center items-center">
         <div className="w-2/3 text-center">
           <h2 className='flex text-xl items-center justify-center font-semibold text-[#1E6DEB]' >  <div className='overflow-hidden'>
-            <img src={require('../../assets/logo.png')} className='  mx-2' style={{
+            <img src={require('../../assets/logo.png')} className='mx-2' style={{
               width: "25px",
               height: "25px",
               objectFit: "cover",
-              objectPosition: "0% 25%",
+              objectPosition: "0% 20%",
             }} alt="" />
           </div> OUR CONTRIBUTIONS</h2>
           <div className="flex justify-center items-start w-full">
@@ -75,8 +75,8 @@ const Contributions = () => {
           </div>
         </div>
       </div>
-      <div className='flex justify-center items-center '>
-        <div className='flex justify-center items-center w-auto max-w-[1200px]'>
+      <div className="flex justify-center items-center w-full">
+        <div className="flex justify-center items-center w-full max-w-[1200px]">
           <Swiper
             ref={swiperRef}
             slidesPerView={1}
@@ -95,15 +95,16 @@ const Contributions = () => {
                 slidesPerView: 3,
                 spaceBetween: 30,
                 centeredSlides: false,
-              }
+              },
             }}
             resizeObserver={true}
           >
-            {
-              sectionData?.map((item, index) => <SwiperSlide key={index}>
-                <ContributionCard card={item} className="flex justify-center items-center my-0 mx-auto max-w-[100px]"></ContributionCard>
-              </SwiperSlide>)
-            }
+            {sectionData?.map((item, index) => (
+              <SwiperSlide key={index}>
+                {/* Removed max-w-[100px] from here */}
+                <ContributionCard card={item} className="flex justify-center items-center my-0" />
+              </SwiperSlide>
+            ))}
           </Swiper>
         </div>
       </div>

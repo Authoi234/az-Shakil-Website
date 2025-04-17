@@ -65,7 +65,7 @@ const BookBanner = () => {
             .then(data => {
                 console.log(data)
                 if (data.acknowledged) {
-                    toast.success('Booking Confirmed');
+                    toast.success('Appointment Request Submitted');
                     refetch();
                     reset();
                     navigate("/")
