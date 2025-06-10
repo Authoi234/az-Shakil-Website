@@ -11,7 +11,7 @@ const MiddleBox = () => {
             <div className="flex justify-center items-center">
                 <div className="w-full max-w-6xl flex flex-wrap justify-center items-center gap-y-8 gap-x-6 text-white">
                     {/* Card 1 */}
-                    <div className="flex flex-col items-center w-40 text-center">
+                    <div className="flex flex-col items-center w-52 text-center">
                         <h1 className="text-xl sm:text-2xl md:text-4xl font-bold">
                             {useNumReacher(0, 2000, 1, 10)}+
                         </h1>
@@ -22,7 +22,7 @@ const MiddleBox = () => {
                     <div className="hidden md:block h-16 w-px bg-white/50"></div>
 
                     {/* Card 2 */}
-                    <div className="flex flex-col items-center w-40 text-center">
+                    <div className="flex flex-col items-center w-52 text-center">
                         <h1 className="text-xl sm:text-2xl md:text-4xl font-bold">
                             {useNumReacher(0, 200, 5, 1)}+
                         </h1>
@@ -33,7 +33,7 @@ const MiddleBox = () => {
                     <div className="hidden md:block h-16 w-px bg-white/50"></div>
 
                     {/* Card 3 */}
-                    <div className="flex flex-col items-center w-40 text-center">
+                    <div className="flex flex-col items-center w-52 text-center">
                         <h1 className="text-xl sm:text-2xl md:text-4xl font-bold">
                             ${useNumReacher(0, 20000, 1, 50)}+
                         </h1>
@@ -44,7 +44,7 @@ const MiddleBox = () => {
                     <div className="hidden md:block h-16 w-px bg-white/50"></div>
 
                     {/* Card 4 */}
-                    <div className="flex flex-col items-center w-40 text-center">
+                    <div className="flex flex-col items-center w-52 text-center">
                         <h1 className="text-xl sm:text-2xl md:text-4xl font-bold">
                             +{useNumReacher(0, 6, 120, 1)}
                         </h1>

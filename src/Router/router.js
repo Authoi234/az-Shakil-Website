@@ -13,6 +13,8 @@ import Assessment from "../Home/Assesments/Assessment";
 import Appointments from "../Admin/Appointments";
 import PartnerRequestForm from "../Partner/PartnerRequestForm";
 import AppointmentsHistory from "../Admin/AppointmentsHistory";
+import WritePost from "../Admin/WritePost";
+import Blog from "../Home/Blogs/Blog";
 
 export const router = createBrowserRouter([
     {
@@ -30,6 +32,10 @@ export const router = createBrowserRouter([
             {
                 path: "assessment",
                 element: <Assessment></Assessment>
+            },
+            {
+                path: '/blog/:id',
+                element: <Blog></Blog>,
             },
         ]
     },
@@ -72,6 +78,10 @@ export const router = createBrowserRouter([
             {
                 path: '/admin/appointments-history',
                 element: <AdminRoute><AppointmentsHistory></AppointmentsHistory></AdminRoute>
+            },
+            {
+                path: '/admin/write-post',
+                element: <AdminRoute><WritePost></WritePost></AdminRoute>
             },
         ]
     },

@@ -166,17 +166,18 @@ const AdminLayout = () => {
                                     </motion.a>
 
                                     {/* Write a Post/Article */}
-                                    <motion.a
-                                        href="#"
-                                        className={`text-gray-700 hover:text-[#1E6DEB] transition duration-300 flex p-2 ${isDrawerOpen ? "justify-start pl-4" : "justify-center"
-                                            } items-center text-base`}
-                                        variants={iconVariants}
-                                        whileHover="hover"
-                                        whileTap="tap"
-                                    >
-                                        <FaEdit size={24} />
-                                        {isDrawerOpen && <span className="ml-2">Write Post</span>}
-                                    </motion.a>
+                                    <Link to={"/admin/write-post"}>
+                                        <motion.a
+                                            className={`text-gray-700 hover:text-[#1E6DEB] transition duration-300 flex p-2 ${isDrawerOpen ? "justify-start pl-4" : "justify-center"
+                                                } items-center text-base`}
+                                            variants={iconVariants}
+                                            whileHover="hover"
+                                            whileTap="tap"
+                                        >
+                                            <FaEdit size={24} />
+                                            {isDrawerOpen && <span className="ml-2">Write Post</span>}
+                                        </motion.a>
+                                    </Link>
 
                                     {/* Add Slots */}
                                     <motion.a

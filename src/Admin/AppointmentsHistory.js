@@ -76,7 +76,7 @@ const AppointmentsHistory = () => {
                                 </tr>
                             </thead>
                             <tbody>
-                                {bookings?.filter(booking => booking.status === "confirmed").map(booking => <tr>
+                                {bookings?.filter(booking => booking.status === "confirmed")?.map(booking => <tr>
                                     <th>
                                         <label>
                                             <input type="checkbox" className="checkbox" />
@@ -142,7 +142,7 @@ const AppointmentsHistory = () => {
                             </tr>
                         </thead>
                         <tbody>
-                            {bookings?.filter(booking => booking.status === "cancelled").map(booking => <tr>
+                            {bookings?.filter(booking => booking.status === "cancelled")?.map(booking => <tr>
                                 <th>
                                     <label>
                                         <input type="checkbox" className="checkbox" />

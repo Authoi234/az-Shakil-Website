@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import useTitle from '../../hooks/useTitle';
 import BookBanner from './BookBanner';
+import { InlineWidget } from 'react-calendly';
 
 const BookInfo = () => {
     useTitle('Booking');

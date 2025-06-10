@@ -31,7 +31,7 @@ const Faq = () => {
                         <div className="collapse collapse-arrow join-item border-base-300 border transition-all hover:border-[#1E6DEB]">
                             <input type="radio" name="my-accordion-4" defaultChecked />
                             <div className="collapse-title text-2xl font-semibold">1. How much to pay? </div>
-                            <div className="collapse-content text-sm text-justify ">At apprent global, we kep our charges affordable and fair compared to others in
+                            <div className="collapse-content text-sm text-justify ">At apprent global, we keep our charges affordable and fair compared to others in
                                 the market. Plus, some of our services
                                 are completely free, because we’re committed to helping you achieve your goals
                                 without added stress.</div>

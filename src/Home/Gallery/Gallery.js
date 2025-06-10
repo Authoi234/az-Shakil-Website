@@ -15,6 +15,21 @@ import img7 from "../../assets/gallery-img- (7).jpg";
 import img8 from "../../assets/gallery-img- (8).jpg";
 import img9 from "../../assets/gallery-img- (9).jpg";
 import img10 from "../../assets/gallery-img- (10).jpg";
+import img11 from "../../assets/gallery-img- (11).jpg";
+import img12 from "../../assets/gallery-img- (12).jpg";
+import img13 from "../../assets/gallery-img- (13).jpg";
+import img14 from "../../assets/gallery-img- (14).jpg";
+import img15 from "../../assets/gallery-img- (15).jpg";
+import img16 from "../../assets/gallery-img- (16).jpg";
+import img17 from "../../assets/gallery-img- (17).jpg";
+import img18 from "../../assets/gallery-img- (18).jpg";
+import img19 from "../../assets/gallery-img- (19).jpg";
+import img20 from "../../assets/gallery-img- (20).jpg";
+import img21 from "../../assets/gallery-img- (21).jpg";
+import img22 from "../../assets/gallery-img- (22).jpg";
+import img23 from "../../assets/gallery-img- (23).jpg";
+import img24 from "../../assets/gallery-img- (24).jpg";
+import img25 from "../../assets/gallery-img- (25).jpg";
 
 const Gallery = () => {
     const images = [
@@ -28,6 +43,21 @@ const Gallery = () => {
         { img: img8 },
         { img: img9 },
         { img: img10 },
+        { img: img11 },
+        { img: img12 },
+        { img: img13 },
+        { img: img14 },
+        { img: img15 },
+        { img: img16 },
+        { img: img17 },
+        { img: img18 },
+        { img: img19 },
+        { img: img20 },
+        { img: img21 },
+        { img: img22 },
+        { img: img23 },
+        { img: img24 },
+        { img: img25 },
      
     ]
 

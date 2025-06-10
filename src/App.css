@@ -1,5 +1,3 @@
-
-
 .App {
   text-align: center;
 }
@@ -52,6 +50,15 @@
   .hidden-special-on-small {
     display: flex;
   }
+}
+
+.ql-container {
+  height: auto !important;
+  min-height: 250px !important;
+}
+
+.ql-editor {
+  min-height: 250px !important;
 }
 
 .awesome-3d-card {

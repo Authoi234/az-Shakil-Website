@@ -19,12 +19,15 @@ const ContributionCard = ({ card }) => {
                     </div>
 
                     {/* Image */}
-                    <div className="mb-4 w-full">
-                        <img
-                            className="w-full max-h-[300px] h-full md:max-h-[250px] object-contain rounded-tl-[5px] rounded-tr-[5px] rounded-br-[5px] shadow-lg"
-                            src={card?.img}
-                            alt=""
-                        />
+                    <div
+                        className="mb-4 w-[300px] h-[200px] min-h-[300px] bg-gray-200 overflow-hidden rounded-tl-[5px] rounded-tr-[5px] rounded-br-[5px] shadow-lg"
+                        style={{
+                            backgroundImage: card?.img ? `url(${card.img})` : 'none',
+                            backgroundSize: 'cover',
+                            backgroundPosition: 'center',
+                            backgroundRepeat: 'no-repeat'
+                        }}
+                    >
                     </div>
 
                     {/* Content */}
