@@ -39,7 +39,7 @@ const Appointments = () => {
                 }
             })
     }
-
+    
     const handleAppointmentCancelled = (id) => {
         if(!id){
             return;

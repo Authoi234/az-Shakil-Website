@@ -15,6 +15,10 @@ import PartnerRequestForm from "../Partner/PartnerRequestForm";
 import AppointmentsHistory from "../Admin/AppointmentsHistory";
 import WritePost from "../Admin/WritePost";
 import Blog from "../Home/Blogs/Blog";
+import PartnerRoute from "../route/PartnerRoute";
+import PartnerDashboard from "../Partner/PartnerDashboard";
+import PartnerLayout from "../layout/PartnerLayout";
+import PartnerShips from "../Admin/PartnerShips";
 
 export const router = createBrowserRouter([
     {
@@ -50,11 +54,11 @@ export const router = createBrowserRouter([
         ]
     },
     {
-        path: "/admin/auth",
+        path: "/auth",
         element: <><Outlet></Outlet></>,
         children: [
             {
-                path: '/admin/auth/login',
+                path: '/auth/login',
                 element: <Login></Login>
             },
         ]
@@ -83,16 +87,30 @@ export const router = createBrowserRouter([
                 path: '/admin/write-post',
                 element: <AdminRoute><WritePost></WritePost></AdminRoute>
             },
+            {
+                path: '/admin/partnershipRequests',
+                element: <AdminRoute><PartnerShips></PartnerShips></AdminRoute>
+            },
         ]
     },
     {
         path: "/partnership",
-        element: <PrivateRoute><Outlet></Outlet></PrivateRoute>,
+        element: <Outlet></Outlet>,
         children: [
             {
                 path: '/partnership/request',
                 element: <PartnerRequestForm></PartnerRequestForm>
-            }
+            },
+        ]
+    },
+    {
+        path: "/partner",
+        element: <PrivateRoute><PartnerLayout></PartnerLayout></PrivateRoute>,
+        children: [
+            {
+                path: '/partner/dashboard',
+                element: <PartnerDashboard></PartnerDashboard>
+            },
         ]
     },
 ])

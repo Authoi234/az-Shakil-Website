@@ -4,7 +4,7 @@ import { AuthContext } from '../context/AuthProvider';
 import { Link, Outlet } from 'react-router-dom';
 import logo from "../assets/logo.png";
 import { motion } from 'framer-motion';
-import { FaHome, FaEdit, FaCalendarPlus, FaUserFriends, FaBell, FaCog } from "react-icons/fa";
+import { FaHome, FaEdit, FaCalendarPlus, FaUserFriends, FaBell, FaCog, FaEnvelope } from "react-icons/fa";
 import { RiChatHistoryFill } from "react-icons/ri";
 import { useQuery } from '@tanstack/react-query';
 import { GiConversation } from "react-icons/gi";
@@ -49,7 +49,7 @@ const AdminLayout = () => {
         <div>
             <div className="z-50 h-20 shadow-md" data-theme="light">
                 <div className={`container mx-auto flex justify-between items-center h-full`}>
-                    <div className={`md:w-72 w-10 border-0 outline-none pt-2`} >
+                    <div className={`md:w-64 w-10 border-0 outline-none pt-2`} >
                         <img
                             src={logo}
                             alt=""
@@ -67,27 +67,27 @@ const AdminLayout = () => {
                         </label>
                     </div>
 
-                    <div className="pt-2 mt-5 h-full flex justify-center items-center">
-                        <p className='text-lg mr-2'>{adminData?.name}</p>
-                        <div className="dropdown dropdown-end ">
-                            <div tabIndex={0} role="button" className="btn cursor-pointer btn-circle avatar">
-                                <div className="w-20 rounded-full bg-white">
-                                    <img
-                                        alt="Profile of AzShakil"
-                                        src={adminData?.imgUrl} />
+                    <div className='flex justify-center items-center'>
+                        <p className='text-lg text-black mr-2'>{adminData?.name}</p>
+                        <div className="dropdown dropdown-end">
+                            <div tabIndex={0} role="button" className="cursor-pointer bg-white border-0 outline-0 m-1">
+                                <div className="btn cursor-pointer btn-circle avatar">
+                                    <div className="w-20 rounded-full bg-white">
+                                        <img
+                                            alt="Profile of Partner"
+                                            src={adminData?.imgUrl} />
+                                    </div>
                                 </div>
                             </div>
-                            <ul
-                                tabIndex={0}
-                                className="menu menu-sm dropdown-content bg-white rounded-box z-1 mt-3 w-52 p-2 shadow">
+                            <ul tabIndex={0} className="dropdown-content menu  bg-white rounded-box z-40 font-medium w-52 p-2 shadow-sm">
                                 <li>
-                                    <a className="justify-between">
+                                    <a className=" justify-between">
                                         Profile
                                         <span className="badge">New</span>
                                     </a>
                                 </li>
                                 <li><a>Settings</a></li>
-                                <li onClick={() => { logOut() }}><a>Logout</a></li>
+                                <li className='bg-red-600 text-white' onClick={() => { logOut() }}><a>Logout</a></li>
                             </ul>
                         </div>
                     </div>
@@ -152,18 +152,20 @@ const AdminLayout = () => {
                                         </motion.a>
                                     </Link>
 
-                                    {/* Write a Post/Article */}
-                                    <motion.a
-                                        href="#"
-                                        className={`text-gray-700 hover:text-[#1E6DEB] transition duration-300 flex p-2 ${isDrawerOpen ? "justify-start pl-4" : "justify-center"
-                                            } items-center text-base`}
-                                        variants={iconVariants}
-                                        whileHover="hover"
-                                        whileTap="tap"
-                                    >
-                                        <MdSupportAgent size={24} />
-                                        {isDrawerOpen && <span className="ml-2">Agents</span>}
-                                    </motion.a>
+                                    {/* Agents/Partnership */}
+                                    <Link to={"/admin/partnershipRequests"}>
+                                        <motion.a
+                                            href="#"
+                                            className={`text-gray-700 hover:text-[#1E6DEB] transition duration-300 flex p-2 ${isDrawerOpen ? "justify-start pl-4" : "justify-center"
+                                                } items-center text-base`}
+                                            variants={iconVariants}
+                                            whileHover="hover"
+                                            whileTap="tap"
+                                        >
+                                            <MdSupportAgent size={24} />
+                                            {isDrawerOpen && <span className="ml-2">Partnership</span>}
+                                        </motion.a>
+                                    </Link>
 
                                     {/* Write a Post/Article */}
                                     <Link to={"/admin/write-post"}>
@@ -236,7 +238,7 @@ const AdminLayout = () => {
                     </ul>
                 </div>
             </div>
-        </div>
+        </div >
     )
 };
 

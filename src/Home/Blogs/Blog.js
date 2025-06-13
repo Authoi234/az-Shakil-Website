@@ -36,19 +36,27 @@ const Blog = () => {
     }, [isSuccess, blog])
 
     return (
-        <div className='container mt-24 pt-24 px-5 mx-5'>
+       <div className="flex justify-center items-center">
+         <div className='container mt-16 mb-16 pt-24 px-5 mx-5 max-w-6xl '>
             <div className="">
-                <div className='max-w-2xl mt-5 pt-5'><img src={blog?.imgLink} alt="" className="w-full h-full mt-5" /></div>
                 <div className="mb-5 text-center md:text-left md:flex md:justify-center items-center w-full">
-                    <h1 className='text-3xl font-bold text-black my-5'>{blog?.title}</h1>
-                    <h2 className="text-lg  font-medium text-gray-500">By Az Shakil (MD. Ashaduzzaman Shakil)</h2>
-                    <h2 className='text-lg'><span className='font-medium' style={{ color: 'green' }}>{blog?.blogType}</span> • <span className='font-medium' style={{ color: "#7a7a7a" }}>Pubnished On {time}</span> </h2>
+                    <div className=''>
+                        <h1 className='text-3xl font-bold text-black my-5'>{blog?.title}</h1>
+                        <p className=" text-lg">
+                            <span className="pr-1  font-medium text-gray-500">Author: <span className="text-[#1E6DEB]"> Team Apprent</span></span>
+                            |
+                            <span className='px-1 font-medium ' style={{ color: 'green' }}>{blog?.blogType}</span>
+                            |
+                            <span className='px-1 text-lg'> <span className='font-medium' style={{ color: "#7a7a7a" }}>Pubnished On {time}</span> </span>
+                        </p>
+                    </div>
                 </div>
                 <div id='blog-content-detail' className='mx-auto '>
 
                 </div>
             </div>
         </div>
+       </div>
     );
 };
 

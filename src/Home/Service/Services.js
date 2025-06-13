@@ -1,9 +1,10 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { BsGlobeAmericas } from 'react-icons/bs';
 import { IoPaperPlane } from 'react-icons/io5';
 import Tilt from 'react-parallax-tilt';
 import { BsFillGrid3X3GapFill } from "react-icons/bs";
 import servicesHeading from "../../assets/Services.png";
+import { AuthContext } from '../../context/AuthProvider';
 
 const Services = () => {
     const servicesData = [

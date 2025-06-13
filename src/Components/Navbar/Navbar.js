@@ -1,10 +1,10 @@
-import React, { useEffect, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import '../../App.css';
 import logo from "../../assets/logo.png";
 import logoIcon from "../../assets/logoIcon-bgless.png";
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { FaNetworkWired, FaRegHandshake } from "react-icons/fa6";
-import { MdOutlineReviews } from "react-icons/md";
+import { MdDashboard, MdOutlineReviews } from "react-icons/md";
 import { FcAbout } from "react-icons/fc";
 import { LiaGlobeAmericasSolid } from "react-icons/lia";
 import { BiSolidCategoryAlt } from "react-icons/bi";
@@ -15,8 +15,30 @@ import { TiMessages } from "react-icons/ti";
 import { ImBlog } from "react-icons/im";
 import { AiOutlineLogin } from "react-icons/ai";
 import "../../css/style.css";
+import { AuthContext } from '../../context/AuthProvider';
+import useUserProfile from '../../hooks/useUserProfile';
 
 const Navbar = () => {
+    const navigate = useNavigate()
+    const { user } = useContext(AuthContext);
+    const { data: userProfile, isLoading } = useUserProfile(user?.email);
+
+    const handleDashboardClick = () => {
+        if (isLoading) return; // skip if loading
+
+        console.log("user Profile", userProfile);
+        console.log("user", user);
+        if (!user) {
+            navigate('/login');
+        } else if (userProfile?.role === 'admin') {
+            navigate('/admin/dashboard');
+        } else if (userProfile?.role === 'partner') {
+            navigate('/partner/dashboard');
+        } else {
+            navigate('/');
+        }
+    };
+
 
     const navMenu = [
         <div className="dropdown dropdown-hover">
@@ -118,7 +140,21 @@ const Navbar = () => {
                         <div className="">
                             <ul className="menu menu-horizontal py-5 px-0">
                                 <li className='list-item font-medium rounded-md abc text-white transition-all mx-2'><Link to='/partnership/request'><FaRegHandshake className='text-[#1E6DEB]' />Partner</Link></li>
-                                <li className='list-item font-medium rounded-md abc text-white transition-all ml-2 '><Link to='/admin/auth/login'><AiOutlineLogin className='text-[#1E6DEB]' />Login</Link></li>
+                                {user ? (
+                                    <li className='list-item font-medium rounded-md abc text-white transition-all ml-2 '>
+                                        <button
+                                            onClick={handleDashboardClick}
+                                            disabled={isLoading} // prevent click until profile loaded
+                                            className={`${isLoading ? 'opacity-50 cursor-not-allowed' : ''}`}
+                                        >
+                                            <MdDashboard className='text-[#1E6DEB]' />Dashboard
+                                        </button>
+                                    </li>
+                                ) : (
+                                    <li className='list-item font-medium rounded-md abc text-white transition-all ml-2 '>
+                                        <Link to='/auth/login'><AiOutlineLogin className='text-[#1E6DEB]' />Login</Link>
+                                    </li>
+                                )}
                             </ul>
                         </div>
                     </div>
@@ -149,7 +185,7 @@ const Navbar = () => {
                     </div>
                     <div className=' flex-grow flex justify-end'>
                         <div className="hidden-special-on-small md:flex">
-                            <ul className="menu menu-horizontal  py-5 px-1">
+                            <ul className="menu menu-horizontal py-5 px-1">
                                 {navMenu}
                             </ul>
                         </div>

@@ -2,10 +2,12 @@ import { useQuery } from '@tanstack/react-query';
 import React, { useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import 'swiper/css';
 import { Autoplay } from 'swiper/modules';
 import { format } from 'date-fns';
 import { FaArrowRight } from 'react-icons/fa6';
+import 'swiper/css';
+import 'swiper/css/autoplay';
+
 
 const OurBlogs = () => {
     const swiperRef = useRef(null);
@@ -36,8 +38,14 @@ const OurBlogs = () => {
                 <Swiper
                     ref={swiperRef}
                     slidesPerView={1}
-                    centeredSlides={true} 
+                    centeredSlides={true}
                     centerInsufficientSlides={true}
+                    speed={1000}
+                    autoplay={{
+                        delay: 0,
+                        reverseDirection: true,
+                    }}
+                    loop={true}
                     modules={Autoplay}
                     spaceBetween={1}
                     breakpoints={{
@@ -50,12 +58,6 @@ const OurBlogs = () => {
                             slidesPerView: 3,
                             spaceBetween: 1,
                         },
-                    }}
-                    loop={true}
-                    resizeObserver={true}
-                    autoplay={{
-                        disableOnInteraction: false,
-                        waitForTransition: true,
                     }}
                 >
                     {blogs?.map((blog, i) => (
@@ -79,9 +81,9 @@ const OurBlogs = () => {
                                             {blog?.blogPara}
                                         </p>
                                         <div className="card-action">
-                                            <Link to={`/blog/${blog?._id}`}>
+                                            <a target='_blank' rel='noreferrer' href={`/blog/${blog?._id}`}>
                                                 <button className="btn btn-link no-underline font-medium text-blue-600">Read Article <FaArrowRight className='text-xl text-blue-600'></FaArrowRight></button>
-                                            </Link>
+                                            </a>
                                         </div>
                                     </div>
                                 </div>) :
@@ -94,7 +96,7 @@ const OurBlogs = () => {
                                                     <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQuIR_1ZteURrPfg-Tfghr-GeZtP7R728ScaQ&s" alt="" />
                                                 </div>
                                             </div>
-                                            <Link to={`/blog/${blog?._id}`}><h2 className="transition-all duratin-500 hover:underline hover:decoration-white text-xl text-white font-medium ">{blog?.title}</h2></Link>
+                                             <a target='_blank' rel='noreferrer' href={`/blog/${blog?._id}`}><h2 className="transition-all duratin-500 hover:underline hover:decoration-white text-xl text-white font-medium ">{blog?.title}</h2></a>
                                             <p className='text-[#c0c0c0]'>
                                                 {blog?.blogPara}
                                             </p>

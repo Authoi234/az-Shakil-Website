@@ -1,13 +1,13 @@
 import React, { useContext } from 'react';
+import usePartner from '../hooks/usePartner';
 import { AuthContext } from '../context/AuthProvider';
 import { Navigate } from 'react-router-dom';
-import useAdmin from '../hooks/useAdmin';
 
-const AdminRoute = ({ children }) => {
+const PartnerRoute = ({children}) => {
     const { user, loading } = useContext(AuthContext);
-    const [isAdmin, isAdminLoading] = useAdmin(user?.email);
+    const [isPartner, isPartnerLoading] = usePartner(user?.role);
 
-    if (loading || isAdminLoading) {
+    if (loading || isPartnerLoading) {
         return <>
             <div>
                 Loading.....
@@ -15,11 +15,11 @@ const AdminRoute = ({ children }) => {
         </>;
     }
 
-    if (user && isAdmin) {
+    if (user && isPartner) {
         return children;
     }
 
-    else{return <Navigate to={'/auth/login'} />};
+    else { return <Navigate to={'/auth/login'} /> };
 };
 
-export default AdminRoute;
+export default PartnerRoute;
