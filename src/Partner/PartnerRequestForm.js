@@ -4,8 +4,13 @@ import logo from "../assets/logoIcon-bgless.png"
 import { motion } from 'framer-motion';
 import { Link, useNavigate } from 'react-router-dom';
 import toast from 'react-hot-toast';
+import useTitle from '../hooks/useTitle';
+import useMetaDiscription from '../hooks/useMetaDiscription';
+import { Helmet } from 'react-helmet-async';
 
 const PartnerRequestForm = () => {
+    useTitle('Partnership Request');
+    useMetaDiscription("Grow your business through strategic partnerships! Submit a collaboration request to access resources, networking, and mutual growth opportunities.")
     const navigate = useNavigate();
     const {
         reset,
@@ -16,7 +21,7 @@ const PartnerRequestForm = () => {
 
     const onSubmit = (data) => {
         const request = { ...data, timestamp: new Date().getTime() }
-        fetch("http://localhost:5000/partnerRequest", {
+        fetch("https://az-shakil-website-server.vercel.app/partnerRequest", {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
@@ -56,6 +61,9 @@ const PartnerRequestForm = () => {
             initial="hidden"
             animate="visible"
         >
+            <Helmet>
+                <link rel="canonical" href="https://apprent.azshakil.com/partnership/request" />
+            </Helmet>
             <motion.div
                 className="bg-white shadow-xl rounded-2xl px-8 md:p-10 lg:px-12 w-full max-w-screen-lg xl:max-w-screen-xl border border-gray-200"
                 variants={sectionVariants}

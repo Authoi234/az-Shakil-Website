@@ -2,7 +2,7 @@ import { useQuery } from '@tanstack/react-query';
 import React, { useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Autoplay } from 'swiper/modules';
+import { Autoplay, Pagination } from 'swiper/modules';
 import { format } from 'date-fns';
 import { FaArrowRight } from 'react-icons/fa6';
 import 'swiper/css';
@@ -14,7 +14,7 @@ const OurBlogs = () => {
     const { data: blogs, isLoading, isError, refetch } = useQuery({
         queryKey: ["blogs"],
         queryFn: async () => {
-            const res = await fetch(`http://localhost:5000/blogs`);
+            const res = await fetch(`https://az-shakil-website-server.vercel.app/blogs`);
             const data = await res.json();
             return data;
         },
@@ -37,16 +37,19 @@ const OurBlogs = () => {
 
                 <Swiper
                     ref={swiperRef}
+                    modules={[Autoplay ,Pagination] }
                     slidesPerView={1}
-                    centeredSlides={true}
                     centerInsufficientSlides={true}
                     speed={1000}
                     autoplay={{
-                        delay: 0,
-                        reverseDirection: true,
+                        delay: 1,
+                        // reverseDirection: ,
+                        disableOnInteraction: false,
+                        waitForTransition: true,
+                        stopOnLastSlide: false,
+                        pauseOnMouseEnter: false
                     }}
                     loop={true}
-                    modules={Autoplay}
                     spaceBetween={1}
                     breakpoints={{
                         740: {

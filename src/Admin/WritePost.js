@@ -42,7 +42,7 @@ const WritePost = () => {
             timestamp: new Date().getTime(),
 
         };
-        fetch('http://localhost:5000/blogs', {
+        fetch('https://az-shakil-website-server.vercel.app/blogs', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

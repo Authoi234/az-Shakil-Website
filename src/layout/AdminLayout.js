@@ -10,15 +10,20 @@ import { useQuery } from '@tanstack/react-query';
 import { GiConversation } from "react-icons/gi";
 import logoIcon from "../assets/logoIcon-bgless.png";
 import { MdSupportAgent } from "react-icons/md";
+import useTitle from '../hooks/useTitle';
+import useMetaDiscription from '../hooks/useMetaDiscription';
+import { Helmet } from 'react-helmet-async';
 
 const AdminLayout = () => {
+    useTitle("Admin")
+    useMetaDiscription("Admin portal for user management, content publishing, and partnership tracking. Real-time analytics and permissions control for seamless operations.");
     const { user, logOut } = useContext(AuthContext)
     const [adminData, setAdminData] = useState(null);
 
     const { data: users = [], refetch } = useQuery({
         queryKey: ['users'],
         queryFn: async () => {
-            const res = await fetch(`http://localhost:5000/users`);
+            const res = await fetch(`https://az-shakil-website-server.vercel.app/users`);
             const data = await res.json();
             return data;
         },
@@ -47,6 +52,9 @@ const AdminLayout = () => {
 
     return (
         <div>
+            <Helmet>
+                <link rel="canonical" href="https://apprent.azshakil.com/admin/dashboard" />
+            </Helmet>
             <div className="z-50 h-20 shadow-md" data-theme="light">
                 <div className={`container mx-auto flex justify-between items-center h-full`}>
                     <div className={`md:w-64 w-10 border-0 outline-none pt-2`} >

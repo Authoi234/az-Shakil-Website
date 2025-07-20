@@ -1,8 +1,13 @@
 import React from 'react';
 import { useForm } from 'react-hook-form';
 import { motion } from 'framer-motion';
+import useTitle from '../../hooks/useTitle';
+import useMetaDiscription from '../../hooks/useMetaDiscription';
+import { Helmet } from 'react-helmet-async';
 
 const Assessment = () => {
+    useTitle('Assessment');
+    useMetaDiscription("Take our free skills assessment to identify your strengths and growth areas. Get actionable insights to advance your career or business. Start now!")
     const {
         register,
         handleSubmit,
@@ -23,6 +28,9 @@ const Assessment = () => {
 
     return (
         <div className="min-h-screen mt-20 bg-gray-100">
+            <Helmet>
+                <link rel="canonical" href="https://apprent.azshakil.com/assessment" />
+            </Helmet>
             {/* Header Section with background image and overlay */}
             <div className="relative h-96  w-full" style={{ backgroundImage: "url(https://ca-visa.com/wp-content/uploads/toronto-skyline.png)", backgroundRepeat: "no-repeat", backgroundSize: "cover", backgroundPosition: "center" }}>
                 <div className="absolute inset-0 bg-black opacity-50"></div>

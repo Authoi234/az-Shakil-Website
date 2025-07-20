@@ -9,7 +9,7 @@ const Appointments = () => {
     const { data: bookings, isLoading, isError, refetch } = useQuery({
         queryKey: ["bookings"],
         queryFn: async () => {
-            const res = await fetch(`http://localhost:5000/bookings?status=pending`);
+            const res = await fetch(`https://az-shakil-website-server.vercel.app/bookings?status=pending`);
             const data = await res.json();
             return data;
         },
@@ -20,7 +20,7 @@ const Appointments = () => {
         if(!id){
             return;
         }
-        fetch(`http://localhost:5000/bookings/${String(id)}`, {
+        fetch(`https://az-shakil-website-server.vercel.app/bookings/${String(id)}`, {
             method: 'PATCH',
             headers: {
               'content-type': 'application/json'
@@ -44,7 +44,7 @@ const Appointments = () => {
         if(!id){
             return;
         }
-        fetch(`http://localhost:5000/bookings/${String(id)}`, {
+        fetch(`https://az-shakil-website-server.vercel.app/bookings/${String(id)}`, {
             method: 'PATCH',
             headers: {
               'content-type': 'application/json'

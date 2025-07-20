@@ -3,8 +3,14 @@ import logo from "../../assets/logoIcon-bgless.png";
 import emailjs from 'emailjs-com';
 import toast from 'react-hot-toast';
 import { motion } from 'framer-motion';
+import useTitle from '../../hooks/useTitle';
+import useMetaDiscription from '../../hooks/useMetaDiscription';
+import { Helmet } from 'react-helmet-async';
 
 const ContactUs = ({ id }) => {
+    useTitle('Contact Us');
+    useMetaDiscription("Have questions or need assistance? Contact us today! Our team is here to help with any inquiries, support requests, or feedback you may have. Reach out now and let's connect!");
+
     const [name, setName] = useState("");
     const [email, setEmail] = useState("");
     const [message, setMessage] = useState("");
@@ -16,7 +22,8 @@ const ContactUs = ({ id }) => {
         const templateParams = {
             name,
             email,
-            message
+            message,
+            reply_to: email,
         };
 
         emailjs.send('service_ly6tql4', 'template_bf8c17v', templateParams, 'aw3pzgj5My6EizDfE')
@@ -41,6 +48,9 @@ const ContactUs = ({ id }) => {
 
     return (
         <motion.div className='bg-[#FEFEFE]' id="contact-us" >
+            <Helmet>
+                <link rel="canonical" href="https://apprent.azshakil.com/contact-us" />
+            </Helmet>
             <div className="hero mt-36 mb-10 ">
                 <div className="max-w-[768px] md:w-full w-11/12 md:max-w-3xl h-full relative md:flex-row-reverse mx-auto md:flex md:justify-center md:items-center pb-12 ">
                     <img src={logo} className='absolute w-32 md:top-10 -top-5 right-0 md:-right-20 hidden-special-on-small' alt="" />

@@ -11,7 +11,7 @@ const AppointmentsHistory = () => {
     const { data: bookings = [], refetch } = useQuery({
         queryKey: ["bookings"],
         queryFn: async () => {
-            const res = await fetch(`http://localhost:5000/bookings`);
+            const res = await fetch(`https://az-shakil-website-server.vercel.app/bookings`);
             const data = await res.json();
             return data;
         },
@@ -21,7 +21,7 @@ const AppointmentsHistory = () => {
         if (!id) {
             return;
         }
-        fetch(`http://localhost:5000/bookings/${String(id)}`, {
+        fetch(`https://az-shakil-website-server.vercel.app/bookings/${String(id)}`, {
             method: 'DELETE',
             headers: {
                 'content-type': 'application/json'

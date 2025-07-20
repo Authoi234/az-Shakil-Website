@@ -8,6 +8,7 @@ import reportWebVitals from './reportWebVitals';
 import { ParallaxProvider } from 'react-scroll-parallax';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import AuthProvider from './context/AuthProvider';
+import { HelmetProvider } from 'react-helmet-async';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
@@ -18,7 +19,9 @@ root.render(
     <QueryClientProvider client={queryClient}>
       <ParallaxProvider>
         <AuthProvider>
-          <App />
+          <HelmetProvider>
+            <App />
+          </HelmetProvider>
         </AuthProvider>
       </ParallaxProvider>
     </QueryClientProvider>

@@ -1,0 +1,13 @@
+https://apprent.azshakil.com/
+https://apprent.azshakil.com/contact-us
+https://apprent.azshakil.com/assessment
+https://apprent.azshakil.com/book/booking
+https://apprent.azshakil.com/auth/login
+https://apprent.azshakil.com/admin
+https://apprent.azshakil.com/admin/dashboard
+https://apprent.azshakil.com/admin/appointments
+https://apprent.azshakil.com/admin/appointments-history
+https://apprent.azshakil.com/admin/write-post
+https://apprent.azshakil.com/admin/partnershipRequests
+https://apprent.azshakil.com/partnership/request
+https://apprent.azshakil.com/partner/dashboard

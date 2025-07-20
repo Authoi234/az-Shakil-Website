@@ -8,8 +8,13 @@ import toast from 'react-hot-toast';
 import logo from "../assets/logo.png"
 import { useQuery } from '@tanstack/react-query';
 import useUserProfile from '../hooks/useUserProfile';
+import useTitle from '../hooks/useTitle';
+import useMetaDiscription from '../hooks/useMetaDiscription';
+import { Helmet } from 'react-helmet-async';
 
 const Login = () => {
+    useTitle("Login")
+    useMetaDiscription("Log in to your Apprent account to access personalized coaching, career guidance, and business strategy sessions. Join us today to unlock your potential!");
     const { register, formState: { errors }, handleSubmit } = useForm();
     // Destructure directly from AuthContext as it now has a default value
     const { signInUser, sendForgetPasswordEmail, loading, user, logOut } = useContext(AuthContext);
@@ -19,7 +24,7 @@ const Login = () => {
 
     useEffect(() => {
         if (user) {
-                navigate("/");
+            navigate("/");
         }
     }, [user, navigate]);
 
@@ -28,6 +33,7 @@ const Login = () => {
     };
 
     const handleLogin = async (data) => {
+
         setLoginError('');
         console.log("Login attempt with:", data);
         try {
@@ -36,7 +42,7 @@ const Login = () => {
             console.log("Logged in user:", result.user);
             console.log("userLogged In")
             navigate("/");
-            
+
         } catch (err) {
             setLoginError(err.message);
             console.error("Error during login:", err.message);
@@ -71,6 +77,9 @@ const Login = () => {
     return (
         <div className="font-sans min-h-screen flex items-center justify-center bg-[#f0f4f8] p-4 sm:p-0">
             {/* Main Container for Login Form and Illustration */}
+            <Helmet>
+                <link rel="canonical" href="https://apprent.azshakil.com/auth/login" />
+            </Helmet>
             <div className="flex flex-col md:flex-row bg-white rounded-xl shadow-2xl overflow-hidden max-w-6xl w-full">
 
                 {/* Left Column: Login Form */}
@@ -157,45 +166,13 @@ const Login = () => {
                         </motion.button>
                         {loginError && <div className='text-red-600 font-bold text-sm mt-4 text-center'>Error: {loginError}</div>}
 
-                        {/* Or divider */}
-                        <div className="flex items-center my-6">
-                            <div className="flex-grow border-t border-gray-300"></div>
-                            <span className="flex-shrink mx-4 text-gray-500 text-sm">OR</span>
-                            <div className="flex-grow border-t border-gray-300"></div>
-                        </div>
 
-                        {/* Social Login Buttons */}
-                        <div className="space-y-3">
-                            <button
-                                type="button"
-                                className="w-full flex items-center justify-center gap-2 py-2 px-4 border border-gray-300 rounded-md shadow-sm text-sm font-medium text-gray-700 bg-white hover:bg-gray-50 transition duration-200"
-                            >
-                                <FaGoogle className='text-3xl text-[#4285F4]'></FaGoogle>
-                                Log In with Google
-                            </button>
-                            <button
-                                type="button"
-                                className="w-full flex items-center justify-center gap-2 py-2 px-4 border border-gray-300 rounded-md shadow-sm text-sm font-medium text-gray-700 bg-white hover:bg-gray-50 transition duration-200"
-                            >
-                                <FaApple className='text-3xl text=[#1d1d1f]'></FaApple>
-                                Log In with Apple
-                            </button>
-                            <button
-                                type="button"
-                                className="w-full flex items-center justify-center gap-2 py-2 px-4 border border-gray-300 rounded-md shadow-sm text-sm font-medium text-gray-700 bg-white hover:bg-gray-50 transition duration-200"
-                            >
-                                <FaFacebook className='text-3xl text-[#1877F2]'></FaFacebook>
-                                Log In with Facebook
-                            </button>
-                        </div>
-
-                        {/* Don't have an account? */}
                         <div className="text-left mt-6 text-base text-gray-600">
                             <p className="text-blue-500">
                                 Privacy & Cookies Policy
                             </p>
                             <p className="text-blue-500">
-                                Privacy & Cookies Policy
+                                Terms and Conditions
                             </p>
                         </div>
                     </form>

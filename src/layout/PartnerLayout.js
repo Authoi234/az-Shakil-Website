@@ -5,13 +5,16 @@ import { Outlet } from 'react-router-dom';
 import { IoCloseSharp, IoLayersSharp, IoMenu } from 'react-icons/io5';
 import { IoMdSettings } from 'react-icons/io';
 import { FiMessageSquare } from 'react-icons/fi';
-import logo from "../assets/logo.png";
+import logo from "../assets/white-logo.png";
 import logoIcon from "../assets/logoIcon-bgless.png";
 import useUserProfile from '../hooks/useUserProfile';
 import { AuthContext } from '../context/AuthProvider';
+import useTitle from '../hooks/useTitle';
+import { Helmet } from 'react-helmet-async';
 
 
 const PartnerLayout = () => {
+    useTitle('Partner Dashboard');
     const [isSidebarOpen, setIsSidebarOpen] = useState(false);
     const { logOut, user } = useContext(AuthContext)
     const { data: partnerData, isLoading } = useUserProfile(user?.email);
@@ -22,7 +25,6 @@ const PartnerLayout = () => {
 
     return (
         <div>
-
             <div className="flex h-screen bg-gradient-to-br from-gray-900 to-gray-800 text-gray-100 font-inter">
                 {/* Sidebar */}
                 <motion.aside
@@ -190,10 +192,10 @@ const PartnerLayout = () => {
 
                         <h1 className="text-3xl font-extrabold flex justify-center items-center text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-500 tracking-wide">
                             <img
-                                src={logoIcon}
+                                src={logo}
                                 alt=""
-                                className="border-0 w-12 outline-none pt-2 md:flex"
-                            /> <p className='hidden hidden-special-on-small md:pl-2'>Partner Dashboard </p>
+                                className="border-0 w-56 outline-none pt-2 md:flex"
+                            />
                         </h1>
 
                         <div className="flex items-center space-x-4">

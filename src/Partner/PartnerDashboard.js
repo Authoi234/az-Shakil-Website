@@ -1,8 +1,13 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { FaLayerGroup, FaLightbulb, FaMicrochip, FaSpinner, FaUsers } from 'react-icons/fa';
+import useTitle from '../hooks/useTitle';
+import useMetaDiscription from '../hooks/useMetaDiscription';
+import { Helmet } from 'react-helmet-async';
 
 const PartnerDashboard = () => {
+    useTitle('Partner Dashboard');
+    useMetaDiscription("Track joint projects, resources, and performance metrics in your partner dashboard. Collaborate efficiently for shared success")
     const [isModalOpen, setIsModalOpen] = useState(false);
     const [campaignGoal, setCampaignGoal] = useState('');
     const [generatedIdeas, setGeneratedIdeas] = useState('');
@@ -71,6 +76,9 @@ const PartnerDashboard = () => {
 
     return (
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <Helmet>
+                <link rel="canonical" href="https://apprent.azshakil.com/partner/dashboard" />
+            </Helmet>
             {/* Placeholder Card 1 */}
             <motion.div
                 className="bg-gray-800 rounded-xl p-6 shadow-lg border border-gray-700 hover:border-blue-500 transition-all duration-300 cursor-pointer"

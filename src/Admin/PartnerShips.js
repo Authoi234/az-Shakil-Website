@@ -15,7 +15,7 @@ const PartnerShips = () => {
     const { data: agents = [], refetch } = useQuery({
         queryKey: ["agents"],
         queryFn: async () => {
-            const res = await fetch(`http://localhost:5000/partnerRequest`);
+            const res = await fetch(`https://az-shakil-website-server.vercel.app/partnerRequest`);
             const data = await res.json();
             return data;
         },
@@ -25,7 +25,7 @@ const PartnerShips = () => {
         if (!id) {
             return;
         }
-        fetch(`http://localhost:5000/partnerRequest/${String(id)}`, {
+        fetch(`https://az-shakil-website-server.vercel.app/partnerRequest/${String(id)}`, {
             method: 'DELETE',
             headers: {
                 'content-type': 'application/json'
@@ -49,7 +49,7 @@ const PartnerShips = () => {
         if (!id) {
             return;
         }
-        fetch(`http://localhost:5000/partnerRequest/${String(id)}`, {
+        fetch(`https://az-shakil-website-server.vercel.app/partnerRequest/${String(id)}`, {
             method: 'PATCH',
             headers: {
                 'content-type': 'application/json'

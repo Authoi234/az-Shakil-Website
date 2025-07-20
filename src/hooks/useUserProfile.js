@@ -4,7 +4,7 @@ const useUserProfile = (email) => {
     return useQuery({
         queryKey: ['userProfile', email],
         queryFn: async () => {
-            const res = await fetch(`http://localhost:5000/user?email=${email}`);
+            const res = await fetch(`https://az-shakil-website-server.vercel.app/user?email=${email}`);
             if (!res.ok) throw new Error('Failed to fetch user profile');
             return res.json();
         },

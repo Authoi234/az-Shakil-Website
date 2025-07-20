@@ -14,11 +14,19 @@ import ContactUs from './ContactUs/ContactUs';
 import Faq from './Faq/Faq';
 import Gallery from './Gallery/Gallery';
 import OurBlogs from './Blogs/OurBlogs';
+import useTitle from '../hooks/useTitle';
+import useMetaDiscription from '../hooks/useMetaDiscription';
+import { Helmet } from 'react-helmet-async';
 
 const Home = () => {
+    useTitle();
+    useMetaDiscription();
 
     return (
         <div className=''>
+            <Helmet>
+                <link rel="canonical" href="https://apprent.azshakil.com/" />
+            </Helmet>
             <HomePage></HomePage>
             <Services></Services>
             <VisaCategories></VisaCategories>
