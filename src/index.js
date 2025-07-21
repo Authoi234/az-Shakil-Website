@@ -5,7 +5,6 @@ import App from './App';
 import './App.css';
 import './css/style.css';
 import reportWebVitals from './reportWebVitals';
-import { ParallaxProvider } from 'react-scroll-parallax';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import AuthProvider from './context/AuthProvider';
 import { HelmetProvider } from 'react-helmet-async';
@@ -17,13 +16,11 @@ const queryClient = new QueryClient()
 root.render(
   <React.StrictMode>
     <QueryClientProvider client={queryClient}>
-      <ParallaxProvider>
         <AuthProvider>
           <HelmetProvider>
             <App />
           </HelmetProvider>
         </AuthProvider>
-      </ParallaxProvider>
     </QueryClientProvider>
   </React.StrictMode>
 );

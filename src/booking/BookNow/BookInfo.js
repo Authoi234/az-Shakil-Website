@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import useTitle from '../../hooks/useTitle';
 import BookBanner from './BookBanner';
-import { InlineWidget } from 'react-calendly';
 import useMetaDiscription from '../../hooks/useMetaDiscription';
 import { Helmet } from 'react-helmet-async';
 

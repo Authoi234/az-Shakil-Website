@@ -2,7 +2,12 @@ import { useEffect } from 'react';
 
 const useTitle = (titleText) => {
     useEffect(() => {
-        document.title = `Apprent - ${titleText}` || 'Apprent';
+        if (titleText) {
+             document.title = `Apprent - ${titleText}`
+        }
+        else{
+            document.title = "Apprent - Empowering minds, shaping futures"
+        }
     }, [titleText])
 };
 
